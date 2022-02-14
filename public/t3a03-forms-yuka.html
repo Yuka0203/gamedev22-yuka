@@ -7,20 +7,40 @@ body {
 }
 </style>
 
-<h4>Version 0.0.1.3</h4>
+<h4>Version 0.0.1.4</h4>
 
 <h1 align=center>T3A03-Forms-Yuka.html</h1>
 <h3><font color=blue> Prove you can use: Forms</font>The following are all form elements (add to them):</h3><br>
-<form>
-<big>Enter Your First Name:</big><input type=text id="myText01" value="Yuka"><br>
+<form action="/action_page.php" target="_self">
+ <fieldset>
+  <legend>Personalia:</legend>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Yuka"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Imai">
+  </fieldset>
 <br>
+  
 <big>Checkbox:</big><br>
 Beef:<input type=checkbox><br>
 Veggy:<input type=checkbox><br>
+Pasta:<input type=checkbox><br>
+Burrito:<input type=checkbox><br>
+  <br>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  
 <big>Radio Buttons:</big><br>
- 107.7 <input type=radio name="myRad01" value=""><br>
- 83.5 <input type=radio name="myRad01" value=""><br>
+ 107.7 <input type=radio name="myRad01" value="1"><br>
+ 83.5 <input type=radio name="myRad01" value="2"><br>
+ 92.9<input type=radio name="myRad01" value="3"><br>
+ 100.7<input type=radio name="myRad01" value="4"><br>
 <br>
+  
 <big>hidden:</big><input type=hidden><br>
 File:<input type=file><br>
 Reset:<input type=reset><br>
@@ -29,12 +49,42 @@ Button: <input type=button value="click" onclick="{
   document.getElementById('myArea01').value = 'Cool'
 }"><br>
 <big>Textarea:</big><br>
-<textarea id="myArea01" cols=60 rows=5> wow </textarea><br>
+<textarea id="myArea01" cols=60 rows=5> wow </textarea><br><br>
+Alert:<button type="button" onclick="alert('Hello World!')">Click Me!</button><br>
 <br>
+  
 <big>Select Box:</big><br>
-<select id="mySelect01" size=2>
+<label for="files">Chose a file:</label>
+<select id="mySelect01" size=2 multiple>
+  <optgroup label="First">
 <option value='myOne'>One
 <option value='myTwo'>Two
+  </optgroup>
+  <optgroup label="Second">
 <option value='myThree'>Three
-</select>
+<option value='myFour'>Four
+  </optgroup></select>
+<p>Hold down the Ctrl button to select multiple options.</p>
+<br><br>
+  
+<big>The Datalist</big>  
+   <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist><br><br>
+  
+<big>The Output Element</big>
+  <oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  
 </form>
