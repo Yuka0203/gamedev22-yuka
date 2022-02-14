@@ -65,8 +65,7 @@ Alert:<button type="button" onclick="alert('Hello World!')">Click Me!</button><b
 <option value='myFour'>Four
   </optgroup></select>
 <p>Hold down the Ctrl button to select multiple options.</p>
-<br><br>
-  
+<br>
 <big>The Datalist</big>  
    <input list="browsers" name="browser">
   <datalist id="browsers">
@@ -77,8 +76,8 @@ Alert:<button type="button" onclick="alert('Hello World!')">Click Me!</button><b
     <option value="Safari">
   </datalist><br><br>
   
-<big>The Output Element</big>
-  <oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<big>The Output Element</big><br>
+  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
   0
   <input type="range" id="a" name="a" value="50">
   100 +
