@@ -7,7 +7,7 @@ body {
 }
 </style>
 
-<h4>Version 0.0.1.6</h4>
+<h4>Version 0.0.1.7</h4>
 
 <h1 align=center>T3A03-Forms-Yuka.html</h1>
 <h3><font color=blue> Prove you can use: Forms</font>The following are all form elements (add to them):</h3><br>
@@ -17,7 +17,13 @@ body {
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value="Yuka"><br>
   <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Imai">
+  <input type="text" id="lname" name="lname" value="Imai"><br>
+  <label for="birthdaytime">Birthday (date and time):</label><br>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+  <label for="email">Enter your email:</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  <label for="pwd">Password:(anything)</label><br>
+  <input type="password" id="pwd" name="psw">
   </fieldset>
 <br>
   
@@ -41,7 +47,7 @@ Burrito:<input type=checkbox><br>
  100.7<input type=radio name="myRad01" value="4"><br>
 <br>
   
-<big>hidden:</big><input type=hidden><br>
+<big>Hidden:</big><input type=hidden><br>
 File:<input type=file><br>
 Reset:<input type=reset><br>
 Submit (advanced)<input type=submit><br>  
@@ -75,5 +81,9 @@ Alert:<button type="button" onclick="alert('Hello World!')">Click Me!</button><b
     <option value="Opera">
     <option value="Safari">
   </datalist><br><br>
+  
+<big>Show a Color Picker</big>
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
   
 </form>
