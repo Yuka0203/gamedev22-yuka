@@ -51,40 +51,6 @@ p  {
 <p>This is a courier.</p>
 <br><br>
 
-<big><b>Transparent Boxes</big></b>
-<style>
-div {
-  background-color: green;
-}
-
-div.first {
-  opacity: 0.1;
-}
-
-div.second {
-  opacity: 0.3;
-}
-
-div.third {
-  opacity: 0.6;
-}
-</style>
-<div class="first">
-  <h1>opacity 0.1</h1>
-</div>
-
-<div class="second">
-  <h1>opacity 0.3</h1>
-</div>
-
-<div class="third">
-  <h1>opacity 0.6</h1>
-</div>
-
-<div>
-  <h1>opacity 1 (default)</h1>
-</div>
-<br><br>
 
 <big><b>The border-style Property</big></b>
 <style>
@@ -113,7 +79,7 @@ p.mix {border-style: dotted dashed solid double;}
 <p class="mix">A mixed border.</p>
 <br><br>
 
-<big><b>Hoverable Buttons</big></b>
+<big><b>Hoverable Buttons</big></b><br>
 <style>
 .button {
   background-color: #4CAF50; /* Green */
@@ -188,7 +154,7 @@ p.mix {border-style: dotted dashed solid double;}
 <button class="button button5">Black</button>
 <br><br>
 
-<big><b>Animated Button</big></b>
+<big><b>Animated Button</big></b><br>
 <style>
 .button {
   display: inline-block;
@@ -233,31 +199,6 @@ p.mix {border-style: dotted dashed solid double;}
 <button class="button" style="vertical-align:middle"><span>Hover </span></button>
 <br><br>
 
-<big><b>The transition-timing-function Property</big></b>
-<style> 
-div {
-  width: 100px;
-  height: 100px;
-  background: red;
-  transition: width 2s;
-}
-
-#div1 {transition-timing-function: linear;}
-#div2 {transition-timing-function: ease;}
-#div3 {transition-timing-function: ease-in;}
-#div4 {transition-timing-function: ease-out;}
-#div5 {transition-timing-function: ease-in-out;}
-
-div:hover {
-  width: 300px;
-}
-</style>
-<div id="div1">linear</div><br>
-<div id="div2">ease</div><br>
-<div id="div3">ease-in</div><br>
-<div id="div4">ease-out</div><br>
-<div id="div5">ease-in-out</div><br>
-<br><br>
 
 <big><b>Transition + Transform</big></b>
 <style> 
@@ -335,6 +276,8 @@ div {
   opacity: 1;
 }
 </style>
-<div class="tooltip">Hover over me
+<p>When you move the mouse over the text below, the tooltip text will fade in and take 1 second to go from completely invisible to visible.</p>
+
+<div style="text-align:center;" class="tooltip">Hover over me
   <span class="tooltiptext">Tooltip text</span>
 </div>
