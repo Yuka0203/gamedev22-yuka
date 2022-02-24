@@ -1,5 +1,5 @@
 <body style="background-color:LightGray;">
-<h4>Version 0.0.1.7</h4>
+<h4>Version 0.0.1.8</h4>
 
 <h1 align="center">T3A05 input output by Yuka.html</h1>
 
@@ -8,7 +8,7 @@
    <pre>Example; Input; x = document.getElementById('myTtext01').value  
         Output; document.getElementById('myDiv01').innerHTML = x  
         Web page tags <.input type=text id="myText01" value="5".>
-                      <.div id="myDiv01".>...</div.>
+                      <.div id="myDiv01".>...<./div.>
 Note: Ingnore .s on lasat two rows. "div" means a division or a section in an HTML document.
 </pre>
 <hr>
@@ -24,7 +24,7 @@ Note: Ingnore .s on lasat two rows. "div" means a division or a section in an HT
 
 <input id="myNum01" type="number" value="4"><br>
 
-<input type="button" value="myEvent squares" onclick="{
+<input type="button" value="Squares" onclick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
     let myAnswer = myIn01 * myIn01
     document.getElementById('myDiv01').innerHTML = 
@@ -34,14 +34,16 @@ Note: Ingnore .s on lasat two rows. "div" means a division or a section in an HT
 <div id="myDiv01">...</div>
 <br>
 
-<h4>Multiplying by 2</h4>
+<h4>Multiplication</h4>
 <input id="myNum02" type="number" value="5"><br>
+<input id="myNum03" type="number" value="2"><br>
 
-<input type="button" value="myEvent multiplying by2" onclick="{
-    let myIn02 = preseFloat(document.getElemntById('myNum02').value)
-    let myAnswer = myIn02 * 2
+<input type="button" value="Multiply" onclick="{
+    let myIn02 = parseFloat(document.getElemntById('myNum02').value)
+    let myIn03 = parseFloat(document.getElemetById('myNum03').value)
+    let myAnswer = myIn02 * myIn03
     document.getElementById('myDiv02').innerHTML =
-      myIn02 = ' multiplying by 2 = ' + myAnswer
+      myIn02 = ' multiply = ' + myAnswer
  }"><br>
  
  <div id="myDiv02">...</div>
