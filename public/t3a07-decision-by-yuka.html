@@ -1,6 +1,9 @@
-<h4>Version 0.0.1</h4>
+<body style="background-color:LightGreen;">
 
-<h2 align="center">T3A07 Decition By Yula.html</h2>
+<h4>Version 0.0.1.0</h4>
+
+<h2 align="center">T3A07 Decision By Yula.html</h2>
+  
 <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to Decision if ... else statements Javascript innerHTML value by Yuka</a><br>
 Note: ! = Not, && = AND,  || = OR
 
@@ -14,16 +17,16 @@ if (myHour < 18) {
 
 <h4>Example working code</h4>
 
-<input id="myNum01" type="number" value="4"><br>
+<input id="myNum01" type=number value="4"><br>
 
-<input type="button" value="Simple if Statement for Decision Making" onclick="{
+<input type=button value="Simple if Statement for Decision Making" onclick="{
     let myIn01 = parseFloat(document.getElemetnById('myNum01').value)
     if (myIn01 >= 3){
         document.getElementById('myDiv01').innerHTML - myIn01 + ' is greater than 3'
     }
 }">
                         
-<input type="button" value="if...else" onclick="{
+<input type=button value="if...else" onclick="{
    let myIn01 = parseFloat(document.getElementById('myNum01').value)
    if (myIn01 >= 3){
        document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
@@ -31,12 +34,14 @@ if (myHour < 18) {
        document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
 }">
 
-<input type="button" value="Complex if" onclick="{
+<input type=button value="Complex if" onclick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
-    if ((myIn01 ! = 3 || myIn01 > -3) && myIn01 <-100){
+    if ((myIn01 ! = 3 || myIn01 > -3) && myIn01 <=100){
         document.getElementById('myDiv01').innerHTML = myIn01 + ' is complex'
     } else {
-        document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
 }">
                                                  
 <div id="myDiv01">...</div>           
+
+</body>
