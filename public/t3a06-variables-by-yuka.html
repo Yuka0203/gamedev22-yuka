@@ -1,9 +1,9 @@
 <body style="background-color:Salmon;">
 
-<h4>Version 0.0.1.1</h4>
+<h4>Version 0.0.1.2</h4>
 
 <h2 align="center">T3A06 Variables by Yuka.html</h2>
-
+<hr>
 <big><b><mark>Variables</big></b></mark>
     <p>Store Stuff</p>
     <pre>Example; x=3
@@ -44,4 +44,60 @@ For Global variables Mr. Ellies prefers to use document.myVarName
 }"><br>
 
 <div id="myDiv01">...</div>
+<hr>
+<h3><mark>JavaScript</h3></mark>
+<p>In this example, x, y, and z are variables. Using var keyword. The var keyword is used in all JavaScript code from 1995 to 2015. If you want your code to run in older browser, you must use var.</p>
+<p id="demo01"></p>
+    <script>
+        var x = 5;
+        var y = 6;
+        var z = x + y;
+        document.getElementById('demo01').innerHTML = "The value of z is: " + z;
+    </script>
+<br>
+<p>In this example, x, y, and z are variables. Using let keyword. The let keyword was added to JavaScript in 2015</p>
+<p id="demo02"></p>
+    <script>
+        let x = 5;
+        let y = 6;
+        let z = x + y;
+        document.getElementById('demo02').innerHTML = "The value of z is: " + z;
+    </script>
+<br>
+<p>In this example, x, y, and z are variables.</p>
+<p id="demo03"></p>
+    <script>
+        x = 5;
+        y = 6;
+        z = x + y;
+        document.getElemenyById('demo03').innerHTML = "The value of z is: " + z;
+    </script>
+<br>
+<p>In this example, price, price2, and total are variables. Using const keyword.The const keyword was added to JavaScript in 2015. Constant values and cannot be changed.</p>
+<p id="demo04"></p>
+    <script>
+    const price1 = 5;
+    const price2 = 6;
+    let total = price1 + price2;
+    document.getElementById("demo04").innerHTML = "The total is: " + total;
+    </script>
+<br><br>
+<p>The result of adding "5" + 2 + 3 is:</p>
+<p id="demo"></p>
+    <script>
+    let x = "5" + 2 + 3;
+    document.getElementById("demo").innerHTML = x;
+    </script>
+<br>
+<p>The result of adding 2 + 3 + "5" is:</p>
+<p id="demo"></p>
+    <script>
+    let x = 2 + 3 + "5";
+    document.getElementById("demo").innerHTML = x;
+    </script>
+<br>
+<big>If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.</big>
+<hr>
+    
+
 </body>
