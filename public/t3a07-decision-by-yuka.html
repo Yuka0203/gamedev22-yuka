@@ -1,6 +1,6 @@
 <body style="background-color:LightGreen;">
 
-<h4>Version 0.0.1.1</h4>
+<h4>Version 0.0.1.2</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
@@ -27,10 +27,10 @@ if (myHour < 18) {
 <input id="myNum01" type=number value="4"><br>
 
 <input type=button value="Simple if Statement for Decision Making" onclick="{
-    let myIn01 = parseFloat(document.getElemetnById('myNum01').value)
-    if (myIn01 >= 3){
-        document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
-    }
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+   if (myIn01 >= 3){
+       document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
+   }
 }">
                         
 <input type=button value="if...else" onclick="{
@@ -48,6 +48,52 @@ if (myHour < 18) {
     } else {
         document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
 }">                         
-<div id="myDiv01">...</div>           
+<input type="reset" value="Reset">
+<div id="myDiv01">...</div>   
+
+<h4>Greetting</h4>
+<p>Display "Good day!" if the hour is less than 18:00:</p>
+
+<p id="demo">Good Evening!</p>
+
+<script>
+if (new Date().getHours() < 18) {
+  document.getElementById("demo").innerHTML = "Good day!";
+} else {
+    document.getElementById('demo').innerHTML = "Good Evening!"}
+</script>
+
+<h4>Descriving</h4>
+<label for="weather">Select the weather type today: </label>
+<select id="weather">
+  <option value="">--Make a choice--</option>
+  <option value="sunny">Sunny</option>
+  <option value="rainy">Rainy</option>
+  <option value="snowing">Snowing</option>
+  <option value="overcast">Overcast</option>
+</select>
+
+<p></p>
+
+const select = document.querySelector('select');
+const para = document.querySelector('p');
+
+select.addEventListener('change', setWeather);
+
+function setWeather() {
+  const choice = select.value;
+
+  if (choice === 'sunny') {
+    para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+  } else if (choice === 'rainy') {
+    para.textContent = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
+  } else if (choice === 'snowing') {
+    para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+  } else if (choice === 'overcast') {
+    para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
+  } else {
+    para.textContent = '';
+  }
+}
 
 </body>
