@@ -1,9 +1,16 @@
 <body style="background-color:LightGreen;">
 
-<h4>Version 0.0.1.0</h4>
+<h4>Version 0.0.1.1</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
+<big><b><mark>Decision</big></b></mark>
+    <p>Decide stuff that based on stored stuff</p>
+    <pre>Example; if(x == 3){}
+         if(x <= 3){} else{}
+         if ((x >3) && (x < 9)) {} else{}
+    </pre>
+    <hr> 
 <a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to Decision if ... else statements Javascript innerHTML value by Yuka</a><br>
 Note: ! = Not, && = AND,  || = OR
 
@@ -22,7 +29,7 @@ if (myHour < 18) {
 <input type=button value="Simple if Statement for Decision Making" onclick="{
     let myIn01 = parseFloat(document.getElemetnById('myNum01').value)
     if (myIn01 >= 3){
-        document.getElementById('myDiv01').innerHTML - myIn01 + ' is greater than 3'
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
     }
 }">
                         
@@ -36,12 +43,11 @@ if (myHour < 18) {
 
 <input type=button value="Complex if" onclick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
-    if ((myIn01 ! = 3 || myIn01 > -3) && myIn01 <=100){
+    if ((myIn01 ! 3) || (myIn01 > -3) && (myIn01 <=100)){
         document.getElementById('myDiv01').innerHTML = myIn01 + ' is complex'
     } else {
         document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
-}">
-                                                 
+}">                         
 <div id="myDiv01">...</div>           
 
 </body>
