@@ -1,6 +1,6 @@
 <body style="background-color:LightGreen;">
 
-<h4>Version 0.0.1.2</h4>
+<h4>Version 0.0.1.3</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
@@ -50,6 +50,36 @@ if (myHour < 18) {
 }">                         
 <input type="reset" value="Reset">
 <div id="myDiv01">...</div>   
+
+<h4>Switch Statement</h4>
+<p id="demo01"></p>
+
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo01").innerHTML = "Today is " + day;
+</script>
 
 <h4>Greetting</h4>
 <p>Display "Good day!" if the hour is less than 18:00:</p>
