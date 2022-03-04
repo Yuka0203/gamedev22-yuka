@@ -1,6 +1,6 @@
 <body style="background-color:LightGreen;">
 
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.9</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
@@ -108,7 +108,8 @@ if (new Date().getHours() < 18) {
 <p id="p"> </p>
 
 <script>
-const para = document.getElementById('p').value;
+document.getElementById('p').innerHTML = para
+const choice = document.getElementById('weather').value
 
 function setWeather() {
 
