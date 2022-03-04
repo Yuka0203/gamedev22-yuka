@@ -1,6 +1,6 @@
 <body style="background-color:LightGreen;">
 
-<h4>Version 0.0.1.4</h4>
+<h4>Version 0.0.1.5</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
@@ -43,13 +43,15 @@ if (myHour < 18) {
 
 <input type=button value="Complex if" onclick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
-    if ((myIn01 ! 3) || (myIn01 > -3) && (myIn01 <=100)){
+    if ((myIn01 < 3) || (myIn01 > 6)){
         document.getElementById('myDiv01').innerHTML = myIn01 + ' is complex'
     } else {
         document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
 }">                         
-<input type="button" value="Reload Page" onClick="reload">
+
 <div id="myDiv01">...</div>   
+<input type="button"  value="Reload" onclick="location.reload()">
+
 
 <h4>Switch Statement</h4>
 <p id="demo01"></p>
@@ -80,7 +82,7 @@ switch (new Date().getDay()) {
 }
 document.getElementById("demo01").innerHTML = "Today is " + day;
 </script>
-
+<br>
 <h4>Greetting</h4>
 <p>Display "Good day!" if the hour is less than 18:00:</p>
 
@@ -92,8 +94,8 @@ if (new Date().getHours() < 18) {
 } else {
     document.getElementById('demo').innerHTML = "Good Evening!"}
 </script>
-
-<h4>Descriving</h4>
+<br>
+<h4>Describing</h4>
 <label for="weather">Select the weather type today: </label>
 <select id="weather">
   <option value="">--Make a choice--</option>
@@ -103,8 +105,9 @@ if (new Date().getHours() < 18) {
   <option value="overcast">Overcast</option>
 </select>
 
-<p></p>
+<p> </p>
 
+<script>
 const select = document.querySelector('select');
 const para = document.querySelector('p');
 
@@ -125,5 +128,5 @@ function setWeather() {
     para.textContent = '';
   }
 }
-
+</script>
 </body>
