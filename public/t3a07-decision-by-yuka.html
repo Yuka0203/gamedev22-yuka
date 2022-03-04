@@ -1,6 +1,6 @@
 <body style="background-color:LightGreen;">
 
-<h4>Version 0.0.1.7</h4>
+<h4>Version 0.0.1.8</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
@@ -86,7 +86,7 @@ document.getElementById("demo01").innerHTML = "Today is " + day;
 <h4>Greetting</h4>
 <p>Display "Good day!" if the hour is less than 18:00:</p>
 
-<p id="demo">Good Evening!</p>
+<b id="demo">Good Evening!</b>
 
 <script>
 if (new Date().getHours() < 18) {
@@ -99,20 +99,18 @@ if (new Date().getHours() < 18) {
 <label for="weather">Select the weather type today: </label>
 <select id="weather">
   <option value="">--Make a choice--</option>
-  <option value="sunny">Sunny</option>
-  <option value="rainy">Rainy</option>
-  <option value="snowing">Snowing</option>
-  <option value="overcast">Overcast</option>
+  <option id="sunny">Sunny</option>
+  <option id="rainy">Rainy</option>
+  <option id="snowing">Snowing</option>
+  <option id="overcast">Overcast</option>
 </select>
 
 <p id="p"> </p>
 
 <script>
-const select = document.getElementById('weather').value;
 const para = document.getElementById('p').value;
 
 function setWeather() {
-  const choice = select.value;
 
   if (choice === 'sunny') {
     para = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
@@ -123,7 +121,7 @@ function setWeather() {
   } else if (choice === 'overcast') {
     para = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
   } else {
-    para = '';
+    para = '...';
   }
 }
 </script>
