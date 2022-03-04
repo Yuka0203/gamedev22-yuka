@@ -94,36 +94,4 @@ if (new Date().getHours() < 18) {
 } else {
     document.getElementById('demo').innerHTML = "Good Evening!"}
 </script>
-<br>
-<h4>Describing</h4>
-<label for="weather">Select the weather type today: </label>
-<select id="weather">
-  <option value="">--Make a choice--</option>
-  <option id="sunny">Sunny</option>
-  <option id="rainy">Rainy</option>
-  <option id="snowing">Snowing</option>
-  <option id="overcast">Overcast</option>
-</select>
-
-<p id="p"> </p>
-
-<script>
-document.getElementById('p').innerHTML = para
-const choice = document.getElementById('weather').value
-
-function setWeather() {
-
-  if (choice === 'sunny') {
-    para = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
-  } else if (choice === 'rainy') {
-    para = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
-  } else if (choice === 'snowing') {
-    para = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
-  } else if (choice === 'overcast') {
-    para = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
-  } else {
-    para = '...';
-  }
-}
-</script>
 </body>
