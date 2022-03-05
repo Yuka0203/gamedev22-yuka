@@ -7,7 +7,7 @@ body {
 }
 </style>
 
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.9</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
@@ -59,7 +59,7 @@ if (myHour < 18) {
 <div id="myDiv01">...</div>   
 <input type="button"  value="Reload" onclick="location.reload()">
 <br>
-
+<br>
 <h4>Switch Statement</h4>
 <p id="demo01"></p>
 
@@ -89,7 +89,7 @@ switch (new Date().getDay()) {
 }
 document.getElementById("demo01").innerHTML = "Today is " + day;
 </script>
-
+<br>
 <h4>Greetting</h4>
 <p>Display "Good day!" if the hour is less than 18:00:</p>
 
@@ -101,30 +101,28 @@ if (new Date().getHours() < 18) {
 } else {
     document.getElementById('demo').innerHTML = "Good Evening!"}
 </script>
-
+<br>
 <h4>Describing</h4>
 <label for="weather">Choose a weather:</label>
   <select name="weather" id="weathers">
-    <option value="sunny">Sunny</option>
-    <option value="rain">Rain</option>
-    <option value="cloudy">Cloudy</option>
-    <option value="windy">Windy</option>
-    <option value="snow">Snow</option>
+    <option id="sunny" value="sunny">Sunny</option>
+    <option id="rain"  value="rain">Rain</option>
+    <option id="cloudy" value="cloudy">Cloudy</option>
+    <option id="windy" value="windy">Windy</option>
+    <option id="snow" value="snow">Snow</option>
   </select>
 
 <p id="myDes01">...</p>
 
 <script>
-if (select sunny){
+if (select == sunny){
   document.getElementById('myDes01').innerHTML = "Sunny means bright with sunlight."}
-if else (select rain){
+if else (select == rain){
   document.getElementById('myDes01').innerHTML = "Rain means moisture condensed from the atmosphere that falls visibly in separate drops."}
-if else (select cloudy){
+if else (select == cloudy){
   document.getElementById('myDes01').innerHTML = "The sky is fulled with clouds."}
-if else (select windy){
+if else (select == windy){
   document.getElementById('myDes01').innerHTML = "Windy means marked by or exposed to strong winds."}
-if else (select snow){
+if else (select == snow){
   document.getElementById('myDes01').innerHTML = "Snow means falling in light white flakes or lying on the ground as a white layer."}
-else (){
-  document.getElementById('myDes01').innerHTML = "..."}
 </script>
