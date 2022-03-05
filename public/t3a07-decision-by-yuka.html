@@ -101,7 +101,7 @@ if (new Date().getHours() < 18) {
 } else {
     document.getElementById('demo').innerHTML = "Good Evening!"}
 </script>
-<br>
+<br><br>
 <h4>Describing</h4>
 <label for="weather">Choose a weather:</label>
   <select name="weather" id="weathers">
@@ -115,14 +115,16 @@ if (new Date().getHours() < 18) {
 <p id="myDes01">...</p>
 
 <script>
-if (select == sunny){
+let x = documetn.getElementById('weathers').value
+
+if (x == sunny){
   document.getElementById('myDes01').innerHTML = "Sunny means bright with sunlight."}
-if else (select == rain){
+if else (x == rain){
   document.getElementById('myDes01').innerHTML = "Rain means moisture condensed from the atmosphere that falls visibly in separate drops."}
-if else (select == cloudy){
+if else (x == cloudy){
   document.getElementById('myDes01').innerHTML = "The sky is fulled with clouds."}
-if else (select == windy){
+if else (x == windy){
   document.getElementById('myDes01').innerHTML = "Windy means marked by or exposed to strong winds."}
-if else (select == snow){
+if else (x == snow){
   document.getElementById('myDes01').innerHTML = "Snow means falling in light white flakes or lying on the ground as a white layer."}
 </script>
