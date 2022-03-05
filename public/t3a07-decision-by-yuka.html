@@ -7,7 +7,7 @@ body {
 }
 </style>
 
-<h4>Version 0.0.1.9</h4>
+<h4>Version 0.0.1.8</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
@@ -58,7 +58,7 @@ if (myHour < 18) {
 
 <div id="myDiv01">...</div>   
 <input type="button"  value="Reload" onclick="location.reload()">
-
+<br>
 
 <h4>Switch Statement</h4>
 <p id="demo01"></p>
@@ -93,7 +93,7 @@ document.getElementById("demo01").innerHTML = "Today is " + day;
 <h4>Greetting</h4>
 <p>Display "Good day!" if the hour is less than 18:00:</p>
 
-<b id="demo">Good Evening!</b>
+<big id="demo">Good Evening!</big>
 
 <script>
 if (new Date().getHours() < 18) {
@@ -103,17 +103,16 @@ if (new Date().getHours() < 18) {
 </script>
 
 <h4>Describing</h4>
-<big>The Weather</big>
- <input list="browsers" name="browser">
-  <datalist id="browsers">
-    <option id="sunny" value="Sunny">
-    <option id="rain" value="Rain">
-    <option id-"cloudy" value="Cloudy">
-    <option id="windy" value="Windy">
-    <option id="snow" value="Snow">
-  </datalist><br><br>
+<label for="weather">Choose a weather:</label>
+  <select name="weather" id="weathers">
+    <option value="sunny">Sunny</option>
+    <option value="rain">Rain</option>
+    <option value="cloudy">Cloudy</option>
+    <option value="windy">Windy</option>
+    <option value="snow">Snow</option>
+  </select>
 
-<p id="myDes01"></p>
+<p id="myDes01">...</p>
 
 <script>
 if (select sunny){
