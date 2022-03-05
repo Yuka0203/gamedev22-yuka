@@ -7,7 +7,7 @@ body {
 }
 </style>
 
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.9</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
@@ -89,7 +89,7 @@ switch (new Date().getDay()) {
 }
 document.getElementById("demo01").innerHTML = "Today is " + day;
 </script>
-<br>
+
 <h4>Greetting</h4>
 <p>Display "Good day!" if the hour is less than 18:00:</p>
 
@@ -101,6 +101,31 @@ if (new Date().getHours() < 18) {
 } else {
     document.getElementById('demo').innerHTML = "Good Evening!"}
 </script>
-<br><br>
-I want to make select box, and then if user selects a box, div shows its describing.
 
+<h4>Describing</h4>
+<big>The Weather</big>
+ <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option id="sunny" value="Sunny">
+    <option id="rain" value="Rain">
+    <option id-"cloudy" value="Cloudy">
+    <option id="windy" value="Windy">
+    <option id="snow" value="Snow">
+  </datalist><br><br>
+
+<p id="myDes01"></p>
+
+<script>
+if (select sunny){
+  document.getElementById('myDes01').innerHTML = "Sunny means bright with sunlight."}
+if else (select rain){
+  document.getElementById('myDes01').innerHTML = "Rain means moisture condensed from the atmosphere that falls visibly in separate drops."}
+if else (select cloudy){
+  document.getElementById('myDes01').innerHTML = "The sky is fulled with clouds."}
+if else (select windy){
+  document.getElementById('myDes01').innerHTML = "Windy means marked by or exposed to strong winds."}
+if else (select snow){
+  document.getElementById('myDes01').innerHTML = "Snow means falling in light white flakes or lying on the ground as a white layer."}
+else (){
+  document.getElementById('myDes01').innerHTML = "..."}
+</script>
