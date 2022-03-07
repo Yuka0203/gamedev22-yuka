@@ -8,7 +8,7 @@ body {
 }
 </style>
 
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.9</h4>
 
 <h2 align="center">T3A07 Decision By Yula.html</h2>
   
@@ -117,13 +117,13 @@ if (new Date().getHours() < 18) {
     <p></p>
 
     <script>
-      const select = document.querySelector('select');
-      const para = document.querySelector('p');
+      let select = document.querySelector('select');
+      let para = document.querySelector('p');
 
       select.onchange = setWeather;
 
       function setWeather() {
-        const choice = select.value;
+        let choice = select.value;
 
         switch(choice) {
           case 'sunny':
