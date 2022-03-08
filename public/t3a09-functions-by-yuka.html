@@ -1,6 +1,6 @@
 <body style="background-color:IndianRed;">
   
-<h4>Version 0.0.1.1 </h4>
+<h4>Version 0.0.1.2 </h4>
 
 <h2 align=center>T3A09 Functions by Yuka.html</h2>
 
@@ -49,9 +49,13 @@ function myAdvanced(x){
 }">
 <div id="myDiv01">...</div>
 <hr>
-<mark><b>Javascript Functions</mark></b>
   
-<h3>This example calls a function which performs a calculation and returns the result:</h3>
+  
+  
+  
+<mark><b><big>Javascript Functions</mark></b></big>
+  
+<h3>This example calls a function which performs a <font color=yellow>calculation and returns</font> the result:</h3>
 <h4>Example Code</h4>
 <pre>
 var x = myFunction(4, 3);
@@ -62,6 +66,7 @@ function myFunction(a, b) {
 }
 </script>
 </pre>
+<h4>Example code works</h4>
 <p id="demo"></p>
 
 <script>
@@ -74,7 +79,8 @@ function myFunction(a, b) {
 </script>
 <br><br>
 
-<h3>This example calls a function to convert from Fahrenheit to Celsius:</h3>
+
+<h3>This example calls a function to <font color=yellow>convert from Fahrenheit to Celsius</font>:</h3>
 <h4>Example code</h4>
 <pre>
 function toCelsius(f) {
@@ -83,6 +89,7 @@ function toCelsius(f) {
 document.getElementById("demo").innerHTML = toCelsius(77);
 </script>
 </pre>
+<h4>Example code works</h4>
 <p id="demo01"></p>
 
 <script>
@@ -93,7 +100,7 @@ document.getElementById("demo01").innerHTML = toCelsius(77);
 </script>
 <br><br>
 
-<h3>This example can calculate from fahrene]heit to celsius:</h3>
+<h3>This example can <font color=yellow>calculate from fahrene]heit to celsius</font>:</h3>
 <h4>Example code</h4>
 <pre>
 document.getElementById("demo02").innerHTML =
@@ -104,17 +111,18 @@ function toCelsius(fahrenheit) {
 } 
 </script>
 </pre>
-
+<h4>Example code works</h4>
 Select today's fahrenheit:<input type=number id="myFah" value="77">
-<p id="demo02"></p>
+<input type="button"  value="Reload" onclick="location.reload()">
+<div id="myDiv02">...</div>
 
 <script>
 let x = document.getElementById('myFah').value;
-document.getElementById("demo02").innerHTML =
-"The temperature is " + toCelsius(x) + " Celsius";
+document.getElementById("myDiv02").innerHTML =
+"The temperature is " + myCelsius(x) + " Celsius";
 
-function toCelsius(fahrenheit) {
-  return (5/9) * (fahrenheit-32);
+function myCelsius(x) {
+  return (5/9) * (x-32);
 } 
 </script>
 
