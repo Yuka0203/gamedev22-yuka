@@ -1,16 +1,6 @@
 <body style="background-color:IndianRed;">
-
-<script>
-function myExampleFunction(){
-  let myIn01 = parseInt(document.getElementById('myText01').value)
-  let mySum = myIn01 + myIn01
-  let myReply = myIn01 + ' + ' + myIn01 + ' = ' + mySum
-  return myReply
-}
   
-</script>
-
-<h4>Version 0.0.1.0 </h4>
+<h4>Version 0.0.1.1 </h4>
 
 <h2 align=center>T3A09 Functions by Yuka.html</h2>
 
@@ -33,7 +23,15 @@ function myGrabNumber(){
 </pre>
 
 <h4> Example working code</h4>
-
+<script>
+function myExampleFunction(){
+  let myIn01 = parseInt(document.getElementById('myText01').value)
+  let mySum = myIn01 + myIn01
+  let myReply = myIn01 + ' + ' + myIn01 + ' = ' + mySum
+  return myReply
+}
+  
+</script>
 <input type=text id="myText01" value="3"><br>
 
 <input type=button value="Function Example" onClick="{
@@ -50,6 +48,75 @@ function myAdvanced(x){
    document.getElementById('myDiv01').innerHTML = myAdvanced(document.getElementById('myText01').value)
 }">
 <div id="myDiv01">...</div>
+<hr>
+<mark><b>Javascript Functions</mark></b>
+  
+<h3>This example calls a function which performs a calculation and returns the result:</h3>
+<h4>Example Code</h4>
+<pre>
+var x = myFunction(4, 3);
+document.getElementById("demo").innerHTML = x;
+
+function myFunction(a, b) {
+  return a * b;
+}
+</script>
+</pre>
+<p id="demo"></p>
+
+<script>
+var x = myFunction(4, 3);
+document.getElementById("demo").innerHTML = x;
+
+function myFunction(a, b) {
+  return a * b;
+}
+</script>
+<br><br>
+
+<h3>This example calls a function to convert from Fahrenheit to Celsius:</h3>
+<h4>Example code</h4>
+<pre>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+</script>
+</pre>
+<p id="demo01"></p>
+
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("demo01").innerHTML = toCelsius(77);
+</script>
+<br><br>
+
+<h3>This example can calculate from fahrene]heit to celsius:</h3>
+<h4>Example code</h4>
+<pre>
+document.getElementById("demo02").innerHTML =
+"The temperature is " + toCelsius(77) + " Celsius";
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+</script>
+</pre>
+
+Select today's fahrenheit:<input type=number id="myFah" value="77">
+<p id="demo02"></p>
+
+<script>
+let x = document.getElementById('myFah').value;
+document.getElementById("demo02").innerHTML =
+"The temperature is " + toCelsius(x) + " Celsius";
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+</script>
 
   
 </body>
