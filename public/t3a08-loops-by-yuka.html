@@ -1,6 +1,6 @@
 <body style="background-color:Orange;">
 
-<h4>Version 0.0.1.4</h4>
+<h4>Version 0.0.1.5</h4>
 
 <h2 align=center>T3A08 Loops by Yuka.html</h2>
 
@@ -52,7 +52,16 @@ Max loops: <input id="myNum01" type=number value="5"><br>
 </ul>
 </fieldset><br>
 <mark><b>For</b></mark>
-
+<h4>Example code</h4>
+<pre>
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let i, len, text;
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+</pre>
 <p id="demo"></p>
 
 <script>
@@ -68,7 +77,18 @@ document.getElementById("demo").innerHTML = text;
 
 <mark><b>For / In</b></mark>
 <p>The for in statement can loops over array values:</p>
+<h4>Example code</h4>
+<pre>
+const numbers = [45, 4, 9, 16, 25];
 
+let txt = "";
+for (let x in numbers) {
+  txt += numbers[x] + "<br>"; 
+}
+
+document.getElementById("demo01").innerHTML = txt;
+</script>
+</pre>
 <p id="demo01"></p>
 
 <script>
@@ -86,7 +106,18 @@ document.getElementById("demo01").innerHTML = txt;
 
 <mark><b>For / Of</b></mark>
 <p>The for of statement loops through the values of an iterable object.</p>
+<h4>Example code</h4>
+<pre>
+let language = "JavaScript";
 
+let text01 = "";
+for (let x of language) {
+  text01 += x + "<br>";
+}
+
+document.getElementById("demo02").innerHTML = text01;
+</script>
+</pre>
 <p id="demo02"></p>
 
 <script>
@@ -103,6 +134,17 @@ document.getElementById("demo02").innerHTML = text01;
 
 
 <mark><b>While</b></mark>
+<h4>Example code</h4>
+<pre>
+let text02 = "";
+let i01 = 0;
+while (i01 < 10) {
+  text02 += "<br>The number is " + i01;
+  i01++;
+}
+document.getElementById("demo03").innerHTML = text02;
+</script>
+</pre>
 <p id="demo03"></p>
 
 <script>
@@ -119,6 +161,20 @@ document.getElementById("demo03").innerHTML = text02;
 
 
 <mark><b>Do / While</b></mark>
+<h4>Example code</h4>
+<pre>
+let text03 = ""
+let i02 = 0;
+
+do {
+  text03 += "<br>The number is " + i02;
+  i02++;
+}
+while (i02 < 10);  
+
+document.getElementById("demo04").innerHTML = text03;
+</script>
+</pre>
 <p id="demo04"></p>
 
 <script>
