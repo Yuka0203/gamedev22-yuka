@@ -1,10 +1,10 @@
 <body style="background-color:Violet;">
 
-<h4>Version 0.0.1.6</h4>
+<h4>Version 0.0.1.7</h4>
 
 <h2 align=center>T3A10 Events by Yuka.html</h2>
 
-<big><b><mark>Events</big></b></mark>
+    <big><b><mark>Events</big></mark></b>
     <p>trigger computer code</p>
     <pre>Example; onClick(), onMouseOver(), onBlur(), onFocus(),,,
     </pre>
@@ -16,9 +16,9 @@ Events are HTML code that activates Javascript code
 
 <h4>Example Functions code</h4>
 <pre>
-&It input type=button value="Example onClick" onClick="{
-   alert('hi')\
-}" &gt
+ input type=button value="Example onClick" onClick="{
+   document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+}">
 </pre>
 
 <h4>Example working code</4>
@@ -30,6 +30,8 @@ Events are HTML code that activates Javascript code
 }">
 
 <div id="myDiv01">...</div>
+    
+
 <br>
 <br>
 
@@ -152,12 +154,51 @@ function blurFunction() {
     
     
 <mark><b>onFocus</mark></b><br>
+<p>A function is triggered when one of the input fields get focus. The function changes the background-color of the input field.</p>
+First name: <input type="text" id="f1name" onfocus="myEighthFunction(this.id)"><br>
+Last name: <input type="text" id="l1name" onfocus="myEighthFunction(this.id)">
+
+<script>
+function myEighthFunction(x) {
+  document.getElementById(x).style.background = "yellow";
+}
+</script>
     
+<p>When you enter the input field, a function is triggered which sets the background color to yellow. When you leave the input field, a function is triggered which sets the background color to red.</p>
+
+Enter your name: <input type="text" id="my1Input" onfocus="focusmyFunction()" onblur="blurmyFunction()">
+
+<script>
+// Focus = Changes the background color of input to yellow
+function focusmyFunction() {
+  document.getElementById("my1Input").style.background = "yellow";
+}
+
+// No focus = Changes the background color of input to red
+function blurmyFunction() {
+  document.getElementById("my1Input").style.background = "red";
+}
+</script>
 <hr>
     
     
 <mark><b>onMouseMove</mark></b><br>
-    
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
+
+<p>The function bigImg() is triggered when the user mouse over the image. This function enlarges the image.</p>
+<p>The function normalImg() is triggered when the mouse pointer is moved out of the image. That function sets the height and width of the image back to normal.</p>
+
+<script>
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+</script>
 <hr>
     
     
@@ -167,17 +208,86 @@ function blurFunction() {
     
     
 <mark><b>onKeyDown</mark></b><br>
+<p>A function is triggered when the user is pressing a key in the input field.</p>
+
+<input type="text" onkeydown="myNinthFunction()">
+
+<script>
+function myNinthFunction() {
+  alert("You pressed a key inside the input field");
+}
+</script>
     
+<p>Press and hold down a key inside the text field to set a red background color. Release the key to set a green background color.</p>
+
+<input type="text" id="demo10" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+
+<script>
+function keydownFunction() {
+  document.getElementById("demo10").style.backgroundColor = "red";
+}
+
+function keyupFunction() {
+  document.getElementById("demo10").style.backgroundColor = "green";
+}
+</script>
 <hr>
         
     
 <mark><b>onKeyPress</mark></b><br>
-    
+<p>A function is triggered when the user is pressing a key in the input field.</p>
+
+<input type="text" onkeypress="myTenthFunction()">
+
+<script>
+function myTenthFunction() {
+  alert("You pressed a key inside the input field");
+}
+</script>
 <hr>
         
     
 <mark><b>onDragStart</mark></b><br>
-    
+<style>
+.droptarget {
+  float: left; 
+  width: 100px; 
+  height: 35px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<p>Drag the p element back and forth between the two rectangles:</p>
+
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">Drag me!</p>
+</div>
+
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<p style="clear:both;" id="demo11"></p>
+
+<script>
+function dragStart(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+  document.getElementById("demo11").innerHTML = "Started to drag the p element";
+}
+
+function dragEnd(event) {
+  document.getElementById("demo11").innerHTML = "Finished dragging the p element.";
+}
+
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+}
+</script>
 <hr>
         
     
