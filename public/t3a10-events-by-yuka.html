@@ -1,6 +1,6 @@
 <body style="background-color:Violet;">
 
-<h4>Version 0.0.1.6 </h4>
+<h4>Version 0.0.1.5</h4>
 
 <h2 align=center>T3A10 Events by Yuka.html</h2>
 
@@ -32,34 +32,127 @@ Events are HTML code that activates Javascript code
 <div id="myDiv01">...</div>
 
 
-<b id="myB01" onMouseOut="{
-   document.getElementById('myB01').innerHTML = 'This is bold'
-}"     onMouseOver="{
+<b id="myB01" onMouseOver="{
    document.getElementById('myB01').innerHTML = 'This is cool'
-}"></b> <small>If you mouse over on 'bold', you can see 'cool'</small>
+}">This is bold</b> <small>If you mouse over on 'bold', you can see 'cool'</small>
 <br>
 <br>
 
+    
 You do at least 8 other events:<br>
 onClick, onDbClick, onChange, onBlur, onFocus, onMouseMove, onTouch, onKeyDown, onKeyPress, onDragStart, onTouchstart, onTouchEnd, onTouchMove
 <hr>
 <mark><b>onClick</mark></b>
+<button onclick="myFirstFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<p>A function is triggered when the button is clicked. The function outputs some text in a p element with id="demo".</p>
+
+<script>
+function myFirstFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
     
+<p id="demo01" onclick="mySecondFunction()">Click me to change my text color.</p>
+
+<script>
+function mySecondFunction() {
+  document.getElementById("demo01").style.color = "red";
+}
+</script>
 <hr>
     
     
 <mark><b>onDbClick</mark></b>
-        
+<button ondblclick="myThirdFunction()">Double-click me</button>
+
+<p id="demo02"></p>
+
+<p>A function is triggered when the button is double-clicked. The function outputs some text in a p element with id="demo".</p>
+
+<script>
+function myThirdFunction() {
+  document.getElementById("demo02").innerHTML = "Hello World";
+}
+</script>
+    
+Field1: <input type="text" id="field1" value="Hello World!"><br>
+Field2: <input type="text" id="field2"><br><br>
+
+<button ondblclick="myForthFunction()">Copy Text</button>
+
+<p>A function is triggered when the button is double-clicked. The function copies the text from Field1 into Field2.</p>
+
+<script>
+function myForthFunction() {
+  document.getElementById("field2").value = document.getElementById("field1").value;
+}
+</script>
 <hr>
     
     
 <mark><b>onChange</mark></b>
+<p>Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFifthFunction()">
+  <option value="Audi">Audi
+  <option value="BMW">BMW
+  <option value="Mercedes">Mercedes
+  <option value="Volvo">Volvo
+</select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo03"></p>
+
+<script>
+function myFifthFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo03").innerHTML = "You selected: " + x;
+}
+</script>
     
+<p>Modify the text in the input field, then click outside the field to fire the onchange event.</p>
+
+Enter some text: <input type="text" name="txt" value="Hello" onchange="mySixthFunction(this.value)">
+
+<script>
+function mySixthFunction(val) {
+  alert("The input value has changed. The new value is: " + val);
+}
+</script>
 <hr>
     
     
 <mark><b>onBlur</b></mark>
-        
+Enter your name: <input type="text" name="fname" id="fname" onblur="mySeventhFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function mySeventhFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+    
+<p>When you enter the input field, a function is triggered which sets the background color to yellow. When you leave the input field, a function is triggered which sets the background color to red.</p>
+
+Enter your name: <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+
+<script>
+// Focus = Changes the background color of input to yellow
+function focusFunction() {
+  document.getElementById("myInput").style.background = "yellow";
+}
+
+// No focus = Changes the background color of input to red
+function blurFunction() {
+  document.getElementById("myInput").style.background = "red";
+}
+</script>
 <hr>
     
     
