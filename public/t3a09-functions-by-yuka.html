@@ -1,6 +1,6 @@
 <body style="background-color:IndianRed;">
   
-<h4>Version 0.0.1.9</h4>
+<h4>Version 0.0.1.8</h4>
 
 <h2 align=center>T3A09 Functions by Yuka.html</h2>
 
@@ -112,14 +112,14 @@ function toCelsius(fahrenheit) {
 </script>
 </pre>
 <h4>Example code works</h4>
-Text today's fahrenheit<input type="text" name="fahrenheit" id="maFah" value="78" onchange="myCelsius(y)">
+Text today's fahrenheit<input type="text" name="fahrenheit" id="maFah" value="78" onchange="myCelsius()">
 <div id="myDiv02">...</div>
 
 <script>
-document.getElementById("myDiv02").innerHTML = "The temperature is " + myCelsius(val) + " Celsius";
+document.getElementById("myDiv02").innerHTML = "The temperature is " + myCelsius() + " Celsius";
 var y = document.getElementById('myFah').value;
   
-function myCelsius(val) {
+function myCelsius() {
   return (5/9) * (y-32);
 } 
 </script>
