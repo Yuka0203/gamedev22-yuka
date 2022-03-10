@@ -1,6 +1,6 @@
 <body style="background-color:CadetBlue;">
 
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.9</h4>
 
 <h2 align=center>T3A10 Events by Yuka.html</h2>
 
@@ -11,6 +11,7 @@
 <hr> 
 
 <a href="https://www.w3schools.com/tags/ref_eventattributes.asp">Good rederence to HTML Events</a><br>
+<a href="https://www.w3schools.com/jsref/obj_touchevent.asp">Good rederence to HTML Touch Events</a><br>
 
 Events are HTML code that activates Javascript code
 
@@ -43,12 +44,12 @@ Events are HTML code that activates Javascript code
 You do at least 8 other events:<br>
 onClick, onDbClick, onChange, onBlur, onFocus, onMouseMove, onTouch, onKeyDown, onKeyPress, onDragStart, onTouchstart, onTouchEnd, onTouchMove
 <hr>
-<mark><i>onClick</mark></i><br>
+<mark><b>onClick</mark></b><br>
 <button onclick="myFirstFunction()">Click me</button>
 
 <p id="demo"></p>
 
-<p>A function is triggered when the button is clicked. The function outputs some text in a p element with id="demo".</p>
+<p>A function is triggered when the button is clicked. The function outputs some text in a p element with id="demo".</p><br>
 
 <script>
 function myFirstFunction() {
@@ -56,7 +57,7 @@ function myFirstFunction() {
 }
 </script>
     
-<p id="demo01" onclick="mySecondFunction()">Click me to change my text color.</p>
+ <p id="demo01" onclick="mySecondFunction()"><big>Click me to change my text color.</p></big>
 
 <script>
 function mySecondFunction() {
@@ -71,7 +72,7 @@ function mySecondFunction() {
 
 <p id="demo02"></p>
 
-<p>A function is triggered when the button is double-clicked. The function outputs some text in a p element with id="demo".</p>
+<p>A function is triggered when the button is double-clicked. The function outputs some text in a p element with id="demo".</p><br>
 
 <script>
 function myThirdFunction() {
@@ -114,7 +115,7 @@ function myFifthFunction() {
   document.getElementById("demo03").innerHTML = "You selected: " + x;
 }
 </script>
-    
+    <br>
 <p>Modify the text in the input field, then click outside the field to fire the onchange event.</p>
 
 Enter some text: <input type="text" name="txt" value="Hello" onchange="mySixthFunction(this.value)">
@@ -130,7 +131,7 @@ function mySixthFunction(val) {
 <mark><b>onBlur</b></mark><br>
 Enter your name: <input type="text" name="fname" id="fname" onblur="mySeventhFunction()">
 
-<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p><br>
 
 <script>
 function mySeventhFunction() {
@@ -167,7 +168,7 @@ function myEighthFunction(x) {
   document.getElementById(x).style.background = "yellow";
 }
 </script>
-    
+    <br>
 <p>When you enter the input field, a function is triggered which sets the background color to yellow. When you leave the input field, a function is triggered which sets the background color to red.</p>
 
 Enter your name: <input type="text" id="my1Input" onfocus="focusmyFunction()" onblur="blurmyFunction()">
@@ -187,7 +188,7 @@ function blurmyFunction() {
     
     
 <mark><b>onMouseMove</mark></b><br>
-<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png" alt="Smiley" width="32" height="32">
 
 <p>The function bigImg() is triggered when the user mouse over the image. This function enlarges the image.</p>
 <p>The function normalImg() is triggered when the mouse pointer is moved out of the image. That function sets the height and width of the image back to normal.</p>
@@ -204,11 +205,7 @@ function normalImg(x) {
 }
 </script>
 <hr>
-    
-    
-<mark><b>onTouch</mark></b><br>
-    
-<hr>
+
     
     
 <mark><b>onKeyDown</mark></b><br>
@@ -221,7 +218,7 @@ function myNinthFunction() {
   alert("You pressed a key inside the input field");
 }
 </script>
-    
+    <br>
 <p>Press and hold down a key inside the text field to set a red background color. Release the key to set a green background color.</p>
 
 <input type="text" id="demo10" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
@@ -296,17 +293,49 @@ function drop(event) {
         
     
 <mark><b>onTouchstart</mark></b><br>
-    
+<p ontouchstart="myEleventhFunction()">Touch this paragraph to trigger a function that will write "Hello World".</p>
+
+<p><strong>Note:</strong> This example is for touch devices only. So, not for the computer.</p>
+
+<p id="demo12"></p>
+
+<script>
+function mEleventhyFunction() {
+  document.getElementById("demo12").innerHTML = "Hello World";
+}
+</script>
 <hr>
         
     
 <mark><b>onTouchEnd</mark></b><br>
-    
+<p ontouchend="myTwelvethFunction()">Touch this paragraph, then release the touch to trigger a function that will write "Hello World".</p>
+
+<p><strong>Note:</strong> This example is for touch devices only. So, not for the computer.</p>
+
+<p id="demo13"></p>
+
+<script>
+function myTwelvethFunction() {
+  document.getElementById("demo13").innerHTML = "Hello World";
+}
+</script>
 <hr>
         
     
 <mark><b>onTouchMove</mark></b><br>
-    
+<p ontouchmove="myThirteenthFunction(event)">Touch this paragraph, and move the finger to trigger a function that will display the x and y coordinates of the touch, according the the document:</p>
+
+<p><strong>Note:</strong> This example is for touch devices only. So, not for the computer.</p>
+
+<p id="demo14"></p>
+
+<script>
+function myThirteenthFunction(event) {
+  var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
+  document.getElementById("demo14").innerHTML = x + ", " + y;
+}
+</script>
 
 
                                               
