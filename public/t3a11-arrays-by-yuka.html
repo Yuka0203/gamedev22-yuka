@@ -1,6 +1,6 @@
 <body style="background-color:LightSkyBlue;">
   
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.7</h4>
 
 <h2 align=center>T3A11 Arrays By Yuka.html</h2>
 
@@ -434,11 +434,202 @@ document.getElementById("demo38").innerHTML = fruits20 + "<br><br>" + citrus0;
    
    
 <h3><mark>JavaScript Arrays Sort</h3></mark>
-   
-   
+<b><u>sort()</b></u>
+<p>The sort() method <font color=red>sorts an array alphabetically</font>:</p>
+<p id="demo39"></p>
+<p id="demo40"></p>
+
+<script>
+const fruits21 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo39").innerHTML = fruits21 + '(Normal)';
+
+fruits21.sort();
+document.getElementById("demo40").innerHTML = fruits21;
+</script>
+<br><br>
+  
+<b><u>reverse()</b></u>
+<p>The reverse() method <font color=red>reverses</font> the elements in an array.</p>
+<p>By combining sort() and reverse() you can sort an array in descending order:</p>
+<p id="demo41"></p>
+<p id="demo42"></p>
+
+<script>
+// Create and display an array:
+const fruits22 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo41").innerHTML = fruits22 + '(Normal)';
+
+// First sort the array
+fruits22.sort();
+
+// Then reverse it:
+fruits22.reverse();
+
+document.getElementById("demo42").innerHTML = fruits22;
+</script>
+<br><br>
+  
+<b><u>Sorting Object Arrays</b></u>
+<p>Sort car <font color=red>objects</font> on age:</p>
+<p id="demo43"></p>
+
+<script>
+const cars3 = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars3();
+
+cars3.sort(function(a, b){return a.year - b.year});
+displayCars3();
+
+function displayCars3() {
+  document.getElementById("demo43").innerHTML =
+  cars3[0].type + " " + cars3[0].year + "<br>" +
+  cars3[1].type + " " + cars3[1].year + "<br>" +
+  cars3[2].type + " " + cars3[2].year;
+}
+</script>
+<br>
+<p>Click the buttons to sort car <font color=red>objects</font> on type.</p>
+<button onclick="myFunction()">Sort</button>
+<p id="demo44"></p>
+
+<script>
+const cars4 = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars4();
+
+function myFunction() {
+  cars4.sort(function(a, b){
+    let x = a.type.toLowerCase();
+    let y = b.type.toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+  });
+  displayCars4();
+}
+
+function displayCars4() {
+  document.getElementById("demo44").innerHTML =
+  cars4[0].type + " " + cars4[0].year + "<br>" +
+  cars4[1].type + " " + cars4[1].year + "<br>" +
+  cars4[2].type + " " + cars4[2].year;
+}
+</script>
+<br><br>
+  
+<b><u>sort(function(){})</b></u>
+<p><font color=red>Sort</font> the array in <font color=red>ascending</font> order with {return a - b}:</p>
+<p id="demo45"></p>
+<p id="demo46"></p>
+
+<script>
+const points1 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo45").innerHTML = points1 + '(Normal)';  
+
+points1.sort(function(a, b){return a - b});
+document.getElementById("demo46").innerHTML = points1;
+</script>
+<br>
+<p><font color=red>Sort</font> the array in <font color=red>descending</font> order with {return b - a}:</p>
+<p id="demo47"></p>
+
+<script>
+const points2 = [40, 100, 1, 5, 25, 10];
+
+points2.sort(function(a, b){return b - a});
+document.getElementById("demo47").innerHTML = points2;
+</script>
+<br><br>
+  
+<u><b>Compare Function</u></b>
+<p>Click the buttons to sort the array alphabetically or numerically.</p>
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+<p id="demo48"></p>
+
+<script>
+const points3 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo48").innerHTML = points3;  
+
+function myFunction1() {
+  points3.sort();
+  document.getElementById("demo48").innerHTML = points3;
+}
+function myFunction2() {
+  points3.sort(function(a, b){return a - b});
+  document.getElementById("demo48").innerHTML = points3;
+}
+</script>
+<br><br>
+  
+<u><b>Sorting an Array in Random Order</u></b>
+<p>Click the button (again and again) to sort the array in <font color=red>random order</font> with Math.random().</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo49"></p>
+
+<script>
+const points4 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo49").innerHTML = points4;  
+
+function myFunction() {
+  points4.sort(function(a, b){return 0.5 - Math.random()});
+  document.getElementById("demo49").innerHTML = points4;
+}
+</script>
+<br><br>
+
+  <u><b>Find the Highest or Lowest Array Value</u></b>
+<p>The <font color=red>lowest</font> number is <span id="demo50"></span> with {return a-b} and points[0].</p>
+<script>
+const points5 = [40, 100, 1, 5, 25, 10];
+points5.sort(function(a, b){return a-b});
+document.getElementById("demo50").innerHTML = points5[0];
+</script>
+<br>
+<p>The <font color=red>lowest</font> number is <span id="demo51"></span>. Code is with Math.min.apply(null, arr).</p>
+
+<script>
+const points6 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo51").innerHTML = myArrayMin(points6);
+
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+</script>
+<br>
+<p>The <font color=red>highest</font> number is <span id="demo52"></span>. code is with {return b-a} and points[0].</p>
+
+<script>
+const points7 = [40, 100, 1, 5, 25, 10];
+points7.sort(function(a, b){return b-a});
+document.getElementById("demo52").innerHTML = points7[0];
+</script>
+<br>
+<p>The <font color=red>highest</font> number is <span id="demo53"></span>. Code is with Math.max.apply(null, arr).</p>
+
+<script>
+const points8 = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo53").innerHTML = myArrayMax(points8);
+
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+</script>
 <hr>
    
    
+  
+  
+  
    
 <h3><mark>JavaScript Arrays Iteration</h3></mark>
    
