@@ -6,7 +6,7 @@ body {
   background-size: cover;
 }
 </style>
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.9</h4>
 
 <h2 align=center>T3A12 Objects By Yuka.html</h2>
 
@@ -26,8 +26,9 @@ let myPerson = {
    "firstName" : "Yuka",
    "lastName"  : "Imai",
    "age"       : "17",
-   "eyeColor"  : "Dark Brown"
-   "hairColor" : "Black"
+   "eyeColor"  : "Dark Brown",
+   "hairColor" : "Black",
+   'nationality': 'Japanese',
    }
 </pre>
 
@@ -44,6 +45,8 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
    'eyeColor'   : 'Dark Brown',
    'hairColor'  : 'Black',
    'nationality': 'Japanese',
+   'height'     : '165cm',
+   'birthday'   : 'February Third', 
    }
                                                                 
     document.getElementById('myDiv01').innerHTML = '<br> myPerson Object has properties: <br>';
@@ -52,8 +55,9 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
     document.getElementById('myDiv01').innerHTML += 'Age: ' + myPerson.age + '<br>';
     document.getElementById('myDiv01').innerHTML += 'EyeColor: ' + myPerson.eyeColor + '<br>';
     document.getElementById('myDiv01').innerHTML += 'HairColor: ' + myPerson.hairColor + '<br>';
-    document.getElementById('myDIv01').innerHTML += 'Nationality: ' + myPerson.nationality + '<br>';
-                                                                
+    document.getElementById('myDiv01').innerHTML += 'Nationality: ' + myPerson.nationality + '<br>';
+    document.getElementById('myDiv01').innerHTML += 'Height: ' + myPerson.height + '<br>';
+    document.getElementById('myDiv01').innerHTML += 'Birthday: ' + myPerson.birthday + '<br>';                                                            
 }">
 
 <div id=myDiv01>...</div>
