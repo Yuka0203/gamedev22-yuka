@@ -6,7 +6,7 @@ body {
   background-size: cover;
 }
 </style>
-<h4>Version 0.0.1.5</h4>
+<h4>Version 0.0.1.6</h4>
 
 <h2 align=center>T3A12 Objects By Yuka.html</h2>
 
@@ -41,9 +41,6 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
    'lastName'  : 'Imai',
    'age'       : '17',
    'eyeColor'  : 'Dark Brown',
-   'hairColor' : 'Black',
-   'city'      : 'Mission',
-   'nationality': 'Japanese',
    }
                                                                 
     document.getElementById('myDiv01').innerHTML = '<br> myPerson Object has properties: <br>';
@@ -51,17 +48,30 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
     document.getElementById('myDiv01').innerHTML += 'LastName: ' + myPerson.lastName + '<br>';
     document.getElementById('myDiv01').innerHTML += 'Age: ' + myPerson.age + '<br>';
     document.getElementById('myDiv01').innerHTML += 'EyeColor: ' + myPerson.eyeColor + '<br>';
-    document.getElementById('myDiv01').innerHTML += 'HairColor: ' + myPerson.hairColor + '<br>;
-    document.getElementById('myDiv01').innerHTML += 'City: ' + myPerson.city + '<br>';
-    document.getElementById('myDiv01').innerHTML += 'Nationality: ' + myPerson.nationality + '<br>';
                                                                 
 }">
 
 <div id=myDiv01>...</div>
 <br>
+<br>
+<b><big>This example uses the defineProperty() method to add a getter and a setter.</b></big>
 
-<p>This example uses the defineProperty() method to add a getter and a setter.</p>
+<h4>Example Code</h4>
+<pre>
+// Create an object:
+const person = {firstName:"Yuka", lastName:"Imai"};
 
+// Define a getter
+Object.defineProperty(person, "fullName", {
+  get: function () {return this.firstName + " " + this.lastName;}
+});
+
+// Display full name
+document.getElementById("demo").innerHTML = person.fullName;
+</script>
+</pre>
+
+<h4>Example Working COde</h4>
 <p id="demo"></p>
 
 <script>
