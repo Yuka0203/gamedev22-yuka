@@ -6,7 +6,7 @@ body {
   background-size: cover;
 }
 </style>
-<h4>Version 0.0.1.6</h4>
+<h4>Version 0.0.1.7</h4>
 
 <h2 align=center>T3A12 Objects By Yuka.html</h2>
 
@@ -23,10 +23,11 @@ Objects are stored named variables.
 <h4>Example Onjects Code</h4>
 <pre>
 let myPerson = {
-   "firstName": "Yuka",
-   "lastName": "Imai",
-   "age": "17",
-   "eyeColor": "Dark Brown"
+   "firstName" : "Yuka",
+   "lastName"  : "Imai",
+   "age"       : "17",
+   "eyeColor"  : "Dark Brown"
+   "hairColor" : "Black"
    }
 </pre>
 
@@ -41,6 +42,7 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
    'lastName'  : 'Imai',
    'age'       : '17',
    'eyeColor'  : 'Dark Brown',
+   'hairColor' : 'Black',
    }
                                                                 
     document.getElementById('myDiv01').innerHTML = '<br> myPerson Object has properties: <br>';
@@ -48,6 +50,7 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
     document.getElementById('myDiv01').innerHTML += 'LastName: ' + myPerson.lastName + '<br>';
     document.getElementById('myDiv01').innerHTML += 'Age: ' + myPerson.age + '<br>';
     document.getElementById('myDiv01').innerHTML += 'EyeColor: ' + myPerson.eyeColor + '<br>';
+    document.getElementById('myDiv01').innerHTML += 'HairColor: ' + myPerson.hairColor + '<br>';
                                                                 
 }">
 
