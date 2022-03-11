@@ -38,11 +38,12 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
 <input type=button value="Example Object Set and Show" onClick="{
                                                                
    let myPerson = {
-   'firstName' : 'Yuka',
-   'lastName'  : 'Imai',
-   'age'       : '17',
-   'eyeColor'  : 'Dark Brown',
-   'hairColor' : 'Black',
+   'firstName'  : 'Yuka',
+   'lastName'   : 'Imai',
+   'age'        : '17',
+   'eyeColor'   : 'Dark Brown',
+   'hairColor'  : 'Black',
+   'nationality': 'Japanese',
    }
                                                                 
     document.getElementById('myDiv01').innerHTML = '<br> myPerson Object has properties: <br>';
@@ -51,6 +52,7 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
     document.getElementById('myDiv01').innerHTML += 'Age: ' + myPerson.age + '<br>';
     document.getElementById('myDiv01').innerHTML += 'EyeColor: ' + myPerson.eyeColor + '<br>';
     document.getElementById('myDiv01').innerHTML += 'HairColor: ' + myPerson.hairColor + '<br>';
+    document.getElementById('myDIv01').innerHTML += 'Nationality: ' + myPerson.nationality + '<br>';
                                                                 
 }">
 
