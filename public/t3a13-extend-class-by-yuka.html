@@ -1,3 +1,12 @@
+<style>
+body {
+  background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
 <script>
   
   class myAnimal {
@@ -6,7 +15,7 @@
          this.myAge = passAge;
     }
     myShow(){
-      document.getElementById('myDiv01').innerHTML = 'Hello' + this.myName+ '<br>'
+      document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '<br>'
     }
   }  // end class myAnimal
   
@@ -49,7 +58,7 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
  class myCat extends myAnimal {
                                                                 
      myShow(){
-        document.getElementById('myDiv01').innerHTML = this.myName + 'is a great cat<br>'
+        document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>'
     }
 }   // end extended class myCat
                                                                 
