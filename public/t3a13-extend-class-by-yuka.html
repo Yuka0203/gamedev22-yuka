@@ -16,13 +16,13 @@ body {
          this.myHair = passHair;
     }
     myShow(){
-      document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + ' is ' + this.myAge + ' who has ' + this.myHair + '<br>'
+      document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + ' is ' + this.myAge + ' who has ' + this.myHair + ' hair<br>'
     }
   }  // end class myAnimal
   
 </script>
 
-<h4>Version 0.0.2.8</h4>
+<h4>Version 0.0.2.9</h4>
 <h2 align=center>T3A13 Extend Class By Yuka.html</h3>
 <big><b><mark>Class</big></b></mark>
     <p>Groups variables and functions to make programming easier</p>
@@ -52,9 +52,13 @@ class myAnimal {
 class myCat extends myAnimal {
 
    myShow(){
-      document.getElementById('myDiv01').innerHTML = this.myName
+      document.getElementById('myDiv01').innerHTML = this.myName + ' is the great cat<br>'
    }
 }
+
+   myPet = new myCat('Fluffy', 14)
+   myPet.myShow()
+
 </pre>
 <br><br>
 
@@ -74,7 +78,7 @@ class myCat extends myAnimal {
  class myCat extends myAnimal {
                                                                 
      myShow(){
-        document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>'
+        document.getElementById('myDiv01').innerHTML = this.myName + ' is the great cat<br>'
     }
 }   // end extended class myCat
                                                       
@@ -86,15 +90,18 @@ class myCat extends myAnimal {
 <br><br>
 
 <h4>Pasted a text</h4>
-Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+Nothing: <input type=text id="myText01" value="is my pet in Japan"><br>
 <input type=button value="Example Copied and Pasted Text" onClick="{         
                                                                    
 class myText extends myAnimal {
                                                                    
-       myFunction(){
-          document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value + '<br>was pasted<br>'
+       myShow(){
+          document.getElementById('myDiv01').innerHTML = this.myName + document.getElementById('myText01').value + '<br>was pasted<br>'
        }
 }
+                                                                   
+       myCute = new myText('Loa', 5)
+       myCute.myShow()
                                                         
 }">
 <br><br>
