@@ -1,6 +1,6 @@
 <body style="background-color:LightSkyBlue;">
   
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.9</h4>
 
 <h2 align=center>T3A11 Arrays By Yuka.html</h2>
 
@@ -51,7 +51,7 @@ Max Array Entry: <input type=text id="myText01" value="3"><br>
 <br>
 
 You do at least 7 other arrays for 8 out of 9:<br>
-<big><a href="https://github.com/Yuka0203/gamedev22-yuka/blob/main/public/t3a11-arrays-by-yuka.html">You can see codes</a>I recomend to see codes together.</big>
+<big><a href="https://github.com/Yuka0203/gamedev22-yuka/blob/main/public/t3a11-arrays-by-yuka.html">You can see codes.</a> I recomend to see codes together.</big>
 <hr>
 <h3><mark>JavaScript Arrays</h3></mark>
 <b><u>Creating an Array</b></u><br>
@@ -639,11 +639,11 @@ function myArrayMax(arr) {
 <p>The forEach() method calls a function (a callback function) once for each array element.</p>
 <p id="demo54"></p>
 <script>
-const numbers = [45, 4, 9, 16, 25];
+const numbers20 = [45, 4, 9, 16, 25];
 
-let txt = "";
-numbers.forEach(myFunction);
-document.getElementById("demo54").innerHTML = txt;
+let txt1 = "";
+numbers20.forEach(myFunction14);
+document.getElementById("demo54").innerHTML = txt1;
 
 function myFunction14(value, index, array) {
   txt += value + "<br>"; 
@@ -657,10 +657,10 @@ function myFunction14(value, index, array) {
 <p>Creates a new array by performing a function on each array element.</p>
 <p id="demo55"></p>
 <script>
-const numbers1 = [45, 4, 9, 16, 25];
-const numbers2 = numbers1.map(myFunction);
+const numbers21 = [45, 4, 9, 16, 25];
+const numbers22 = numbers21.map(myFunction15);
 
-document.getElementById("demo55").innerHTML = numbers2;
+document.getElementById("demo55").innerHTML = numbers22;
 
 function myFunction15(value, index, array) {
   return value * 2;
@@ -710,8 +710,8 @@ The reduceRight() works from right-to-left in the array. See also reduce().<br>
 <p id="demo58"></p>
 
 <script>
-const numbers5 = [45, 4, 9, 16, 25];
-let sum = numbers5.reduceRight(myFunction18);
+const numbers25 = [45, 4, 9, 16, 25];
+let sum = numbers25.reduceRight(myFunction18);
 
 document.getElementById("demo58").innerHTML = "The sum is " + sum;
 
@@ -819,14 +819,14 @@ document.getElementById("demo65").innerHTML = myArr;
 <p id="demo66"></p>
 <script>
 const fruits25 = ["Banana", "Orange", "Apple", "Mango"];
-const keys = fruits25.keys();
+const keys10 = fruits25.keys();
 
-let text = "";
-for (let x of keys) {
-  text += x + "<br>";
+let text50 = "";
+for (let x of keys10) {
+  text50 += x + "<br>";
 }
 
-document.getElementById("demo66").innerHTML = text;
+document.getElementById("demo66").innerHTML = text50;
 </script>
 <p>Array.keys() is not supported in Internet Explorer.</p>
   <br><br>
