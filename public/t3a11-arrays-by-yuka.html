@@ -1,6 +1,6 @@
 <body style="background-color:LightSkyBlue;">
   
-<h4>Version 0.0.1.7</h4>
+<h4>Version 0.0.1.8</h4>
 
 <h2 align=center>T3A11 Arrays By Yuka.html</h2>
 
@@ -51,7 +51,7 @@ Max Array Entry: <input type=text id="myText01" value="3"><br>
 <br>
 
 You do at least 7 other arrays for 8 out of 9:<br>
-<a href="https://github.com/Yuka0203/gamedev22-yuka/blob/main/public/t3a11-arrays-by-yuka.html">You can see codes</a>
+<big><a href="https://github.com/Yuka0203/gamedev22-yuka/blob/main/public/t3a11-arrays-by-yuka.html">You can see codes</a>I recomend to see codes together.</big>
 <hr>
 <h3><mark>JavaScript Arrays</h3></mark>
 <b><u>Creating an Array</b></u><br>
@@ -560,11 +560,11 @@ document.getElementById("demo47").innerHTML = points2;
 const points3 = [40, 100, 1, 5, 25, 10];
 document.getElementById("demo48").innerHTML = points3;  
 
-function myFunction1() {
+function myFunction11() {
   points3.sort();
   document.getElementById("demo48").innerHTML = points3;
 }
-function myFunction2() {
+function myFunction12() {
   points3.sort(function(a, b){return a - b});
   document.getElementById("demo48").innerHTML = points3;
 }
@@ -580,7 +580,7 @@ function myFunction2() {
 const points4 = [40, 100, 1, 5, 25, 10];
 document.getElementById("demo49").innerHTML = points4;  
 
-function myFunction() {
+function myFunction13() {
   points4.sort(function(a, b){return 0.5 - Math.random()});
   document.getElementById("demo49").innerHTML = points4;
 }
@@ -630,13 +630,241 @@ function myArrayMax(arr) {
   
   
   
+  
+  
+  
    
 <h3><mark>JavaScript Arrays Iteration</h3></mark>
-   
-   
+<b><u>forEach()</b></u>
+<p>The forEach() method calls a function (a callback function) once for each array element.</p>
+<p id="demo54"></p>
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo54").innerHTML = txt;
+
+function myFunction14(value, index, array) {
+  txt += value + "<br>"; 
+}
+</script>
+  <br><br>
+  
+<u><b>map()</u></b>
+<p>The map() method does not execute the function for array elements without values.<br>
+  The map() method does not change the original array.</p>
+<p>Creates a new array by performing a function on each array element.</p>
+<p id="demo55"></p>
+<script>
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("demo55").innerHTML = numbers2;
+
+function myFunction15(value, index, array) {
+  return value * 2;
+}
+</script>
+  <br><br>
+  
+<u><b>filter()</u></b>
+<p>The filter() method creates a new array with array elements that passes a test.</p>
+<p>Creates a new array with all array elements that passes a test.</p>
+  <p id="demo56"></p>
+<script>
+const numbers3 = [45, 4, 9, 16, 25];
+const over18 = numbers3.filter(myFunction16);
+
+document.getElementById("demo56").innerHTML = over18;
+
+function myFunction16(value, index, array) {
+  return value > 18;
+}
+</script>
+  <br><br>
+  
+<u><b>reduce()</u></b>
+<p>The reduce() method runs a function on each array element to produce (reduce it to) a single value.<br>
+The reduce() method works from left-to-right in the array. See also reduceRight().<br>
+<u>The reduce() method does not reduce the original array.</u><br></p>
+<p>This example finds the sum of all numbers in an array:</p>
+<p id="demo57"></p>
+<script>
+const numbers4 = [45, 4, 9, 16, 25];
+let sum = numbers4.reduce(myFunction17, 100);
+
+document.getElementById("demo57").innerHTML = "The sum is " + sum;
+
+function myFunction17(total, value, index, array) {
+  return total + value;
+}
+</script>
+  <br><br>
+  
+<u><b>reduceRight()</u></b>
+<p>The reduceRight() method runs a function on each array element to produce (reduce it to) a single value.<br>
+The reduceRight() works from right-to-left in the array. See also reduce().<br>
+<u>The reduceRight() method does not reduce the original array.</u></p>
+<p>This example finds the sum of all numbers in an array:</p>
+<p id="demo58"></p>
+
+<script>
+const numbers5 = [45, 4, 9, 16, 25];
+let sum = numbers5.reduceRight(myFunction18);
+
+document.getElementById("demo58").innerHTML = "The sum is " + sum;
+
+function myFunction18(total, value, index, array) {
+  return total + value;
+}
+</script>   
+  <br><br>
+  
+<u><b>every()</u></b>
+<p>The every() method checks if all array values pass a test.</p>
+<p id="demo59"></p>
+
+<script>
+const numbers6 = [45, 4, 9, 16, 25];
+let allOver18 = numbers6.every(myFunction19);
+
+document.getElementById("demo59").innerHTML = "All over 18 is " + allOver18;
+
+function myFunction19(value, index, array) {
+  return value > 18;
+}
+</script>
+  <br><br>
+  
+<u><b>some()</u></b>
+<p>The some() method checks if some array values pass a test.</p>
+<p id="demo60"></p>
+
+<script>
+const numbers7 = [45, 4, 9, 16, 25];
+let someOver18 = numbers7.some(myFunction20);
+
+document.getElementById("demo60").innerHTML = "Some over 18 is " + someOver18;
+
+function myFunction20(value, index, array) {
+  return value > 18;
+}
+</script>
+  <br><br>
+  
+<u><b>indexOf()</u></b>
+<p>The indexOf() method searches an array for an element value and returns its position.</p>
+<p id="demo61"></p>
+<script>
+const fruits23 = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits23.indexOf("Apple") + 1;
+
+document.getElementById("demo61").innerHTML = "Apple is found in position " + position;
+</script>
+  <br><br>
+  
+<u><b>lastIndexOf()</u></b>
+<p>Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.</p>
+<p id="demo62"></p>
+<script>
+const fruits24 = ["Apple", "Orange", "Apple", "Mango"];
+let position1 = fruits24.lastIndexOf("Apple") + 1;
+
+document.getElementById("demo62").innerHTML = "Apple is found in position " + position1;
+</script>  
+  <br><br>
+  
+<u><b>find()</u></b>
+<p>The find() method returns the value of the first array element that passes a test function.</p>  
+<p id="demo63"></p>
+<script>
+const numbers8 = [4, 9, 16, 25, 29];
+let first = numbers8.find(myFunction21);
+
+document.getElementById("demo63").innerHTML = "First number over 18 is " + first;
+
+function myFunction21(value, index, array) {
+  return value > 18;
+}
+</script>
+  <br><br>
+  
+<u><b>findIndex()</u></b>
+<p>The findIndex() method returns the index of the first array element that passes a test function.</p>
+<p id="demo64"></p>
+<script>
+const numbers9 = [4, 9, 16, 25, 29];
+
+document.getElementById("demo64").innerHTML = "First number over 18 has index " + numbers9.findIndex(myFunction22);
+
+function myFunction22(value, index, array) {
+  return value > 18;
+}
+</script>
+  <br><br>
+  
+<u><b>from()</u></b>
+<p>The Array.from() method returns an Array object from any object with a length property or any iterable object.</p>
+<p id="demo65"></p>
+<script>
+const myArr = Array.from("ABCDEFG");
+document.getElementById("demo65").innerHTML = myArr;
+</script>
+<p>The Array.from() method is not supported in Internet Explorer.</p>  
+  <br><br>
+  
+<u><b>key()</u></b>
+<p>The Array.keys() method returns an Array Iterator object with the keys of the array.</p>
+<p id="demo66"></p>
+<script>
+const fruits25 = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits25.keys();
+
+let text = "";
+for (let x of keys) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo66").innerHTML = text;
+</script>
+<p>Array.keys() is not supported in Internet Explorer.</p>
+  <br><br>
+  
+<u><b>entries()</u></b>
+The entries() method does not change the original array.
+<p>entries() returns an Array Iterator object with key/value pairs:</p>
+<p id="demo67"></p>
+<script>
+const fruits25 = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits25.entries();
+
+for (let x of f) {
+  document.getElementById("demo67").innerHTML += x + "<br>";
+}
+</script>
+<p>The entries() method is not supported in Internet Explorer 11 (or earlier).</p>
+  <br><br>
+  
+<u><b>includes()</u></b>
+<p>ECMAScript 2016 introduced Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).<br>
+Check if the fruit array contains "Mango":</p>
+<p id="demo68"></p>
+<p><strong>Note:</strong> The includes method is not supported in Edge 12/13 (and earlier versions).</p>
+<script>
+const fruits26 = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo68").innerHTML = fruits26.includes("Mango");
+</script>
 <hr>
    
    
+  
+  
+  
+  
+  
+  
+  
    
 <h3><mark>JavaScript Arrays Const</h3></mark>
 
