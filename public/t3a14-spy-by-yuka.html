@@ -31,12 +31,12 @@ body {
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
 
 <input type=button value="decrypt" onclick="{
-   let myTemp1 = ' '
+   let myTemp1 = ''
    myString1 = document.getElementById('myArea02').value.toUpperCase().split('')
    for (let myLoop1=0; myLoop1 < myString1.length; myLoop1++){
      myTemp1 = myString1[myLoop1]
-     if (myString1[myLoop1] == 'f') {myTemp1 = 'e'}
-     if (myString1[myLoop1] == 'i') {myTemp1 = 'h'}
+     if (myString1[myLoop1] == 'f') {myTemp1 = 'E'}
+     if (myString1[myLoop1] == 'i') {myTemp1 = 'H'}
      myString1[myLoop1] = myTemp1
   }
   document.getElementById('myArea03').value = myString1.join('')
