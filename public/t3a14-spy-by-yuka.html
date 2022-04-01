@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.1</h4>
+<hh4>Version 0.0.1.2</h4>
 <h1 align=center>T3A14 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -35,8 +35,8 @@ body {
    myString1 = document.getElementById('myArea02').value.toUpperCase().split('')
    for (let myLoop1=0; myLoop1 < myString1.length; myLoop1++){
      myTemp1 = myString1[myLoop1]
-     if (myString1[myLoop1] == 'f') {myTemp1 = 'E'}
-     if (myString1[myLoop1] == 'i') {myTemp1 = 'H'}
+     if (myString1[myLoop1] == 'E') {myTemp1 = 'f'}
+     if (myString1[myLoop1] == 'H') {myTemp1 = 'i'}
      myString1[myLoop1] = myTemp1
   }
   document.getElementById('myArea03').value = myString1.join('')
