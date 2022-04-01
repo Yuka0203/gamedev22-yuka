@@ -1,7 +1,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg">
 
-<h4>Version 0.0.1.3</h4>
+<h4>Version 0.0.1.4</h4>
 
 <h2 align="center">T3A15 Move Background by Yuka.html</h2>
    
@@ -12,7 +12,7 @@
 
 <input id="myButton01" type=button value="background move left" onclick="{
   myTemp = '100px 0px'
-  myGlobalX -= 5
+  myGlobalX -= 10
   myTemp =  myGlobalX + 'px 0px'
   document.getElementById('myBody').style.backgroundPosition =myTemp
 }">
@@ -21,7 +21,7 @@
   clearInterval(myClock)
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
-  }, 150)
+  }, 100)
     
 }">
 
