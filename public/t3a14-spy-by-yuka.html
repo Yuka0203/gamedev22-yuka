@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.5</h4>
+<hh4>Version 0.0.1.6</h4>
 <h1 align=center>T3A14 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -19,9 +19,8 @@ body {
    myString = document.getElementById('myArea01').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == 'e') {myTemp  = 'f'} 
-      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
-      myString[myLoop] = myTemp
+      if (myTemp == 'e') {myTemp  = 'f'} 
+      if (myTemp == 'h') {myTemp  = 'i'} 
    }
    document.getElementById('myArea02').value = myString.join('')
 }"><br><br>
@@ -35,9 +34,8 @@ body {
    myYuka = document.getElementById('myArea02').value.toUpperCase().split('')
    for (let myLoopOne=0; myLoopOne < myYuka.length; myLoopOne++){
      myDec = myYuka[myLoopOne]
-     if (myYuka[myLoopOne] == 'f') {myDec = 'e'}
-     if (myYuka[myLoopOne] == 'i') {myDec = 'h'}
-     myYuka[myLoopOne] = myDec
+     if (myDec == 'f') {myDec = 'e'}
+     if (myDec == 'i') {myDec = 'h'}
   }
   document.getElementById('myArea03').value = myYuka.join('')
 }"><br><br>
