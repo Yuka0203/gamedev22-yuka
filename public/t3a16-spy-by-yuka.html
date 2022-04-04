@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.7</h4>
+<hh4>Version 0.0.1.6</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -31,13 +31,13 @@ body {
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
 
 <input type=button value="decrypt" onclick="{
-   let myTemp = ''
-   myString = document.getElementById('myArea02').value.toLowerCase().split('')
-   for (let myLoop=0;   myLoop < myString.length; myLoop++){
-      myTemp = myString[myLoop]
-      if (myString[myLoop] == 'f') {myTemp  = 'e'} 
-      if (myString[myLoop] == 'i') {myTemp  = 'h'} 
-      myString[myLoop] = myTemp
+   let myTemp1 = ''
+   myString1 = document.getElementById('myArea02').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString1.length; myLoop++){
+      myTemp1 = myString1[myLoop]
+      if (myString1[myLoop] == 'f') {myTemp1  = 'e'} 
+      if (myString1[myLoop] == 'i') {myTemp1  = 'h'} 
+      myString1[myLoop] = myTemp1
    }
    document.getElementById('myArea02').value = myString.join('')
 }"><br><br>
