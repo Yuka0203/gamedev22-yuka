@@ -1,7 +1,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg">
 
-<h4>Version 0.0.1.6</h4>
+<h4>Version 0.0.1.7</h4>
 
 <h2 align="center">T3A17 Move Background by Yuka.html</h2>
    
@@ -12,7 +12,7 @@
 
 <input id="myButton01" type=button value="Background Move Left" onclick="{
   myTemp = '100px 0px'
-  myGlobalX = 10
+  myGlobalX -= 10
   myTemp =  myGlobalX + 'px 0px'
   document.getElementById('myBody').style.backgroundPosition =myTemp
 }">
@@ -21,7 +21,7 @@
    
 <input id="myButton02" type=button value="Background Move Right" onclick="{
   myTemp1 = '100px 0px'
-  myGlobalX1 = -10
+  myGlobalX1 -= -10
   myTemp1 =  myGlobalX + 'px 0px'
   document.getElementById('myBody').style.backgroundPosition =myTemp1
 }">   
@@ -71,8 +71,3 @@
    
 <br><br>   
 <img id="myImage01" style="position:relative; width:100px; height:100px; top:0px; left:0px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdCn9n2KVLS0ReAUIPAv_LYVESTtf_ZhPHpg&usqp=CAU">
-
-   
-   
-
-                                               
