@@ -1,7 +1,7 @@
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg">
 
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.9</h4>
 
 <h2 align="center">T3A17 Move Background by Yuka.html</h2>
    
@@ -20,8 +20,8 @@
    
    
 <input id="myButton02" type=button value="Background Move Right" onclick="{
-  myTemp1 = '-100px 0px'
-  myGlobalX1 -= -10
+  myTemp1 = '100px 0px'
+  myGlobalX -= -10
   myTemp1 =  myGlobalX + 'px 0px'
   document.getElementById('myBody').style.backgroundPosition =myTemp1
 }">   
@@ -38,7 +38,7 @@
    
 <input type=button value="Auto Background Right" onclick="{
   clearInterval(myClock)
-  myClock1 = setInterval(function(){
+  myClock = setInterval(function(){
      document.getElementById('myButton02').click() 
   }, 100)
 }">
