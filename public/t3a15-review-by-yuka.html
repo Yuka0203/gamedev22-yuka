@@ -43,30 +43,16 @@ body {
 </div>
 <div id='myDiv123'>...</div><br>
 
-<input id="myUpdate123" type=button value="Update and Run" style="visibility:hidden;" onclick="{
-
-   // first remove first and last line since they are injected
-  myFred = document.getElementById('myTextarea123').value.split('\n')
-  myFred.pop()
-  myFred.push('')
-  myFred.shift()
-  myFred.shift()
-  myJoe = myFred.join('\n')
-
-  document.getElementById('myDiv123Code').innerHTML =    myJoe 
-  document.getElementById('myButton123').click()
-                                             
-}"><br>
-
-<textarea id="myTextarea123"  wrap="off"  style= "font-size:15px; color:white; background-color:black; width:90%;"   rows=2 onclick="{
-  if (myOnce123){
-     myTextGrow('myTextarea123', 'myDiv123Code')
-     document.getElementById('myUpdate123').style.visibility = 'visible'
-     myOnce123 = false
-  }
-}">
-Click here to see the working HTML code.
-</textarea><br>
+<fieldset>
+<legend style="font-size:15px; background-color:black; width:100%; boeder:1px solid white; padding:1px; margin:1px;"><b><big>Example</legend></b></big>
+<pre>
+<input type=text id="myTextIn01" value="Stuff written here" size=30>  <br>
+    <br>
+<input id="myButton123" type=button value="Input / Output"  onclick="{   <br>
+      document.getElementById('myDiv123').innerHTML = document.getElementById('myTextIn01').value // note: use value not innerHTML    <br>                                                
+}">   <br>
+</pre>
+</fieldset>
 
 
 
