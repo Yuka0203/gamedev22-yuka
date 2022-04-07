@@ -18,7 +18,7 @@ a:hover {
 </style>
 <font color=white>
 
-<h4>Version 0.0.1.2</h4>
+<h4>Version 0.0.1.3</h4>
 <h2 align=center>T3A13 Classes By Yuka</h2>
 
 <a href="https://www.w3schools.com/js/js_classes.asp">Good reference to Javascript Classes</a><br>
@@ -48,7 +48,8 @@ This text appears below with class: <input type=text id="myText01" value="You ar
        this.myNationality = passNationalityy;
     }
     myShow(){
-       document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old.' + document.getElementById('myText01').value + ' ' + this.myNationality + '.<br>'
+       document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old.<br>'
+       document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value + ' ' + this.myNationality + '.<br>'
     }
 }  //end class myAnimal
   myDog = new myAnimal('Snikers', 5, 'Canada')
