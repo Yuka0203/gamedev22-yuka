@@ -42,15 +42,17 @@ Classes are both Objects that store variables (Called Properties) and Functions 
 This text appears below with class: <input type=text id="myText01" value="You are from"><br>
 <input type=button value="Example Class Set and Show Class Animal" onClick="{
  class myAnimal {
-    constructor(passName, passAge) {
+    constructor(passName, passAge, passNatio) {
        this.myName = passName;
        this.myAge = passAge;
+       this.myNatio = passNatio;
     }
     myShow(){
        document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old.<br>'
+       document.getElementById('myDiv02').innerHTML = document.getElementById('myText01').value + ' ' + this.myNatio + '.<br>'
     }
 }  //end class myAnimal
-  myDog = new myAnimal('Snikers', 5)
+  myDog = new myAnimal('Snikers', 5, 'Canada')
   myDog.myShow()
                                                                             
 }">
