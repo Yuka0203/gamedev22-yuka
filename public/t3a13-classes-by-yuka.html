@@ -18,7 +18,7 @@ a:hover {
 </style>
 <font color=white>
 
-<h4>Version 0.0.1.6</h4>
+<h4>Version 0.0.1.7</h4>
 <h2 align=center>T3A13 Classes By Yuka</h2>
 
 <a href="https://www.w3schools.com/js/js_classes.asp">Good reference to Javascript Classes</a><br>
@@ -42,16 +42,15 @@ Classes are both Objects that store variables (Called Properties) and Functions 
 This text appears below with class: <input type=text id="myText01" value="You are from"><br>
 <input type=button value="Example Class Set and Show Class Animal" onClick="{
  class myAnimal {
-    constructor(passName, passAge, passNationality) {
+    constructor(passName, passAge) {
        this.myName = passName;
        this.myAge = passAge;
-       this.myNationality = passNationalityy;
     }
     myShow(){
        document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '. You are ' + this.myAge + ' years old.<br>'
     }
 }  //end class myAnimal
-  myDog = new myAnimal('Snikers', 5, 'Canada')
+  myDog = new myAnimal('Snikers', 5)
   myDog.myShow()
                                                                             
 }">
