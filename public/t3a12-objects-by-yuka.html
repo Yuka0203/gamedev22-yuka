@@ -6,7 +6,7 @@ body {
   background-size: cover;
 }
 </style>
-<h4>Version 0.0.1.9</h4>
+<h4>Version 0.0.1.8</h4>
 
 <h2 align=center>T3A12 Objects By Yuka.html</h2>
 
@@ -34,7 +34,7 @@ let myPerson = {
 
 <h4>Example working Objects code</h4>
 
-Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+This text appears below: <input type=text id="myText01" value="I am from"><br>
 
 <input type=button value="Example Object Set and Show" onClick="{
                                                                
@@ -47,6 +47,7 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
    'nationality': 'Japanese',
    'height'     : '165cm',
    'birthday'   : 'February Third', 
+   'country'    : 'Japan',                                                            
    }
                                                                 
     document.getElementById('myDiv01').innerHTML = '<br> myPerson Object has properties: <br>';
@@ -57,7 +58,8 @@ Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
     document.getElementById('myDiv01').innerHTML += 'HairColor: ' + myPerson.hairColor + '<br>';
     document.getElementById('myDiv01').innerHTML += 'Nationality: ' + myPerson.nationality + '<br>';
     document.getElementById('myDiv01').innerHTML += 'Height: ' + myPerson.height + '<br>';
-    document.getElementById('myDiv01').innerHTML += 'Birthday: ' + myPerson.birthday + '<br>';                                                            
+    document.getElementById('myDiv01').innerHTML += 'Birthday: ' + myPerson.birthday + '<br>';
+    document.getElementById('myDiv01').innerHTML += 'Country: ' + document.getElementById('myText01').value + ' ' + myPerson.country + '<br>';                                                            
 }">
 
 <div id=myDiv01>...</div>
