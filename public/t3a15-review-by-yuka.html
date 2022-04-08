@@ -94,13 +94,13 @@ input id="myButton123" type=button value="Input / Output"  onclick="{   <br>
 
 <fieldset style="background-color:black">
 <legend style="font-size:15px; background-color:black; width:5%; border:2px solid white; padding:1px; margin:1px;"><b><big>Example</legend></b></big>
-   var my1 = document.getElementById('myTextIn1').value  
-   var my2 = document.getElementById('myTextIn2').value  
-   document.getElementById('myDiv124').innerHTML =   'Numbers added as strings ' +  my1 + ' + ' +  my2 + ' = ' +  (my1 + my2)  + '<br>'   
-   document.getElementById('myDiv124').innerHTML +=  'Numbers added as integers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseInt(my1) + parseInt(my2))  + '<br>'   
-   document.getElementById('myDiv124').innerHTML +=  'Numbers added as rounded integers ' +  my1 + ' + ' +  my2 + ' = ' +  (Math.round(my1) + Math.round(my2))  + '<br>'                                                      
-   document.getElementById('myDiv124').innerHTML +=  'Numbers added as floating point (decimal) numbers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseFloat(my1) + parseFloat(my2))  + '<br>'                                         
-   document.getElementById('myDiv124').innerHTML +=  'Numbers added using *1 trick ' +  my1 + ' + ' +  my2 + ' = ' +  (my1*1 + my2*1)  + '<br>'            
+   var my1 = document.getElementById('myTextIn1').value  <br>
+   var my2 = document.getElementById('myTextIn2').value  <br>
+   document.getElementById('myDiv124').innerHTML =   'Numbers added as strings ' +  my1 + ' + ' +  my2 + ' = ' +  (my1 + my2)  + 'br'  <br> 
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as integers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseInt(my1) + parseInt(my2))  + 'br'   <br>
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as rounded integers ' +  my1 + ' + ' +  my2 + ' = ' +  (Math.round(my1) + Math.round(my2))  + 'br'    <br>                                                  
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as floating point (decimal) numbers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseFloat(my1) + parseFloat(my2))  + 'br'          <br>                               
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added using *1 trick ' +  my1 + ' + ' +  my2 + ' = ' +  (my1*1 + my2*1)  + 'br'            
 </fieldset>
 
 
@@ -140,11 +140,11 @@ Loop this many times <input type=number id="myTextLoop" value="10" size=10>
 
 <fieldset style="background-color:black">
 <legend style="font-size:15px; background-color:black; width:5%; border:2px solid white; padding:1px; margin:1px;"><b><big>Example</legend></b></big>
-document.getElementById('myDiv125').innerHTML = ''   // blank out the DIV  
-                                                               
-    for (myLoop = 0;  myLoop <= document.getElementById(myTextLoop).value;    myLoop++){
-                                                               
-       document.getElementById(myDiv125).innerHTML += Loop + myLoop+<br>' 
+document.getElementById('myDiv125').innerHTML = ''   // blank out the DIV    <br>
+                                                               <br>
+    for (myLoop = 0;  myLoop <= document.getElementById(myTextLoop).value;    myLoop++){      <br>
+                                                               <br>
+       document.getElementById(myDiv125).innerHTML += Loop + myLoop+br'         <br>
                                                                
     }  
 </fieldset>
@@ -231,45 +231,45 @@ Change the number <input type=number id="myTextIf" value="4" size=10>
 
 <fieldset style="background-color:black">
 <legend style="font-size:15px; background-color:black; width:5%; border:2px solid white; padding:1px; margin:1px;"><b><big>Example</legend></b></big>
-document.getElementById('myDiv126').innerHTML = '' // Clear the DIV
-                                                                    
-   myIf =   document.getElementById('myTextIf').value   // Store the number
-     
-   if (myIf == 4){                                                                
-      document.getElementById('myDiv126').innerHTML += 'That number equals 4 <br>'
-   }   
-                                                                    
-   if (myIf <= 4){                                                                
-      document.getElementById(myDiv126).innerHTML + That number is less than 4 <br>'
-   }  
-                                                                            
-   if (Math.abs(myIf) == 4){        // absolute value of -4 = 4                                                         
-      document.getElementById('myDiv126').innerHTML += 'That number is either positive or negative 4<br>'
-   }  
-                                                                        
-   if (myIf < 0){                                                                
-      document.getElementById(myDiv126).innerHTML + That number is a negative number<br>
-   }  
-                                                                    
-   if (myIf == 4){                                                                
-      document.getElementById('myDiv126').innerHTML += 'That number is less than or equal to 4 <br>'
-   }   
-                                                                    
-   if (myIf >= 4){                                                                
-      document.getElementById('myDiv126').innerHTML += 'That number is greater than or equal to 4 <br>'
-   }   
-                                                                    
-   if (myIf != 4){                                                                
-      document.getElementById('myDiv126').innerHTML += 'That number does not equal 4 <br>'
-   }   
-                                                                    
-   if ((myIf == 4) || (myIf == 8)) {                                                                
-      document.getElementById('myDiv126').innerHTML += 'That number equals either 4 or 8 <br>'
-   }     
-                                                                       
-                                                                    
-   if ((myIf == 4) && (myIf < 8)) {                                                                
-      document.getElementById(myDiv126).innerHTML + That number equals 4 and is less than 8 <br>'
+document.getElementById('myDiv126').innerHTML = '' // Clear the DIV          <br>
+                                                                    <br>
+   myIf =   document.getElementById('myTextIf').value   // Store the number         <br>
+     <br>
+   if (myIf == 4){          <br>                                                               
+      document.getElementById('myDiv126').innerHTML += 'That number equals 4 br'               <br>
+   }             <br>
+                    <br>                                                
+   if (myIf <= 4){                                                              <br>  
+      document.getElementById(myDiv126).innerHTML + That number is less than 4 br'     <br>
+   }      <br>
+              <br>                                                              
+   if (Math.abs(myIf) == 4){        // absolute value of -4 = 4            <br>                                                         
+      document.getElementById('myDiv126').innerHTML += 'That number is either positive or negative 4 br'            <br>
+   }   <br>
+          <br>                                                              
+   if (myIf < 0){       <br>                                                                
+      document.getElementById(myDiv126).innerHTML + That number is a negative number br    <br>
+   }  <br>
+          <br>                                                          
+   if (myIf == 4){    <br>                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is less than or equal to 4 br'    <br>
+  }   <br>   
+          <br>                                                          
+   if (myIf >= 4){    <br>                                                                
+      document.getElementById('myDiv126').innerHTML += 'That number is greater than or equal to 4 br'          <br>
+   }   <br>
+           <br>                                                         
+   if (myIf != 4){        <br>                                                               
+      document.getElementById('myDiv126').innerHTML += 'That number does not equal 4 br'       <br>
+   }   <br>
+                                                <br>                    
+   if ((myIf == 4) || (myIf == 8)) {                <br>                                                
+      document.getElementById('myDiv126').innerHTML += 'That number equals either 4 or 8 br'         <br>
+   }     <br>
+             <br>                                                          
+                 <br>                                                   
+   if ((myIf == 4) && (myIf < 8)) {    <br>                                                                
+      document.getElementById(myDiv126).innerHTML + That number equals 4 and is less than 8 br'          <br>
    }      
 </fieldset>
 <br><br><br><hr><br><br><br><br>
@@ -323,13 +323,13 @@ Store these numbers in an array <input type=text id="myTextArray" value="3, 7, 9
 
 <fieldset style="background-color:black">
 <legend style="font-size:15px; background-color:black; width:5%; border:2px solid white; padding:1px; margin:1px;"><b><big>Example</legend></b></big>
-myArray = []
-      document.getElementById('myDiv127').innerHTML = '' // clear the DIV
-                                                              
-      myArray = document.getElementById('myTextArray').value.split(',')   //splits a string into an array  
-                                                              
-      for (myIndex in myArray){                                                                                                                  
-         document.getElementById('myDiv127').innerHTML +=     myIndex + ' stores : ' + myArray[myIndex] + '<br>'
+myArray = []  <br>
+      document.getElementById('myDiv127').innerHTML = '' // clear the DIV <br>
+                                                              <br>
+      myArray = document.getElementById('myTextArray').value.split(',')   //splits a string into an array          <br> 
+                                                              <br>
+      for (myIndex in myArray){                                   <br>                                                                               
+         document.getElementById('myDiv127').innerHTML +=     myIndex + ' stores : ' + myArray[myIndex] + 'br'            <br>
       }      
 </fieldset>
 <br><br><br><hr><br><br><br><br>
@@ -380,10 +380,10 @@ Store these Items in a Javascript object <br>
 
 <fieldset style="background-color:black">
 <legend style="font-size:15px; background-color:black; width:5%; border:2px solid white; padding:1px; margin:1px;"><b><big>Example</legend></b></big>
-var myPerson = {}                                                              
-    myPerson = JSON.parse(document.getElementById('myTextAreaObject').value)   
-                                                                         
-    document.getElementById('myDiv128').innerHTML = 'Name: ' + myPerson.firstName + ' '+ myPerson.lastName + ', Age: '  + myPerson.age  + ', EyeColor: ' + myPerson.eyeColor + '<br>'   
+var myPerson = {}                    <br>                                          
+    myPerson = JSON.parse(document.getElementById('myTextAreaObject').value)  <br>   
+                                                                         <br>
+    document.getElementById('myDiv128').innerHTML = 'Name: ' + myPerson.firstName + ' '+ myPerson.lastName + ', Age: '  + myPerson.age  + ', EyeColor: ' + myPerson.eyeColor + 'br'             <br>   
 </fieldset>
 <br><br><br><hr><br><br><br><br>
 
@@ -427,11 +427,11 @@ myFun('28')      // This activates the function
 
 <fieldset style="background-color:black">
 <legend style="font-size:15px; background-color:black; width:5%; border:2px solid white; padding:1px; margin:1px;"><b><big>Example</legend></b></big>
-function myFun(myVar){
-  document.getElementById('myDiv129').innerHTML = 'The function made this line. ' + myVar + ' was passed to the function <br>'                                                                     
-}                                                                     
-                                                                      
-
+function myFun(myVar){    <br>
+  document.getElementById('myDiv129').innerHTML = 'The function made this line. ' + myVar + ' was passed to the function br'                   <br> 
+}               <br>                                                      
+                    <br>                                                  
+          <br>
 myFun('28')      // This activates the function   
 </fieldset>
 <br><br><br><hr><br><br><br><br>
@@ -485,21 +485,21 @@ Classes can be extended, so you can add your own functionality to them</font><br
 
 <fieldset style="background-color:black">
 <legend style="font-size:15px; background-color:black; width:5%; border:2px solid white; padding:1px; margin:1px;"><b><big>Example</legend></b></big>
-class myAnimal {
-    constructor(passName, passAge) {
-       this.myName = passName;
-       this.myAge = passAge;
-    }
-
-    myShow(){
-       document.getElementById('myDiv130').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
-    }
-
- }  // end class myAnimal
-                                                             
-   
-                                                                                 
-   myDog = new myAnimal('Snickers', 5)
+class myAnimal {     <br>
+    constructor(passName, passAge) {         <br>
+       this.myName = passName;       <br>
+       this.myAge = passAge;          <br>
+    }        <br>
+                  <br>
+    myShow(){          <br>
+       document.getElementById('myDiv130').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old  br'          <br>
+    }   <br>
+   <br>
+ }  // end class myAnimal           <br>
+                                       <br>
+   <br>
+       <br>                                                                          
+   myDog = new myAnimal('Snickers', 5)          <br>
    myDog.myShow()   
 </fieldset>
 <br><br><br><hr><br><br><br><br>
@@ -550,25 +550,25 @@ class myCat extends myAnimal {
 
 <fieldset style="background-color:black">
 <legend style="font-size:15px; background-color:black; width:5%; border:2px solid white; padding:1px; margin:1px;"><b><big>Example</legend></b></big>
-class myAnimal {
-    constructor(passName, passAge) {
-       this.myName = passName;
-       this.myAge = passAge;
-    }
-    myShow(){
-       document.getElementById('myDiv131').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old<br>'
-    }
- }  // end class myAnimal
-                                                             
-class myCat extends myAnimal {                                                                      
-     myShow(){
-       document.getElementById('myDiv131').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old<br>'
-    }                                                                   
-}    // end extended class myCat
-                                                                     
-                                                              
-                                                                                                                                                                                                       
-   myPet = new myCat('Fluffy', 14)
+class myAnimal {             <br>
+    constructor(passName, passAge) {           <br>
+       this.myName = passName;                 <br>
+       this.myAge = passAge;               <br>
+    }             <br>
+    myShow(){    <br>
+       document.getElementById('myDiv131').innerHTML = 'Hello '+ this.myName + '. You are ' + this.myAge + ' years old br'          <br>
+    }           <br>
+ }  // end class myAnimal        <br>
+                                     <br>                        
+class myCat extends myAnimal {           <br>                                                           
+     myShow(){        <br>
+       document.getElementById('myDiv131').innerHTML = this.myName + ' is a great cat who is ' + this.myAge + ' years old br'          <br>
+    }                                                                    <br>
+}    // end extended class myCat            <br>
+                                              <br>                       
+                                                  <br>            
+                                                     <br>                                                                                                                                                  
+   myPet = new myCat('Fluffy', 14)              <br>
    myPet.myShow() 
 </fieldset>
 <br><br><br><hr><br><br><br><br>
