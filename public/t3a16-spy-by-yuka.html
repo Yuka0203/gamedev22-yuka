@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.7</h4>
+<hh4>Version 0.0.1.8</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -48,8 +48,8 @@ body {
   
   <br><br><br>
   
-  
-<textare id="myArea04" rows=4 cols=70>I like a cat.</textarea><br>
+
+<textarea id="myArea04" rows=4 cols=70>I like a cat.</textarea><br>
   
 <input type=button value="Dog" onClick="{
    let myTemp = ''
@@ -63,11 +63,49 @@ body {
 }"><br><br>
   
 <div id="myDiv01">...<div>
+  <br><br>
   
   
   
+password
+<input type="password" id="pwd" name="psw" size="20">  
+<input type=button value="encrypt" onClick="{
+   let myTemp = ''
+   myString = document.getElementById('pwd').value.toLowerCase().split('')
+   for (let myLoop=0; myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'b') {myTemp = 'a'}
+      if (myString[myLoop] == 'c') {myTemp = 'b'}
+      if (myString[myLoop] == 'd') {myTemp = 'c'}
+      if (myString[myLoop] == 'e') {myTemp = 'd'}
+      if (myString[myLoop] == 'f') {myTemp = 'e'}
+      if (myString[myLoop] == 'g') {myTemp = 'f'}
+      if (myString[myLoop] == 'h') {myTemp = 'g'}
+      if (myString[myLoop] == 'i') {myTemp = 'h'}
+      if (myString[myLoop] == 'j') {myTemp = 'i'}
+      if (myString[myLoop] == 'k') {myTemp = 'j'}
+      if (myString[myLoop] == 'l') {myTemp = 'k'}
+      if (myString[myLoop] == 'm') {myTemp = 'l'}
+      if (myString[myLoop] == 'n') {myTemp = 'm'}
+      if (myString[myLoop] == 'o') {myTemp = 'n'}
+      if (myString[myLoop] == 'p') {myTemp = 'o'}
+      if (myString[myLoop] == 'q') {myTemp = 'p'}
+      if (myString[myLoop] == 'r') {myTemp = 'q'}
+      if (myString[myLoop] == 's') {myTemp = 'r'}
+      if (myString[myLoop] == 't') {myTemp = 's'}
+      if (myString[myLoop] == 'u') {myTemp = 't'}
+      if (myString[myLoop] == 'v') {myTemp = 'u'}
+      if (myString[myLoop] == 'w') {myTemp = 'v'}
+      if (myString[myLoop] == 'x') {myTemp = 'w'}
+      if (myString[myLoop] == 'y') {myTemp = 's'}
+      if (myString[myLoop] == 'z') {myTemp = 'y'}
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myDiv02').value = myString.join('')
+}">  
   
   
+  <div id="myDiv02">...</div>
   
   
   
