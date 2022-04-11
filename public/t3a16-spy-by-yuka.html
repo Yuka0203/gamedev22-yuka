@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.6</h4>
+<hh4>Version 0.0.1.7</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -45,4 +45,34 @@ body {
 
 <textarea id="myArea03" rows=4 cols=70></textarea><br> 
    
+  
+  <br><br><br>
+  
+  
+<textare id="myArea04" rows=4 cols=70>I like a cat.</textarea><br>
+  
+<input type=button value="Dog" onClick="{
+   let myTemp = ''
+   myString = document.getElementById('myArea04').value.toLowerCase().split('')
+   for (let myLoop=0; myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'cat') {myTemp = 'dog'}
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myDiv01').value = myString.join('')
+}"><br><br>
+  
+<div id="myDiv01">...<div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </font>
