@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.9</h4>
+<hh4>Version 0.0.1.8</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -58,23 +58,20 @@ body {
   
   
 
-<div id="p1">I like a cat</div><br>
+<ins id="ins1">I like a cat</ins><br>
   
 <input type=button value="decrypt" onclick="{
    let myTemp = ''
-   myString = document.getElementById('p1').value.toLowerCase().split('')
+   myString = document.getElementById('ins1').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
       if (myString[myLoop] == 'cat') {myTemp  = 'dog'}
-      if (myString[myLoop] == 'c') {myTemp = 'd'}
-      if (myString[myLoop] == 'a') {myTemp = 'o'}
-      if (myString[myLoop] == 't') {myTemp = 'g'}
       myString[myLoop] = myTemp
    }
-   document.getElementById('p2').value = myString.join('')
+   document.getElementById('ins2').value = myString.join('')
 }"><br>
   
-<div id="p2">...</div>
+<ins id="p2">...</ins>
   <br><br><br><br>
   
   
@@ -120,6 +117,35 @@ password
   <br>
 <input type="text" id="pwd2" name="psw" size="20"> 
   
+ <br><br><br><br>
+  
+  
+  
+  
+  <textarea id="myWeek1" rows=4 cols=70>Today is Monday</textarea><br> 
+
+  
+ <input type=button value="Week" onclick="{
+   let myTemp = ''
+   myString = document.getElementById('myWeek1').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myTemp == 'Monday') {myTemp  = 'Monday'} 
+      else if (myString[myLoop] == 'Monday') {myTemp  = 'Tuesday'} 
+      else if (myString[myLoop] == 'Monday') {myTemp  = 'Wednesday'}                                    
+      else if (myString[myLoop] == 'Monday') {myTemp  = 'Thursday'}                                    
+      else if (myString[myLoop] == 'Monday') {myTemp  = 'Friday'}                                    
+      else if (myString[myLoop] == 'Monday') {myTemp  = 'Saturdau'}                                    
+      else if (myString[myLoop] == 'Monday') {myTemp  = 'Sunday'}                                    
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myWeek2').value = myString.join('')
+}"><br><br>
+
+
+
+<textarea id="myWeek2" rows=4 cols=70></textarea><br> 
+
   
   
   
