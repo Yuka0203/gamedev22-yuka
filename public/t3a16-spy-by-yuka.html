@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.8</h4>
+<hh4>Version 0.0.1.9</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -56,7 +56,7 @@ body {
    myString = document.getElementById('myArea04').value.toLowerCase().split('')
    for (let myLoop=0; myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == 'dog') {myTemp = 'cat'}
+      if (myString[myLoop] == 'cat') {myTemp = 'dog'}
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea05').value = myString.join('')
@@ -68,7 +68,7 @@ body {
   
   
 password
-<input type="password" id="pwd" name="psw" size="20">  
+<input type="text" id="pwd" name="psw" size="20">  
 <input type=button value="encrypt" onClick="{
    let myTemp = ''
    myString = document.getElementById('pwd').value.toLowerCase().split('')
