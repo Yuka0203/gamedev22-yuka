@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.8</h4>
+<hh4>Version 0.0.1.9</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -66,6 +66,9 @@ body {
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
       if (myString[myLoop] == 'cat') {myTemp  = 'dog'}
+      if (myString[myLoop] == 'c') {myTemp = 'd'}
+      if (myString[myLoop] == 'a') {myTemp = 'o'}
+      if (myString[myLoop] == 't') {myTemp = 'g'}
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea05').value = myString.join('')
@@ -111,11 +114,11 @@ password
       if (myString[myLoop] == 'z') {myTemp = 'a'}
       myString[myLoop] = myTemp
    }
-   document.getElementById('myDiv02').value = myString.join()
+   document.getElementById('pwd2').value = myString.join()
 }">  
   
   
-  <div id="myDiv02">...</div>
+<input type="text" id="pwd2" name="psw" size="20"> 
   
   
   
