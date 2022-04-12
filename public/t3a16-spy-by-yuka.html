@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.9</h4>
+<hh4>Version 0.0.1.8</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -19,7 +19,7 @@ body {
    myString = document.getElementById('myArea01').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == 'e') {myTemp  = 'f'} 
+      if (myTemp == 'e') {myTemp  = 'f'} 
       if (myString[myLoop] == 'h') {myTemp  = 'i'} 
       myString[myLoop] = myTemp
    }
@@ -48,22 +48,31 @@ body {
   
   <br><br><br><br><br><br>
   
-
-<textarea id="myArea04" rows=4 cols=70>I like a cat.</textarea><br>
   
-<input type=button value="Dog" onClick="{
+  
+  
+  
+  
+  
+  
+  
+  
+
+<textarea id="myArea04" rows=4 cols=70>I like a cat</textarea><br>
+  
+<input type=button value="decrypt" onclick="{
    let myTemp = ''
    myString = document.getElementById('myArea04').value.toLowerCase().split('')
-   for (let myLoop=0; myLoop < myString.length; myLoop++){
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == 'cat') {myTemp = 'dog'}
+      if (myString[myLoop] == 'cat') {myTemp  = 'dog'}
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea05').value = myString.join('')
 }"><br><br>
   
 <textarea id="myArea05" rows=4 cols=70></textarea>
-  <br><br>
+  <br><br><br><br>
   
   
   
@@ -102,7 +111,7 @@ password
       if (myString[myLoop] == 'z') {myTemp = 'a'}
       myString[myLoop] = myTemp
    }
-   document.getElementById('myDiv02').value = myString.join('')
+   document.getElementById('myDiv02').value = myString.join()
 }">  
   
   
