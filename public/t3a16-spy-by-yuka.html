@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.8</h4>
+<hh4>Version 0.0.1.7</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -129,13 +129,13 @@ password
    myString = document.getElementById('myWeek1').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myTemp == 'Monday') {myTemp  = 'Monday'} 
-      else if (myString[myLoop] == 'Monday') {myTemp  = 'Tuesday'} 
-      else if (myString[myLoop] == 'Monday') {myTemp  = 'Wednesday'}                                    
-      else if (myString[myLoop] == 'Monday') {myTemp  = 'Thursday'}                                    
-      else if (myString[myLoop] == 'Monday') {myTemp  = 'Friday'}                                    
-      else if (myString[myLoop] == 'Monday') {myTemp  = 'Saturdau'}                                    
-      else if (myString[myLoop] == 'Monday') {myTemp  = 'Sunday'}                                    
+      if ((new Date().getDay() == 1) && (myString[myLoop] == 'Monday')) {myTemp  = 'Monday'} 
+      else  ((new Date().getDay() == 2) && (myString[myLoop] == 'Monday')) {myTemp  = 'Tuesday'} 
+      else  ((new Date().getDay() == 3) && (myString[myLoop] == 'Monday')) {myTemp  = 'Wednesday'}                                    
+      else  ((new Date().getDay() == 4) && (myString[myLoop] == 'Monday')) {myTemp  = 'Thursday'}                                    
+      else  ((new Date().getDay() == 5) && (myString[myLoop] == 'Monday')) {myTemp  = 'Friday'}                                    
+      else  ((new Date().getDay() == 6) && (myString[myLoop] == 'Monday')) {myTemp  = 'Saturday'}                                    
+      else  ((new Date().getDay() == 0) && (myString[myLoop] == 'Monday')) {myTemp  = 'Sunday'}                                    
       myString[myLoop] = myTemp
    }
    document.getElementById('myWeek2').value = myString.join('')
