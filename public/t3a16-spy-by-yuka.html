@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.7</h4>
+<hh4>Version 0.0.1.8</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -21,6 +21,7 @@ body {
       myTemp = myString[myLoop]
       if (myTemp == 'e') {myTemp  = 'f'} 
       if (myTemp == 'h') {myTemp  = 'i'} 
+      myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
 }"><br><br>
@@ -62,7 +63,9 @@ body {
    myString = document.getElementById('p1').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == 'cat') {myTemp  = 'dog'} 
+      if (myString[myLoop] == 'c') {myTemp = 'd'}
+      if (myString[myLoop] == 'a') {myTemp = 'o'}
+      if (myString[myLoop] == 't') {myTemp = 'g'}
       myString[myLoop] = myTemp
    }
    document.getElementById('p2').value = myString.join('')
@@ -126,6 +129,7 @@ password
  <input type=button value="Week" onclick="{
    let myTemp = ''
    myString = document.getElementById('myWeek1').value.toLowerCase().split('')
+   <script>
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
       if ((new Date().getDay() == 1) && (myTemp == 'Monday')) {myTemp  = 'Monday'} 
@@ -137,6 +141,7 @@ password
       if ((new Date().getDay() == 0) && (myTemp == 'Monday')) {myTemp  = 'Sunday'}                                    
       myString[myLoop] = myTemp
    }
+                                          </script>
    document.getElementById('myWeek2').value = myString.join('')
 }"><br>
 
