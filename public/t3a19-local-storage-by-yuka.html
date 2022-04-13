@@ -1,7 +1,11 @@
 <body style="background-color:LightBlue;">
 
-<h4>Version 0.0.1.0</h4>
+<h4>Version 0.0.1.1</h4>
 <h1 align=center>T3A19 Local Storage By Yuka</h1>
+   
+<a href="https://www.section.io/engineering-education/how-to-use-localstorage-with-javascript/">Good reference link</a>
+   
+   <br><br>
    <h3>Instrutions:</h3>
 <body onload="{
    myStorage = localStorage.getItem('myStoredText')
@@ -30,13 +34,16 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
  
    
    
+   
+   
+<h3>Count Number</h3>   
 <p><button onclick="clickCounter()" type="button">Click me!</button></p>
 
 <p>Number of clicks:</p>
 <p id="demo"></p>
 
 <p>Click the button to see the counter increase.</p>
-<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+<p>Close the browser tab (or window), and try again, and the counter <mark>will continue to count (is not reset)</mark>.</p>
 
 <script>
 clickCounter();
@@ -50,3 +57,103 @@ function clickCounter() {
   document.getElementById("demo").innerHTML = localStorage.clickcount;
 }
 </script>
+<br><br><br>
+   
+   
+<h3>Store Information</h3>   
+Name:<input type=text value="Yuka" id="myName" placeholder="Write here to store your name"><br>
+ <input type="button" value="Store Name" onClick="{
+   localStorage.setItem('myStoredText', document.getElementById('myName').value)
+   alert(document.getElementById('myName').value + ' \nHas been stored')
+   document.getElementById('myName').value = ''
+}">
+
+<input type="button" value="Retrieve Name" onClick="{
+   document.getElementById('myName').value = localStorage.getItem('myStoredText')
+}">      <br><br>
+   
+   
+   
+E-mail:<input type=text value="eito.yuka.9.22@icloud.com" id="myE" placeholder="Write here to store your e-mail"><br>
+ <input type="button" value="Store E-mail" onClick="{
+   localStorage.setItem('myStoredText', document.getElementById('myE').value)
+   alert(document.getElementById('myE').value + ' \nHas been stored')
+   document.getElementById('myE').value = ''
+}">
+
+<input type="button" value="Retrieve E-mail" onClick="{
+   document.getElementById('myE').value = localStorage.getItem('myStoredText')
+}">     <br><br>
+   
+   
+   
+Passward:<input type=text value="asdfg" id="myPass" placeholder="Write here to store your passward"><br>
+ <input type="button" value="Store Passward" onClick="{
+   localStorage.setItem('myStoredText', document.getElementById('myPass').value)
+   alert(document.getElementById('myPass').value + ' \nHas been stored')
+   document.getElementById('myPass').value = ''
+}">
+
+<input type="button" value="Retrieve Passward" onClick="{
+   document.getElementById('myPass').value = localStorage.getItem('myStoredText')
+}">     <br><br>
+   
+   
+   
+Nationality:<input type=text value="Japan" id="myNatio" placeholder="Write here to store your nationality"><br>
+ <input type="button" value="Store Nationality" onClick="{
+   localStorage.setItem('myStoredText', document.getElementById('myNatio').value)
+   alert(document.getElementById('myNatio').value + ' \nHas been stored')
+   document.getElementById('myNatio').value = ''
+}">
+
+<input type="button" value="Retrieve Nationality" onClick="{
+   document.getElementById('myNatio').value = localStorage.getItem('myStoredText')
+}">     <br><br>
+   
+   
+   
+Birth Day:<input type=date value="2005-02-03" id="myBirth" placeholder="Write here to store your birth day"><br>
+ <input type="button" value="Store Birth Day" onClick="{
+   localStorage.setItem('myStoredText', document.getElementById('myBirth').value)
+   alert(document.getElementById('myBirth').value + ' \nHas been stored')
+   document.getElementById('myBirth').value = ''
+}">
+
+<input type="button" value="Retrieve Birth Day" onClick="{
+   document.getElementById('myBirth').value = localStorage.getItem('myStoredText')
+}">     <br><br>
+   
+   
+   
+Hair Color:<input type=text value="Black" id="myHair" placeholder="Write here to store your haircolor"><br>
+ <input type="button" value="Store Hair Color" onClick="{
+   localStorage.setItem('myStoredText', document.getElementById('myHair').value)
+   alert(document.getElementById('myHair').value + ' \nHas been stored')
+   document.getElementById('myHair').value = ''
+}">
+
+<input type="button" value="Retrieve Hair Color" onClick="{
+   document.getElementById('myHair').value = localStorage.getItem('myStoredText')
+}">     <br><br>
+   
+   
+   
+Eye Color:<input type=text value="Brown" id="myEye" placeholder="Write here to store your eyecolor"><br>
+ <input type="button" value="Store Eye Color" onClick="{
+   localStorage.setItem('myStoredText', document.getElementById('myEye').value)
+   alert(document.getElementById('myEye').value + ' \nHas been stored')
+   document.getElementById('myEye').value = ''
+}">
+
+<input type="button" value="Retrieve Eye Color" onClick="{
+   document.getElementById('myEye').value = localStorage.getItem('myStoredText')
+}">     <br><br>
+
+   
+   
+   
+   
+   
+   
+   
