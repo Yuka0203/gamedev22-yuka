@@ -20,8 +20,7 @@ body {
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
       if (myTemp == 'e') {myTemp  = 'f'} 
-      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
-      myString[myLoop] = myTemp
+      if (myTemp == 'h') {myTemp  = 'i'} 
    }
    document.getElementById('myArea02').value = myString.join('')
 }"><br><br>
@@ -56,7 +55,7 @@ body {
   
   
   
-<input type=text id="p1">I like a cat</p>
+<input type=text id="p1" value="I like a cat">
 
 <input type=button value="decrypt" onclick="{
    let myTemp = ''
@@ -70,13 +69,13 @@ body {
 }"><br><br>
 
 
-<input type=text id="p2"></p>
+<input type=text id="p2">
   <br><br><br><br>
   
   
   
 password
-<input type="text" id="pwd" name="psw" size="20">  
+<input type="text" id="pwd" name="psw" size="20">  <br>
 <input type=button value="encrypt" onClick="{
    let myTemp = ''
    myString = document.getElementById('pwd').value.toLowerCase().split('')
@@ -129,13 +128,13 @@ password
    myString = document.getElementById('myWeek1').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if ((new Date().getDay() == 1) && (myString[myLoop] == 'Monday')) {myTemp  = 'Monday'} 
-      else  ((new Date().getDay() == 2) && (myString[myLoop] == 'Monday')) {myTemp  = 'Tuesday'} 
-      else  ((new Date().getDay() == 3) && (myString[myLoop] == 'Monday')) {myTemp  = 'Wednesday'}                                    
-      else  ((new Date().getDay() == 4) && (myString[myLoop] == 'Monday')) {myTemp  = 'Thursday'}                                    
-      else  ((new Date().getDay() == 5) && (myString[myLoop] == 'Monday')) {myTemp  = 'Friday'}                                    
-      else  ((new Date().getDay() == 6) && (myString[myLoop] == 'Monday')) {myTemp  = 'Saturday'}                                    
-      else  ((new Date().getDay() == 0) && (myString[myLoop] == 'Monday')) {myTemp  = 'Sunday'}                                    
+      if ((new Date().getDay() == 1) && (myTemp == 'Monday')) {myTemp  = 'Monday'} 
+      if ((new Date().getDay() == 2) && (myTemp == 'Monday')) {myTemp  = 'Tuesday'} 
+      if ((new Date().getDay() == 3) && (myTemp == 'Monday')) {myTemp  = 'Wednesday'}                                    
+      if ((new Date().getDay() == 4) && (myTemp == 'Monday')) {myTemp  = 'Thursday'}                                    
+      if ((new Date().getDay() == 5) && (myTemp == 'Monday')) {myTemp  = 'Friday'}                                    
+      if ((new Date().getDay() == 6) && (myTemp == 'Monday')) {myTemp  = 'Saturday'}                                    
+      if ((new Date().getDay() == 0) && (myTemp == 'Monday')) {myTemp  = 'Sunday'}                                    
       myString[myLoop] = myTemp
    }
    document.getElementById('myWeek2').value = myString.join('')
