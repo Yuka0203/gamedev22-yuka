@@ -9,7 +9,7 @@ body {
 
 <font color="white">
 
-<hh4>Version 0.0.1.9</h4>
+<hh4>Version 0.0.1.8</h4>
 <h1 align=center>T3A16 Spy By Yuka.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -56,22 +56,21 @@ body {
   
   
   
-  
+  <p id="p1">I like a cat</p>
 
-<ins id="ins1">I like a cat</ins><br>
-  
-<input type=button value="Dog" onclick="{
+<input type=button value="decrypt" onclick="{
    let myTemp = ''
-   myString = document.getElementById('ins1').value.toLowerCase().split('')
+   myString = document.getElementById('p1').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == 'cat') {myTemp  = 'dog'}
+      if (myString[myLoop] == 'cat') {myTemp  = 'dog'} 
       myString[myLoop] = myTemp
    }
-   document.getElementById('ins2').value = myString.join('')
-}"><br>
-  
-<ins id="p2">...</ins>
+   document.getElementById('p2').value = myString.join('')
+}"><br><br>
+
+
+<p id="p2"></p>
   <br><br><br><br>
   
   
@@ -140,7 +139,7 @@ password
       myString[myLoop] = myTemp
    }
    document.getElementById('myWeek2').value = myString.join('')
-}"><br><br>
+}"><br>
 
 
 
