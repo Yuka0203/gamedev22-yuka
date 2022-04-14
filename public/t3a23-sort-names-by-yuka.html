@@ -1,6 +1,6 @@
 <body style="background-color:LightGray;">
 
-<h4>Version 0.0.1.2</h4>
+<h4>Version 0.0.1.4</h4>
 <h1 align=center>T3A23 Sort Names By Yuka</h1>
 
 <script>
@@ -9,9 +9,12 @@
 </script>
 
 <input type=button value="Set Random" onclick="{
+  function myFirst(){                                             
   for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
      myCards[myLoop] = Math.floor(Math.random()*10)
   }
+                                               }
+                                               document.getElementById('myDiv01').innnerHTML = myFirst
                                                
 }">
 
