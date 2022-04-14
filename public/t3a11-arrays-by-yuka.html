@@ -1,6 +1,6 @@
 <body style="background-color:LightSkyBlue;">
   
-<h4>Version 0.0.1.8</h4>
+<h4>Version 0.0.1.9</h4>
 
 <h2 align=center>T3A11 Arrays By Yuka.html</h2>
 
@@ -552,8 +552,8 @@ document.getElementById("demo47").innerHTML = points2;
   
 <u><b>Compare Function</u></b>
 <p>Click the buttons to sort the array alphabetically or numerically.</p>
-<button onclick="myFunction1()">Sort Alphabetically</button>
-<button onclick="myFunction2()">Sort Numerically</button>
+<button onclick="myFunction11()">Sort Alphabetically</button>
+<button onclick="myFunction12()">Sort Numerically</button>
 <p id="demo48"></p>
 
 <script>
@@ -573,7 +573,7 @@ function myFunction12() {
   
 <u><b>Sorting an Array in Random Order</u></b>
 <p>Click the button (again and again) to sort the array in <font color=red>random order</font> with Math.random().</p>
-<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction13()">Try it</button>
 <p id="demo49"></p>
 
 <script>
@@ -867,9 +867,82 @@ document.getElementById("demo68").innerHTML = fruits26.includes("Mango");
   
    
 <h3><mark>JavaScript Arrays Const</h3></mark>
-
-
-
-
-
+  <u><b>ECMAScript 2015 (ES6)</u></b>
+  <p>in 2015, JavaScript introduced an important new keyword: <font color=red>const</font>. It has become a common practice to declare arrays using <font color=red>const</font></p>
+<p id="demo69"></p>
+<script>
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo69").innerHTML = cars;
+</script>
+  <br><br>
+  
+  <u><b>Cannot be Reassigned</u></b>
+  <p>An array declared with <font color=red>const</font> cannot be reassigned</p>
+<p id="demo70"></p>
+<script>
+try {
+  const cars = ["Saab", "Volvo", "BMW"];
+  cars = ["Toyota", "Volvo", "Audi"];
+}
+catch (err) {
+  document.getElementById("demo70").innerHTML = err;
+}
+  </script>
+  <br><br>
+  
+  <u><b>Arrays are Not Constants</u></b>
+  <p>The keyword <font color=red>const</font> is a little misleading. It does NOT define a constant array. It defines a constant reference to an array. Because of this, we can still change the elements of a constant array.<br>You can change the elements of a constant array:</p>
+  <p>Declaring a constant array does NOT make the elements unchangeable:</p>
+<p id="demo71"></p>
+<script>
+// Create an Array:
+const cars = ["Saab", "Volvo", "BMW"];
+// Change an element:
+cars[0] = "Toyota";
+// Add an element:
+cars.push("Audi");
+// Display the Array:
+document.getElementById("demo71").innerHTML = cars; 
+</script>
+  <br><br>
+  
+  <u><b>JavaScript Hoisting</u></b>
+  <p>Arrays declared with <font color=red>var</font> can be initialized at any time. <br>You can even use the array before it is declared:</p>
+  <p id="demo72"></p>
+<script>
+cars = ["Saab", "Volvo", "BMW"];
+var cars;
+document.getElementById("demo72").innerHTML = cars[0];
+</script>
+  <br><br>
+  
+  <u><b>Declaring an Array Using const</u></b>
+  <p>An array declared with <font color=red>const</font> has <b>Block Scope</b>. <br>An array declared in a block is not the same as an array declared outside the block:</p>
+<p id="demo73"></p>
+<script>
+const cars = ["Saab", "Volvo", "BMW"];
+// Here cars[0] is "Saab"
+{  
+  const cars = ["Toyota", "Volvo", "BMW"]; 
+  // Here cars[0] is "Toyota"
+}
+// Here cars[0] is "Saab"
+document.getElementById("demo73").innerHTML = cars[0];
+</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </body>
