@@ -1,6 +1,6 @@
 <body style="background-color:LightGray;">
 
-<h4>Version 0.0.1.0</h4>
+<h4>Version 0.0.1.1</h4>
 <h1 align=center>T3A23 Sort Names By Yuka</h1>
 
 <script>
@@ -29,7 +29,7 @@
   }
 }">
 
-<dir id="myDiv01"></div>
+<dir id="myDiv01">...</div>
 
    
    
@@ -95,7 +95,7 @@ function sortList() {
    
  <h3>Sort List Numerically</h3>
 <p>Click the button to sort the list numerically:</p>
-<button onclick="sortList()">Sort</button>
+<button onclick="sortList1()">Sort</button>
 
 <ul id="id02">
   <li>4</li>
@@ -109,7 +109,7 @@ function sortList() {
 </ul>
 
 <script>
-function sortList() {
+function sortList1() {
   var list, i, switching, b, shouldSwitch;
   list = document.getElementById("id02");
   switching = true;
@@ -118,7 +118,7 @@ function sortList() {
   while (switching) {
     // start by saying: no switching is done:
     switching = false;
-    b = list.getElementsByTagName("L2");
+    b = list.getElementsByTagName("LI");
     // Loop through all list-items:
     for (i = 0; i < (b.length - 1); i++) {
       // start by saying there should be no switching:
