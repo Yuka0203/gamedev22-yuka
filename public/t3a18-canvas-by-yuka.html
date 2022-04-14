@@ -63,12 +63,21 @@ You use loops and variables to make fast fancy drawings <br><br>
 <input type=button value="Heart" onclick="{
    myContext.beginPath();
    myContext.moveTo(700,250);
-   myContext.quadraticCurveTo(750,0,700,110);
+   myContext.quadraticCurveTo(600,0,700,110);
    myContext.stroke();    
    myContext.beginPath();
    myContext.moveTo(700,250);
    myContext.quadraticCurveTo(1000,0,700,110);
    myContext.stroke();   
+}">
+
+
+<input type=button value="Star" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(400,400);
+   myContext.lineTo(500,500);
+   myContext.stroke();
 }">
 
 
