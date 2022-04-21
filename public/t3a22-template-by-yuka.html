@@ -1,4 +1,4 @@
-<h4> Version 0.0.1.7</h4>
+<h4> Version 0.0.1.8</h4>
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg">
 
@@ -99,10 +99,7 @@ var myGameArea = {
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.interval = setInterval(updateGameArea, 20);
-    },
-    clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.interval = setInterval(updateGameArea);
     }
 }
 
