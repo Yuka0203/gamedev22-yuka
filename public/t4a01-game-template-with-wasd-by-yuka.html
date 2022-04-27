@@ -1,4 +1,4 @@
-Version 0.0.1.9<br>
+Version 0.0.1.10<br>
 
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg"     onkeydown="{
@@ -15,11 +15,11 @@ Version 0.0.1.9<br>
       document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -7
       myCheckHit()
    }
-   if (myKey == 's') {
+   if (myKey == 'w') {
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -7
       myCheckHit()
    }
-   if (myKey == 'x') {
+   if (myKey == 's') {
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 7
       myCheckHit()
    }
@@ -71,7 +71,82 @@ function myCheckHit(){
        alert('You lose. You can try again.')  
        location.reload()  
    } 
-               
+        
+   
+   if ( myHitOther('myImg01','myImgt2r') ){
+       alert('You lose. You can try again.')  
+       location.reload() 
+   }            
+   
+   if ( myHitOther('myImg01','myImgt3pi') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }              
+   
+   if ( myHitOther('myImg01','myImgt4o') ){
+       alert('You lose. You can try again.')
+       location.reload()
+   }           
+   
+   if ( myHitOther('myImg01','myImgt5b') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }           
+   
+   
+   
+   if ( myHitOther('myImg01','myImgt1pu2') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }           
+   
+   if ( myHitOther('myImg01','myImgt2r2') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }           
+   
+   if ( myHitOther('myImg01','myImgt3pi2') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }               
+   
+   if ( myHitOther('myImg01','myImgt4o2') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }            
+   
+   if ( myHitOther('myImg01','myImgt5b2') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }              
+   
+   
+   
+   if ( myHitOther('myImg01','myImgt1pu3') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }             
+   
+   if ( myHitOther('myImg01','myImgt2r3') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }             
+   
+   if ( myHitOther('myImg01','myImgt3pi3') ){
+       alert('You lose. You can try again.)  
+       location.reload()
+   }             
+   
+   if ( myHitOther('myImg01','myImgt4o3') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }           
+   
+   if ( myHitOther('myImg01','myImgt5b3') ){
+       alert('You lose. You can try again.')  
+       location.reload()
+   }     
+   
 
 
    // more if statements here like the above
@@ -153,7 +228,7 @@ function myCheckHit(){
    
    
    <br><br>
-   d key = A star moves right. a key = A star moves left. s key = A star moves up. x key = A star moves down.
+   d key = A star moves right. a key = A star moves left. w key = A star moves up. s key = A star moves down.
    
    
 
