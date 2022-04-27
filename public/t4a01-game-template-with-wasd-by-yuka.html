@@ -1,4 +1,4 @@
-Version 0.0.1.8<br>
+Version 0.0.1.9<br>
 
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg"     onkeydown="{
@@ -62,12 +62,15 @@ function myHitOther(my1,my2){
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
        alert('You win! You can go to lext nevel.')  
-       document.getElementById('myImg01').style.left = '20px'
        location = 't4a02-game-level-two-by-yuka.html'  // go to your next level
    }
    
    
    
+   if ( myHitOther('myImg01','myImgt1pu') ){
+       alert('You lose. You can try again.')  
+       location.reload()  
+   } 
                
 
 
