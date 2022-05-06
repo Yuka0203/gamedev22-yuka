@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Basic Breakout HTML Game</title>
+  <title>Breakout Yuka's Game    </title>
   <meta charset="UTF-8">
   <style>
   html, body {
@@ -17,6 +17,14 @@
   </style>
 </head>
 <body>
+  <h4>Version 0.0.0.0</h4>
+  
+<h3>Instruction:</h3>
+  <li>Click Space key to start or restart
+  <li>You can still continue game if a ball go downfall
+  <li>Have fun!
+  
+  
 <canvas width="400" height="500" id="game"></canvas>
 <script>
 const canvas = document.getElementById('game');
@@ -55,7 +63,7 @@ const brickWidth = 25;
 const brickHeight = 12;
 
 // the wall width takes up the remaining space of the canvas width. with 14 bricks
-// and 13 2px gaps between them, thats: 400 - (14 * 25 + 2 * 13) = 24px. so each
+// and 13 2px gaps between them, thats: 400 - (14 * 25 + 2 * 13) = 24px. so each 
 // wall will be 12px
 const wallSize = 12;
 const bricks = [];
@@ -80,7 +88,7 @@ const paddle = {
   // place the paddle horizontally in the middle of the screen
   x: canvas.width / 2 - brickWidth / 2,
   y: 440,
-  width: brickWidth,
+  width: 70,
   height: brickHeight,
 
   // paddle x velocity
@@ -173,8 +181,7 @@ function loop() {
       bricks.splice(i, 1);
 
       // ball is above or below the brick, change y velocity
-      // account for the balls speed since it will be inside the brick when it
-      // collides
+      // account for the balls speed since it will be inside the brick when it collides
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
         ball.dy *= -1;
@@ -186,7 +193,7 @@ function loop() {
 
       break;
     }
-  }
+  }// function(loop) is done
 
   // draw walls
   context.fillStyle = 'lightgrey';
