@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Breakout Yuka's Game    </title>
+  <title>Breakout Yuka's Game</title>
   <meta charset="UTF-8">
   <style>
   html, body {
@@ -17,15 +17,26 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.0</h4>
+  <h4>Version 0.0.0.1</h4>
   
 <h3>Instruction:</h3>
-  <li>Click Space key to start or restart
-  <li>You can still continue game if a ball go downfall
-  <li>Have fun!</font>
+  <li>Click Space key to start
+  <li>Use arrow keys to move the paddle
+  <li>If the ball goes falldown, you lose
+  <li>Have fun!
+  <li>wanna add sound, score
+  </font>
   
   
 <canvas width="400" height="500" id="game"></canvas>
+  
+  
+  
+  
+  
+  
+  
+  
 <script>
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
@@ -57,7 +68,7 @@ const colorMap = {
 
 // use a 2px gap between each brick
 const brickGap = 2;
-const brickWidth = 75;
+const brickWidth = 40;
 const brickHeight = 12;
 
 // the wall width takes up the remaining space of the canvas width. with 14 bricks
@@ -96,8 +107,8 @@ const paddle = {
 const ball = {
   x: 130,
   y: 260,
-  width: 10,
-  height: 10,
+  width: 8,
+  height: 8,
 
   // how fast the ball should go in either the x or y direction
   speed: 2,
@@ -192,6 +203,8 @@ function loop() {
       break;
     }
   }// function(loop) is done
+  
+  
 
   // draw walls
   context.fillStyle = 'lightgrey';
@@ -241,6 +254,55 @@ document.addEventListener('keyup', function(e) {
     paddle.dx = 0;
   }
 });
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+function animate(timestamp) { 
+  game.time.elapsed = timestamp - game.time.start;
+  if (game.time.elapsed > game.time.refreshRate) {
+    game.time.start = timestamp;
+
+    paint();
+    update();
+    detectCollision();
+
+    if (isGameOver()) return;
+  }
+
+  requestId = requestAnimationFrame(animate);
+}//function animate(timestamp) is done
+
+function isGameOver() {
+  const isBallLost = () => ball.y > canvas.height;
+  
+  if (isBallLost()) {
+    gameOver();
+    return true;
+  }  
+  return false;
+}//function isGameOver() is done
+
+function gameOver() {
+  ctx.font = '40px Arial';
+  ctx.fillStyle = 'red';
+  ctx.fillText('GAME OVER', canvas.width / 2 - 100, canvas.height / 2);
+  alert('You win! You can go to lext nevel.');
+  location = 't4a02-game-level-two-by-yuka.html';
+}//function gameOver() is done
+  
+  
+  
+  
 
 // start the game
 requestAnimationFrame(loop);
