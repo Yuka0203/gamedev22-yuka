@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.1</h4>
+  <h4>Version 0.0.0.2</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -25,6 +25,7 @@
   <li>If the ball goes falldown, you lose
   <li>Have fun!
   <li>wanna add sound, score
+  <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a></li>
   </font>
   
   
@@ -293,9 +294,9 @@ function isGameOver() {
 }//function isGameOver() is done
 
 function gameOver() {
-  ctx.font = '40px Arial';
-  ctx.fillStyle = 'red';
-  ctx.fillText('GAME OVER', canvas.width / 2 - 100, canvas.height / 2);
+  context.font = '40px Arial';
+  context.fillStyle = 'red';
+  context.fillText('GAME OVER', canvas.width / 2 - 100, canvas.height / 2);
   alert('You win! You can go to lext nevel.');
   location = 't4a02-game-level-two-by-yuka.html';
 }//function gameOver() is done
