@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.5</h4>
+  <h4>Version 0.0.0.6</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -245,7 +245,7 @@ document.addEventListener('keydown', function(e) {
   // space key =32, Enter key = 13
   // if they ball is not moving, we can launch the ball using the space key. ball
   // will move towards the bottom right to start
-  if (ball.dx === 0 && ball.dy === 0 && e.which === 13) {
+  if (ball.dx === 0 && ball.dy === 0 && e.which === 32) {
     ball.dx = ball.speed;
     ball.dy = ball.speed;
   }
