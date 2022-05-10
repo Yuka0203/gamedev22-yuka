@@ -17,14 +17,14 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.4</h4>
+  <h4>Version 0.0.0.5</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
   <li>Use arrow keys to move the paddle
   <li>If the ball goes falldown, you lose
   <li>Have fun!
-  <li>wanna add sound, score
+  <li>wanna add sound, score (be able to store)
   <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a></li>
   </font>
   
@@ -115,8 +115,8 @@ const ball = {
   speed: 2,
 
   // ball velocity
-  dx: 2,
-  dy: 2
+  dx: 0,
+  dy: 0
 };
 
 // check for collision between two objects using axis-aligned bounding box (AABB)
@@ -138,10 +138,10 @@ function loop() {
 
   // prevent paddle from going through walls
   if (paddle.x < wallSize) {
-    paddle.x = wallSize
+    paddle.x = canvas.width - wallSize*2
   }
   else if (paddle.x + brickWidth > canvas.width - wallSize) {
-    paddle.x = canvas.width - wallSize - brickWidth;
+    paddle.x = canvas.width - wallSize - wallSize;
   }
 
   // move ball by it's velocity
@@ -152,16 +152,16 @@ function loop() {
   // left & right walls
   if (ball.x < wallSize) {
     ball.x = wallSize;
-    ball.dx *= -1;
+    ball.dx *= -2;
   }
   else if (ball.x + ball.width > canvas.width - wallSize) {
     ball.x = canvas.width - wallSize - ball.width;
-    ball.dx *= -1;
+    ball.dx *= -2;
   }
   // top wall
   if (ball.y < wallSize) {
     ball.y = wallSize;
-    ball.dy *= -1;
+    ball.dy *= -2;
   }
 
   // reset ball if it goes below the screen
@@ -176,7 +176,7 @@ function loop() {
 
   // check to see if ball collides with paddle. if they do change y velocity
   if (collides(ball, paddle)) {
-    ball.dy *= -1;
+    ball.dy *= -2;
 
     // move ball above the paddle otherwise the collision will happen again
     // in the next frame
@@ -196,11 +196,11 @@ function loop() {
       // account for the balls speed since it will be inside the brick when it collides
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
-        ball.dy *= -1;
+        ball.dy *= -2;
       }
       // ball is on either side of the brick, change x velocity
       else {
-        ball.dx *= -1;
+        ball.dx *= -2;
       }
 
       break;
@@ -242,10 +242,10 @@ document.addEventListener('keydown', function(e) {
     paddle.dx = 4;
   }
 
-  // space key
+  // space key =32, Enter key = 13
   // if they ball is not moving, we can launch the ball using the space key. ball
   // will move towards the bottom right to start
-  if (ball.dx === 0 && ball.dy === 0 && e.which === 32) {
+  if (ball.dx === 0 && ball.dy === 0 && e.which === 13) {
     ball.dx = ball.speed;
     ball.dy = ball.speed;
   }
