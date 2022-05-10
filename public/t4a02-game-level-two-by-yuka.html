@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.3</h4>
+  <h4>Version 0.0.0.4</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -170,6 +170,8 @@ function loop() {
     ball.y = 260;
     ball.dx = 0;
     ball.dy = 0;
+    alert('GAME OVER')  
+    location.reload()  
   }
 
   // check to see if ball collides with paddle. if they do change y velocity
@@ -233,11 +235,11 @@ function loop() {
 document.addEventListener('keydown', function(e) {
   // left arrow key
   if (e.which === 37) {
-    paddle.dx = -3;
+    paddle.dx = -4;
   }
   // right arrow key
   else if (e.which === 39) {
-    paddle.dx = 3;
+    paddle.dx = 4;
   }
 
   // space key
@@ -266,48 +268,9 @@ document.addEventListener('keyup', function(e) {
   
 
   
-let game = {    
-    requestId: null,
-    timeoutId: null,
-    leftKey: false,
-    rightKey: false,
-    on: false,
-    music: true,
-    sfx: true
-}  
+
   
-function animate(timestamp) { 
-  game.time.elapsed = timestamp - game.time.start;
-  if (game.time.elapsed > game.time.refreshRate) {
-    game.time.start = timestamp;
 
-    paint();
-    update();
-    detectCollision();
-
-    if (isGameOver()) return;
-  }
-
-  requestId = requestAnimationFrame(animate);
-}//function animate(timestamp) is done
-
-function isGameOver() {
-  const isBallLost = () => ball.y > canvas.height;
-  
-  if (isBallLost()) {
-    gameOver();
-    return true;
-  }  
-  return false;
-}//function isGameOver() is done
-
-function gameOver() {
-  context.font = '40px Arial';
-  context.fillStyle = 'red';
-  context.fillText('GAME OVER', canvas.width / 2 - 100, canvas.height / 2);
-  alert('You win! You can go to lext nevel.');
-  location = 't4a02-game-level-two-by-yuka.html';
-}//function gameOver() is done
   
   
   
