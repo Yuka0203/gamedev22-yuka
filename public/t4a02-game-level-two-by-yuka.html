@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.2</h4>
+  <h4>Version 0.0.0.3</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -115,8 +115,8 @@ const ball = {
   speed: 2,
 
   // ball velocity
-  dx: 0,
-  dy: 0
+  dx: 2,
+  dy: 2
 };
 
 // check for collision between two objects using axis-aligned bounding box (AABB)
@@ -266,7 +266,15 @@ document.addEventListener('keyup', function(e) {
   
 
   
-  
+let game = {    
+    requestId: null,
+    timeoutId: null,
+    leftKey: false,
+    rightKey: false,
+    on: false,
+    music: true,
+    sfx: true
+}  
   
 function animate(timestamp) { 
   game.time.elapsed = timestamp - game.time.start;
