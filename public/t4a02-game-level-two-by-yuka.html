@@ -17,9 +17,9 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.6</h4>
+  <h4>Version 0.0.0.7</h4>
   
-<h3>Instruction:</h3>
+<h2>Instruction:</h2>
   <li>Click Space key to start
   <li>Use arrow keys to move the paddle
   <li>If the ball goes falldown, you lose
@@ -138,10 +138,10 @@ function loop() {
 
   // prevent paddle from going through walls
   if (paddle.x < wallSize) {
-    paddle.x = canvas.width - wallSize*2
+    paddle.x = wallSize
   }
   else if (paddle.x + brickWidth > canvas.width - wallSize) {
-    paddle.x = canvas.width - wallSize - wallSize;
+    paddle.x = canvas.width - wallSize;
   }
 
   // move ball by it's velocity
@@ -152,7 +152,7 @@ function loop() {
   // left & right walls
   if (ball.x < wallSize) {
     ball.x = wallSize;
-    ball.dx *= -2;
+    ball.dx *= -1;
   }
   else if (ball.x + ball.width > canvas.width - wallSize) {
     ball.x = canvas.width - wallSize - ball.width;
@@ -161,7 +161,7 @@ function loop() {
   // top wall
   if (ball.y < wallSize) {
     ball.y = wallSize;
-    ball.dy *= -2;
+    ball.dy *= -1;
   }
 
   // reset ball if it goes below the screen
@@ -176,7 +176,7 @@ function loop() {
 
   // check to see if ball collides with paddle. if they do change y velocity
   if (collides(ball, paddle)) {
-    ball.dy *= -2;
+    ball.dy *= -1;
 
     // move ball above the paddle otherwise the collision will happen again
     // in the next frame
@@ -196,11 +196,11 @@ function loop() {
       // account for the balls speed since it will be inside the brick when it collides
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
-        ball.dy *= -2;
+        ball.dy *= -1;
       }
       // ball is on either side of the brick, change x velocity
       else {
-        ball.dx *= -2;
+        ball.dx *= -1;
       }
 
       break;
