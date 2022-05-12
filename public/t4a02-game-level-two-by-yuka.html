@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.10</h4>
+  <h4>Version 0.0.0.11</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -81,6 +81,7 @@ const bricks = [];
 
 // create the level by looping over each row and column in the level1 array
 // and creating an object with the bricks position (x, y) and color
+        // may be i can add information about score
 for (let row = 0; row < level1.length; row++) {
   for (let col = 0; col < level1[row].length; col++) {
     const colorCode = level1[row][col];
@@ -100,7 +101,7 @@ const paddle = {
   x: canvas.width / 2 - brickWidth / 2,
   y: 400,
   width: 70,
-  height: brickHeight,
+  height: 10,
 
   // paddle x velocity
   dx: 0
@@ -141,7 +142,7 @@ function loop() {
   if (paddle.x < wallSize) {
     paddle.x = wallSize;
   }
-  else if (paddle.x + brickWidth > canvas.width - wallSize) {
+  else if (paddle.x + 70 > canvas.width - wallSize) {
     paddle.x = canvas.width - wallSize;
   }
 
@@ -171,7 +172,7 @@ function loop() {
     ball.y = 260;
     ball.dx = 0;
     ball.dy = 0;
-    alert('GAME OVER')  
+    alert('GAME OVER. TRY AGAIN')  
     location.reload()  
   }
 
@@ -192,17 +193,23 @@ function loop() {
     if (collides(ball, brick)) {
       // remove brick from the bricks array
       bricks.splice(i, 1);
-
+      
       // ball is above or below the brick, change y velocity
       // account for the balls speed since it will be inside the brick when it collides
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
-        ball.dy *= -1;
+        ball.dy *= -2;
       }
       // ball is on either side of the brick, change x velocity
       else {
-        ball.dx *= -1;
+        ball.dx *= -2;
       }
+      
+      else (i.status = 0) {
+        alert("YOU WIN, CONGRATULATIONS! GO TO NEXT LEVEL!");
+            location = 't4a03-game-level-three-by-yuka.html';
+            clearInterval(interval); // Needed for Chrome to end game
+        }
 
       break;
     }
@@ -272,9 +279,9 @@ const score = 0;
   
   
 function drawScore() {
-    context.font = '20px';
+    context.font = '50px serif';
     context.fillStyle = 'white';
-    context.fillText("Score: " + score) = canvas(20, 0);
+    context.fillText("Score: " + score, 150, 0, 100);
 }
  
 function collisionDetection() {
