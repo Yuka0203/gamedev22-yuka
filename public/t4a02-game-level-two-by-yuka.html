@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.9</h4>
+  <h4>Version 0.0.0.10</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -139,10 +139,10 @@ function loop() {
 
   // prevent paddle from going through walls
   if (paddle.x < wallSize) {
-    paddle.x = wallSize*2
+    paddle.x = wallSize;
   }
   else if (paddle.x + brickWidth > canvas.width - wallSize) {
-    paddle.x = canvas.width - wallSize*2;
+    paddle.x = canvas.width - wallSize;
   }
 
   // move ball by it's velocity
@@ -264,36 +264,27 @@ document.addEventListener('keyup', function(e) {
   
   
   
-var brickRowCount = 4;
-var brickColumnCount = 9;
-var x = canvas.width/2;
-var y = canvas.height-30;
-var dy = -2;
-var score = 0;
+const brickRowCount = 4;
+const brickColumnCount = 9;
+const x = canvas.width/2;
+const y = canvas.height-30;
+const score = 0;
   
   
 function drawScore() {
-    context.font = '24px ArcadeClassic';
+    context.font = '20px';
     context.fillStyle = 'white';
-    context.fillText("Score: " + score, 20, 0);
+    context.fillText("Score: " + score) = canvas(20, 0);
 }
  
 function collisionDetection() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                    score++;
-                    if(score == brickRowCount*brickColumnCount) {
-                        alert("YOU WIN, CONGRATULATIONS! GO TO NEXT LEVEL!");
-                        location = 't4a03-game-level-three-by-yuka.html';
-                        clearInterval(interval); // Needed for Chrome to end game
-                    }
-                }
-            }
+    for(let c=0; c<brickColumnCount; c++) {
+        for(let r=0; r<brickRowCount; r++) {
+            const b = bricks[c][r];
+            b.status = 0;
+            alert("YOU WIN, CONGRATULATIONS! GO TO NEXT LEVEL!");
+            location = 't4a03-game-level-three-by-yuka.html';
+            clearInterval(interval); // Needed for Chrome to end game
         }
     }
 }
@@ -301,11 +292,10 @@ function collisionDetection() {
   
   
   
+  
 
 // start the game
 requestAnimationFrame(loop);
-drawScore();  
-collisionDetection();
 </script>
 </body>
 </html>
