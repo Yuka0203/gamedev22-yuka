@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.8</h4>
+  <h4>Version 0.0.0.9</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -266,6 +266,10 @@ document.addEventListener('keyup', function(e) {
   
 var brickRowCount = 4;
 var brickColumnCount = 9;
+var x = canvas.width/2;
+var y = canvas.height-30;
+var dy = -2;
+var score = 0;
   
   
 function drawScore() {
@@ -273,28 +277,7 @@ function drawScore() {
     context.fillStyle = 'white';
     context.fillText("Score: " + score, 20, 0);
 }
-  
-  
- function collisionDetection() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                    score++;
-                }
-            }
-        }
-    }
-}
-  
-drawScore();
-  
-  
-  
-  
+ 
 function collisionDetection() {
     for(var c=0; c<brickColumnCount; c++) {
         for(var r=0; r<brickRowCount; r++) {
@@ -305,7 +288,7 @@ function collisionDetection() {
                     b.status = 0;
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
-                        alert("YOU WIN, CONGRATULATIONS!");
+                        alert("YOU WIN, CONGRATULATIONS! GO TO NEXT LEVEL!");
                         location = 't4a03-game-level-three-by-yuka.html';
                         clearInterval(interval); // Needed for Chrome to end game
                     }
@@ -321,6 +304,8 @@ function collisionDetection() {
 
 // start the game
 requestAnimationFrame(loop);
+drawScore();  
+collisionDetection();
 </script>
 </body>
 </html>
