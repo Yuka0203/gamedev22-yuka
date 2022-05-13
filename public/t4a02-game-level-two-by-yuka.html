@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.19</h4>
+  <h4>Version 0.0.0.20</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -78,10 +78,27 @@ const brickHeight = 12;
 // wall will be 12px
 const wallSize = 12;
 const bricks = [];
+  
+  
+  
+  
+//go to next level
+  if (bricks.status = 0) {
+    alert("YOU WIN! CONGRATULATIONS! GO TO NEXT LEVEL")
+    location = 't4a03-game-level-three-by-yuka.html'
+  }
 
+   
+   
+   
+   
+   
+   
+   
+   
 // create the level by looping over each row and column in the level1 array
 // and creating an object with the bricks position (x, y) and color
-        // may be i can add information about score
+                                                                                        // may be i can add information about score
 for (let row = 0; row < level1.length; row++) {
   for (let col = 0; col < level1[row].length; col++) {
     const colorCode = level1[row][col];
@@ -209,14 +226,6 @@ function loop() {
   
       }
       
-      //go to next level
-   for (let i = 0; i < bricks.length; i++) {
-     if (i.status = 0) {
-        alert("YOU WIN! CONGRATULATIONS! GO TO NEXT LEVEL!")
-        location = 't4a03-game-level-three-by-yuka.html'
-     }
-   }
-      
       
   }// function(loop) is done
   
@@ -246,7 +255,11 @@ function loop() {
 
   
   
-  
+  //draw score
+  context.font = '50px serif';
+  context.fillStyle = 'white';
+  context.fillText("Score: " + "0", 150, 0, 100);
+}
   
 
   
@@ -289,11 +302,7 @@ document.addEventListener('keyup', function(e) {
  
 
   
-  //draw score
-  context.font = '50px serif';
-  context.fillStyle = 'white';
-  context.fillText("Score: " + "0", 150, 0, 100);
-}
+ 
   
   
   
