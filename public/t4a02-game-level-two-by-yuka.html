@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.13</h4>
+  <h4>Version 0.0.0.14</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -114,7 +114,7 @@ const ball = {
   height: 8,
 
   // how fast the ball should go in either the x or y direction
-  speed: 2,
+  speed: 3,
 
   // ball velocity
   dx: 0,
@@ -142,10 +142,10 @@ function loop() {
   if (paddle.x < wallSize) {
     paddle.x = wallSize;
   }
-  else if (paddle.x + 70 > canvas.width - wallSize) {
+  else if (paddle.x > canvas.width - wallSize) {
     paddle.x = canvas.width - wallSize;
   }
-
+  
   // move ball by it's velocity
   ball.x += ball.dx;
   ball.y += ball.dy;
