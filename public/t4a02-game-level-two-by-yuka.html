@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.12</h4>
+  <h4>Version 0.0.0.13</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -200,11 +200,11 @@ function loop() {
       // account for the balls speed since it will be inside the brick when it collides
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
-        ball.dy *= -2;
+        ball.dy *= -1;
       }
       // ball is on either side of the brick, change x velocity
       else {
-        ball.dx *= -2;
+        ball.dx *= -1;
       }
       
       if (brick.status = 0) {
