@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.29</h4>
+  <h4>Version 0.0.0.30</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -81,22 +81,6 @@ const brickHeight = 12;
 const wallSize = 12;
 const bricks = [];
   
-  
-  
-  
-//go to next level
-if (bricks.status = 0) {
-alert("YOU WIN! CONGRATULATIONS! GO TO NEXT LEVEL")
-location = 't4a03-game-level-three-by-yuka.html'
-}
-
-   
-   
-   
-   
-   
-   
-   
    
 // create the level by looping over each row and column in the level1 array
 // and creating an object with the bricks position (x, y) and color
@@ -212,7 +196,11 @@ function loop() {
     if (collides(ball, brick)) {
       // remove brick from the bricks array
       bricks.splice(i, 1) 
-      
+      //go to next level
+if else (bricks.status = 0) {
+alert("YOU WIN! GO TO NEXT LEVEL")
+location = 't4a03-game-level-three-by-yuka.html'
+}
       // ball is above or below the brick, change y velocity
       // account for the balls speed since it will be inside the brick when it collides
       if (ball.y + ball.height - ball.speed <= brick.y ||
@@ -254,10 +242,11 @@ function loop() {
 
   
   
-  //draw score
+function drawScore() {  //draw score
 context.font = '50px serif';
 context.fillStyle = 'white';
 context.fillText("Score: " + "0", 150, 0, 100);
+}
 
   
 
