@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.25</h4>
+  <h4>Version 0.0.0.26</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -64,8 +64,10 @@ const level1 = [
 
 // create a mapping between color short code (R, O, G, Y) and color name
 const colorMap = {
+  'R': 'red',
+  'O': 'orange',
   'G': 'green',
-  'Y': 'yellow'
+  'Y': 'yellow
 };
 
 // use a 2px gap between each brick
@@ -83,10 +85,10 @@ const bricks = [];
   
   
 //go to next level
-//  if (bricks.status = 0) {
-//    alert("YOU WIN! CONGRATULATIONS! GO TO NEXT LEVEL")
-//    location = 't4a03-game-level-three-by-yuka.html'
-//  }
+if (bricks.status = 0) {
+alert("YOU WIN! CONGRATULATIONS! GO TO NEXT LEVEL")
+location = 't4a03-game-level-three-by-yuka.html'
+}
 
    
    
@@ -253,10 +255,10 @@ function loop() {
   
   
   //draw score
-  //context.font = '50px serif';
-  //context.fillStyle = 'white';
-  //context.fillText("Score: " + "0", 150, 0, 100);
-//}
+context.font = '50px serif';
+context.fillStyle = 'white';
+context.fillText("Score: " + "0", 150, 0, 100);
+}
   
 
   
