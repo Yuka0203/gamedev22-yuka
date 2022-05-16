@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.32</h4>
+  <h4>Version 0.0.0.33</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -43,6 +43,13 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
+  //draw score
+context.font = '50px serif';
+context.fillStyle = 'white';
+context.fillText("Score: " + "0", 150, 30);
+}
+  
+  
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
 // of 4 colors: red, orange, green, and yellow
 const level1 = [
@@ -59,7 +66,7 @@ const level1 = [
   [],
   [],
   [],
-  ['Y','Y','Y','Y','Y','Y','Y','Y','Y']
+  ['','','','','','','Y','','']
 ];
 
 // create a mapping between color short code (R, O, G, Y) and color name
@@ -239,21 +246,7 @@ location = 't4a03-game-level-three-by-yuka.html'
   // draw paddle
   context.fillStyle = 'cyan';
   context.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-}
-
-  
-  
-function drawScore() {  //draw score
-context.font = '50px serif';
-context.fillStyle = 'white';
-context.fillRect("Score: " + "0", 150, 0, 100);
-}
-
-  
-
-  
-  
-  
+}  
   
 // listen to keyboard events to move the paddle
 document.addEventListener('keydown', function(e) {
