@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.31</h4>
+  <h4>Version 0.0.0.32</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -196,8 +196,9 @@ function loop() {
     if (collides(ball, brick)) {
       // remove brick from the bricks array
       bricks.splice(i, 1) 
+      
       //go to next level
-if (bricks.status = 0) {
+if (i.status = 0) {
 alert("YOU WIN! GO TO NEXT LEVEL")
 location = 't4a03-game-level-three-by-yuka.html'
 }
@@ -245,7 +246,7 @@ location = 't4a03-game-level-three-by-yuka.html'
 function drawScore() {  //draw score
 context.font = '50px serif';
 context.fillStyle = 'white';
-context.fillText("Score: " + "0", 150, 0, 100);
+context.fillRect("Score: " + "0", 150, 0, 100);
 }
 
   
