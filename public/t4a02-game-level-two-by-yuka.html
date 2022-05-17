@@ -9,7 +9,7 @@
   }
 
   body {
-    background: black;
+    background: HotPink;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.38</h4>
+  <h4>Version 0.0.0.39</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -63,6 +63,11 @@ const level1 = [
   ['Y','Y','Y','Y','Y','Y','Y','Y','Y']
 ];
 
+  if(level1.status = 0) {
+      alert("YOU WIN! GO TO NEXT LEVEL!")
+      location = 't4a03-game-level-three-by-yuka.html'
+    }
+  
 // create a mapping between color short code (R, O, G, Y) and color name
 const colorMap = {
   'R': 'red',
@@ -134,6 +139,10 @@ function collides(obj1, obj2) {
          obj1.y + obj1.height > obj2.y;
 }
 
+  
+  
+  
+  
 // game loop
 function loop() {
   requestAnimationFrame(loop);
@@ -194,12 +203,6 @@ function loop() {
   for (let i = 0; i < bricks.length; i++) {
     const brick = bricks[i];
     
-    //go to next level
-    if(brick.status = 0) {
-      alert("YOU WIN! GO TO NEXT LEVEL!")
-      location = 't4a03-game-level-three-by-yuka.html'
-    }
-    
     if (collides(ball, brick)) {
       // remove brick from the bricks array
       bricks.splice(i, 1) 
@@ -218,6 +221,12 @@ function loop() {
       break;
     } 
   }// function(loop) is done
+  
+  
+  
+  
+  
+  
   
   //draw score
   context.font = '30px Arial';
