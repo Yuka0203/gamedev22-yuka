@@ -9,7 +9,7 @@
   }
 
   body {
-    background: Pink;
+    background: DarkSlateGray;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.40</h4>
+  <h4>Version 0.0.2.41</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -25,6 +25,7 @@
   <li>If the ball goes falldown, you lose
   <li>Have fun!
   <li>wanna add sound, score (be able to store)
+  <li><a href="https://gist.github.com/straker/98a2aed6a7686d26c04810f08bfaf66b">Good reference Breakout</a>
   <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Good reference 2</a></li>
   </font>
@@ -43,6 +44,7 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
   
+const score = 0;  
   
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
 // of 4 colors: red, orange, green, and yellow
@@ -198,13 +200,27 @@ function loop() {
       // remove brick from the bricks array
       bricks.splice(i, 1) 
       
-    if(i.status = 0) {
-      alert("YOU WIN! GO TO NEXT LEVEL!")
-      location = 't4a03-game-level-three-by-yuka.html'
-    }
+      // ball is above or below the brick, change y velocity
+      // account for the balls speed since it will be inside the brick when it
+      // collides
+      if (ball.y + ball.height - ball.speed <= brick.y ||
+          ball.y >= brick.y + brick.height - ball.speed) {
+        ball.dy *= -1;
+      }
+      // ball is on either side of the brick, change x velocity
+      else {
+        ball.dx *= -1;
+      }
       
       break;
     } 
+    
+    
+    if(brick.status = 0) {
+      alert("YOU WIN! GO TO NEXT LEVEL!")
+      location = 't4a03-game-level-three-by-yuka.html'
+    }
+    
   }// function(loop) is done
   
   
@@ -216,7 +232,7 @@ function loop() {
   //draw score
   context.font = '30px Arial';
   context.fillStyle = 'white';
-  context.fillText("Score: " + "0", 150, 40);
+  context.fillText("Score: " + score, 150, 40);
   
   // draw walls
   context.fillStyle = 'lightgrey';
