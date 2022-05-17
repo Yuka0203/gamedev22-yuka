@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.35</h4>
+  <h4>Version 0.0.0.36</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -42,12 +42,6 @@
 <script>
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
-
-  //draw score
-context.font = '30px Arial';
-context.fillStyle = 'white';
-context.fillText("Score: " + "0", 150, 30);
-
   
   
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
@@ -199,16 +193,17 @@ function loop() {
   // and change the ball velocity based on the side the brick was hit on
   for (let i = 0; i < bricks.length; i++) {
     const brick = bricks[i];
-
+    
+    //go to next level
+    if(i.status = 0) {
+      alert("YOU WIN! GO TO NEXT LEVEL!")
+      location = 't4a03-game-level-three-by-yuka.html'
+    }
+    
     if (collides(ball, brick)) {
       // remove brick from the bricks array
       bricks.splice(i, 1) 
       
-      //go to next level
-if (i.status = 0) {
-alert("YOU WIN! GO TO NEXT LEVEL")
-location = 't4a03-game-level-three-by-yuka.html'
-}
       // ball is above or below the brick, change y velocity
       // account for the balls speed since it will be inside the brick when it collides
       if (ball.y + ball.height - ball.speed <= brick.y ||
@@ -224,8 +219,13 @@ location = 't4a03-game-level-three-by-yuka.html'
     } 
   }// function(loop) is done
   
-  
+  //draw score
+context.font = '30px Arial';
+context.fillStyle = 'white';
+context.fillText("Score: " + "0", 150, 30);
 
+  
+  
   // draw walls
   context.fillStyle = 'lightgrey';
   context.fillRect(0, 0, canvas.width, wallSize);
