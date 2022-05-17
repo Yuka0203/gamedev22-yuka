@@ -9,7 +9,7 @@
   }
 
   body {
-    background: HotPink;
+    background: Pink;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.39</h4>
+  <h4>Version 0.0.2.40</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -62,11 +62,6 @@ const level1 = [
   [],
   ['Y','Y','Y','Y','Y','Y','Y','Y','Y']
 ];
-
-  if(level1.status = 0) {
-      alert("YOU WIN! GO TO NEXT LEVEL!")
-      location = 't4a03-game-level-three-by-yuka.html'
-    }
   
 // create a mapping between color short code (R, O, G, Y) and color name
 const colorMap = {
@@ -181,10 +176,6 @@ function loop() {
 
   // reset ball if it goes below the screen
   if (ball.y > canvas.height) {
-    ball.x = 130;
-    ball.y = 260;
-    ball.dx = 0;
-    ball.dy = 0;
     alert('GAME OVER. TRY AGAIN')  
     location.reload()  
   }
@@ -207,16 +198,10 @@ function loop() {
       // remove brick from the bricks array
       bricks.splice(i, 1) 
       
-      // ball is above or below the brick, change y velocity
-      // account for the balls speed since it will be inside the brick when it collides
-      if (ball.y + ball.height - ball.speed <= brick.y ||
-          ball.y >= brick.y + brick.height - ball.speed) {
-        ball.dy *= -1;
-      }
-      // ball is on either side of the brick, change x velocity
-      else {
-        ball.dx *= -1;
-      }
+    if(i.status = 0) {
+      alert("YOU WIN! GO TO NEXT LEVEL!")
+      location = 't4a03-game-level-three-by-yuka.html'
+    }
       
       break;
     } 
@@ -281,19 +266,6 @@ document.addEventListener('keyup', function(e) {
     paddle.dx = 0;
   }
 });
-  
-  
-  
-  
-  
-  
-
- 
-
-  
- 
-  
-  
   
 
 // start the game
