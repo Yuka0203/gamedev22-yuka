@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.53</h4>
+  <h4>Version 0.0.2.54</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -205,17 +205,17 @@ function loop() {
     const brick = bricks[i];
     
     //go to next level
-    if(brick.status == 0) {
-      alert("YOU WIN! GO TO NEXT LEVEL!");
-      location = 't4a03-game-level-three-by-yuka.html';
-    }
+    //if(brick.status == 0) {
+     // alert("YOU WIN! GO TO NEXT LEVEL!");
+      //location = 't4a03-game-level-three-by-yuka.html';
+   // }
     
     if (collides(ball, brick)) {
       // remove brick from the bricks array
       bricks.splice(i, 1) 
       //update score
       score ++
-    }
+    
     
     
     
