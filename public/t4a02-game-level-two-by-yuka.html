@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.51</h4>
+  <h4>Version 0.0.2.52</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -31,7 +31,7 @@
   </font>
   
   
-<canvas width="400" height="500" id="game" style="background-color:black"></canvas>
+<canvas width="400" height="500" id="game"></canvas>
   
   
   
@@ -266,7 +266,7 @@ function loop() {
   // draw paddle
   context.fillStyle = 'cyan';
   context.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-  }
+  
 
   
 // listen to keyboard events to move the paddle
