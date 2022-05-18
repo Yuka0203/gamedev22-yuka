@@ -44,7 +44,7 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
   
-const score = 0;
+//const score = 0;
   
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
 // of 4 colors: red, orange, green, and yellow
@@ -214,10 +214,7 @@ function loop() {
       // remove brick from the bricks array
       bricks.splice(i, 1) 
       //update score
-     
-    
-    
-    
+     //score++
     
       
       // ball is above or below the brick, change y velocity
@@ -268,7 +265,7 @@ function loop() {
   // draw paddle
   context.fillStyle = 'cyan';
   context.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-  
+}
 
   
 // listen to keyboard events to move the paddle
