@@ -128,7 +128,7 @@ const ball = {
 };
 
 // check for collision between two objects using axis-aligned bounding box (AABB)
-// @see https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
+// see https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
 function collides(obj1, obj2) {
   return obj1.x < obj2.x + obj2.width &&
          obj1.x + obj1.width > obj2.x &&
@@ -205,10 +205,10 @@ function loop() {
     const brick = bricks[i];
     
     //go to next level
-    //if(brick.status == 0) {
-     // alert("YOU WIN! GO TO NEXT LEVEL!");
-      //location = 't4a03-game-level-three-by-yuka.html';
-   // }
+    if(brick.status == 0) {
+      alert("YOU WIN! GO TO NEXT LEVEL!");
+      location = 't4a03-game-level-three-by-yuka.html';
+   }
     
     if (collides(ball, brick)) {
       // remove brick from the bricks array
