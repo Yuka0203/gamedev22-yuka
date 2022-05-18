@@ -17,11 +17,11 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.44</h4>
+  <h4>Version 0.0.2.45</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
-  <li>Use arrow keys to move the paddle
+  <li>Use arrow keys to move the paddle        
   <li>If the ball goes falldown, you lose
   <li>Have fun!
   <li>wanna add score (be able to store)
@@ -31,7 +31,7 @@
   </font>
   
   
-<canvas width="400" height="500" id="game"></canvas>
+<canvas width="400" height="500" id="game" background-color="black"></canvas>
   
   
   
@@ -44,9 +44,7 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
   
-const score = 0;  
-const brickRowCount = 9;
-const brickColumnCount = 1;  
+const score
   
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
 // of 4 colors: red, orange, green, and yellow
@@ -140,25 +138,8 @@ function collides(obj1, obj2) {
 
   
   
-function collisionDetection() {
-    for(let c=0; c<brickColumnCount; c++) {
-        for(let r=0; r<brickRowCount; r++) {
-            const b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                    score++;
-                    if(score == brickRowCount*brickColumnCount) {
-                        alert("YOU WIN! GO TO NEXT LEVEL!");
-                        location = 't4a03-game-level-three-by-yuka.html';
-                        clearInterval(interval); // Needed for Chrome to end game
-                    }
-                }
-            }
-        }
-    }
-}  
+ 
+  
   
   
   
@@ -226,6 +207,16 @@ function loop() {
     if (collides(ball, brick)) {
       // remove brick from the bricks array
       bricks.splice(i, 1) 
+      //update score
+      score ++
+    }
+    
+    
+    //go to next level
+    if(brick.status == 0) {
+      alert("YOU WIN! GO TO NEXT LEVEL!");
+      location = 't4a03-game-level-three-by-yuka.html';
+    }
       
       // ball is above or below the brick, change y velocity
       // account for the balls speed since it will be inside the brick when it
