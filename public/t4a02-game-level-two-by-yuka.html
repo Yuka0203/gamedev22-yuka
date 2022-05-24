@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.60</h4>
+  <h4>Version 0.0.2.61</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -203,15 +203,20 @@ function loop() {
   // check to see if ball collides with a brick. if it does, remove the brick
   // and change the ball velocity based on the side the brick was hit on
   for (let i = 0; i < bricks.length; i++) {
+     if ( i.status == 0 ) {
+      alert("YOU WIN! GO TO NEXT LEVEL!");
+      location = 't4a03-game-level-three-by-yuka.html';
+   }
     const brick = bricks[i];
     
     
     
     if (collides(ball, brick)) {
       // remove brick from the bricks array
-      bricks.splice(i, 1) 
       brickScore++
+      bricks.splice(i, 1) 
       
+    
     
       
       // ball is above or below the brick, change y velocity
@@ -229,10 +234,7 @@ function loop() {
       break;
     } 
     
-    if ( brick.status == 0 ) {
-      alert("YOU WIN! GO TO NEXT LEVEL!");
-      location = 't4a03-game-level-three-by-yuka.html';
-   }
+   
     
   }// function(loop) is done
   
