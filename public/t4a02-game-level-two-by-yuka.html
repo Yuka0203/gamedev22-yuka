@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.72</h4>
+  <h4>Version 0.0.2.73</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -135,28 +135,15 @@ function collides(obj1, obj2) {
          obj1.x + obj1.width > obj2.x &&
          obj1.y < obj2.y + obj2.height &&
          obj1.y + obj1.height > obj2.y;
+  
+  brickScore += 1
 }
 
   
 
   
   
-  
-  
-function goNext () {
-   for (let i = 0; i < bricks.length; i++) {
-      const brick = bricks[i]
-        
-      if ( brick.status == 0 ) {
-      alert("YOU WIN! GO TO NEXT LEVEL!");
-      location = 't4a03-game-level-three-by-yuka.html';
-     }
-        
-      if (collides(ball, brick)) {
-        brickScore += 10;
-     }   
-   }
-}  
+
  
   
   
@@ -221,6 +208,13 @@ function loop() {
     alert('GAME OVER. TRY AGAIN')  
     location.reload()  
   }
+  
+  if (level1 == 0) {
+     alert('YOU WIN! GO TO NEXT LEVEL!')
+    location = 't4a03-game-level-three-by-yuka.html'
+}
+  
+  
 
   // check to see if ball collides with paddle. if they do change y velocity
   if (collides(ball, paddle)) {
