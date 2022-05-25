@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.71</h4>
+  <h4>Version 0.0.2.72</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -138,25 +138,25 @@ function collides(obj1, obj2) {
 }
 
   
-  function ballHitBrick(ball, brick) {
-    brick.kill();
-    brickScore += 10;
-}
+
   
   
   
   
-  
-  function goNext () {
-      for (let i = 0; i < bricks.length; i++) {
-        const brick = bricks[i];
+function goNext () {
+   for (let i = 0; i < bricks.length; i++) {
+      const brick = bricks[i]
         
-     if ( i.status == 0 ) {
+      if ( brick.status == 0 ) {
       alert("YOU WIN! GO TO NEXT LEVEL!");
       location = 't4a03-game-level-three-by-yuka.html';
      }
-      }
-  }  
+        
+      if (collides(ball, brick)) {
+        brickScore += 10;
+     }   
+   }
+}  
  
   
   
