@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.76</h4>
+  <h4>Version 0.0.2.77</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -88,7 +88,6 @@ const bricks = [];
    
 // create the level by looping over each row and column in the level1 array
 // and creating an object with the bricks position (x, y) and color
-                                                                                        // may be i can add information about score
 for (let row = 0; row < level1.length; row++) {
   for (let col = 0; col < level1[row].length; col++) {
     const colorCode = level1[row][col];
@@ -252,17 +251,14 @@ function loop() {
   // check to see if ball collides with a brick. if it does, remove the brick
   // and change the ball velocity based on the side the brick was hit on
   for (let i = 0; i < bricks.length; i++) {
-     
-    
     const brick = bricks[i];
     
-    
-    
     if (collides(ball, brick)) {
-      // remove brick from the bricks array
-     
-      bricks.splice(i, 1) 
+      brickScore++;
       
+      
+      // remove brick from the bricks array
+      bricks.splice(i, 1) 
       
       // ball is above or below the brick, change y velocity
       // account for the balls speed since it will be inside the brick when it
