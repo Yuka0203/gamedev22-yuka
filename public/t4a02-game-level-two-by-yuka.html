@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.74</h4>
+  <h4>Version 0.0.2.75</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -44,7 +44,7 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
   
-//const score = 0;
+
   
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
 // of 4 colors: red, orange, green, and yellow
@@ -127,7 +127,7 @@ const ball = {
   dx: 0,
   dy: 0
 };
-
+  
 // check for collision between two objects using axis-aligned bounding box (AABB)
 // see https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
 function collides(obj1, obj2) {
@@ -138,9 +138,31 @@ function collides(obj1, obj2) {
 }
 
   
-
   
   
+  
+  
+  
+  
+//for adding score  
+const x = canvas.width/2;  
+const y = canvas.height-30;  
+const dy = -2
+  
+  function collisionDetection() {
+    for(var c=0; c<1; c++) {
+        for(var r=0; r<9; r++) {
+            var b = bricks[c][r];
+            if(b.status == 1) {
+                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                    dy = -dy;
+                    b.status = 0;
+                    brickScore++;
+                }
+            }
+        }
+    }
+}
 
  
   
@@ -217,7 +239,7 @@ function loop() {
   // check to see if ball collides with paddle. if they do change y velocity
   if (collides(ball, paddle)) {
     ball.dy *= -1;
-    brickScore += 1;
+    
 
     // move ball above the paddle otherwise the collision will happen again
     // in the next frame
