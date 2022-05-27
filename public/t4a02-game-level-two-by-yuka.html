@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.84</h4>
+  <h4>Version 0.0.2.85</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -232,7 +232,7 @@ function loop() {
   }
   
   if (bricks == 0) {
-     alert('YOU WIN! GO TO NEXT LEVEL!')
+    alert('YOU WIN! GO TO NEXT LEVEL!')
     location = 't4a03-game-level-three-by-yuka.html'
 }
   
@@ -240,7 +240,6 @@ function loop() {
 
   // check to see if ball collides with paddle. if they do change y velocity
   if (collides(ball, paddle)) {
-    score += 1;
     ball.dy *= -1;
     
 
@@ -257,6 +256,7 @@ function loop() {
     if (collides(ball, brick)) {
       // remove brick from the bricks array
       bricks.splice(i, 1);
+      score += 1;
   
       // ball is above or below the brick, change y velocity
       // account for the balls speed since it will be inside the brick when it
