@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.0</h4>
+  <h4>Version 0.0.0.1</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -62,7 +62,7 @@ const level1 = [
   [],
   [],
   [],
-  ['Y','Y','Y','Y','Y','Y','Y','Y','Y']
+  ['Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y']
 ];
   
 // create a mapping between color short code (R, O, G, Y) and color name
@@ -75,7 +75,7 @@ const colorMap = {
 
 // use a 2px gap between each brick
 const brickGap = 2;
-const brickWidth = 40;
+const brickWidth = 25;
 const brickHeight = 12;
 const brickScore = 0;
 
@@ -111,7 +111,7 @@ const paddle = {
   height: 10,
 
   // paddle x velocity
-  dx: 0
+  dx: 1
 };
 
 const ball = {
@@ -121,7 +121,7 @@ const ball = {
   height: 8,
 
   // how fast the ball should go in either the x or y direction
-  speed: 3,
+  speed: 4,
 
   // ball velocity
   dx: 0,
@@ -266,11 +266,11 @@ function loop() {
       // collides
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
-        ball.dy *= -1;
+        ball.dy *= -2;
       }
       // ball is on either side of the brick, change x velocity
       else {
-        ball.dx *= -1;
+        ball.dx *= -2;
       }
       
       break;
