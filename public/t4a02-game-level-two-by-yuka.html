@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.85</h4>
+  <h4>Version 0.0.2.86</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -97,7 +97,8 @@ for (let row = 0; row < level1.length; row++) {
       y: wallSize + (brickHeight + brickGap) * row,
       color: colorMap[colorCode],
       width: brickWidth,
-      height: brickHeight
+      height: brickHeight,
+      points: (5 - row) *2
     });
   }
 }
@@ -159,7 +160,7 @@ function countScore() {
         if (x > b.x && x < b.x+brickWindth && y > b.y+brickHeight) {
           dy = -dy;
           b.status = 0;
-          score++;
+          score += brick.points
         }
       }
     }
@@ -256,7 +257,7 @@ function loop() {
     if (collides(ball, brick)) {
       // remove brick from the bricks array
       bricks.splice(i, 1);
-      score += 1;
+      
   
       // ball is above or below the brick, change y velocity
       // account for the balls speed since it will be inside the brick when it
@@ -270,8 +271,8 @@ function loop() {
         ball.dx *= -1;
       }
       
-      
       break;
+      score += brick.points
     } 
     
    
