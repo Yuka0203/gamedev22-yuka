@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.83</h4>
+  <h4>Version 0.0.2.84</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -159,7 +159,7 @@ function countScore() {
         if (x > b.x && x < b.x+brickWindth && y > b.y+brickHeight) {
           dy = -dy;
           b.status = 0;
-          brickScore++;
+          score++;
         }
       }
     }
@@ -240,6 +240,7 @@ function loop() {
 
   // check to see if ball collides with paddle. if they do change y velocity
   if (collides(ball, paddle)) {
+    score += 1;
     ball.dy *= -1;
     
 
@@ -269,7 +270,6 @@ function loop() {
         ball.dx *= -1;
       }
       
-      ++score
       
       break;
     } 
