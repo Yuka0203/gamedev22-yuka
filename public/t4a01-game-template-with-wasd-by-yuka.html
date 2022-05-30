@@ -236,9 +236,9 @@ You can use arrow keys and wasd keys. DO NOT TOUCH THORNS, HIT THE QUESTOIN MARK
    
 
 <div style="text-align:center;width:100px;"> 
-<button type=button value="Image Up Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<button type=button value="Image Up Fast Button" value="upButton" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
-  speedY = -5;                                                                                                               
+  upButton.speedY = -5;                                                                                                               
   myCheckHit()     // checks for all collisions
 }"><img src="https://cdn-icons-png.flaticon.com/512/25/25282.png" height=30 width=30></button>
    
@@ -248,18 +248,18 @@ You can use arrow keys and wasd keys. DO NOT TOUCH THORNS, HIT THE QUESTOIN MARK
    
    
 
- <button type=button value="Image Left Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+ <button type=button value="Image Left Fast Button" value="leftButton" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
-  speedX = -1;                                                                                                                  
+  leftButton.speedX = -1;                                                                                                                  
   myCheckHit()     // checks for all collisions
 }"><img src="https://www.shareicon.net/data/512x512/2015/12/17/688824_arrows_512x512.png" height=30 width=30></button>  
    
  
    
    
-<button type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<button type=button value="Image Right Fast Button" value="rightButton" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  speedX = 1;                                                                                                                  
+  rightButton.speedX = 1;                                                                                                                  
   myCheckHit()     // checks for all collisions
 }"><img src="https://simg.nicepng.com/png/small/135-1350731_chevron-sign-to-right-vector-resume-button.png" height=30 width=30></button>
 
@@ -270,9 +270,9 @@ You can use arrow keys and wasd keys. DO NOT TOUCH THORNS, HIT THE QUESTOIN MARK
    
 
    <div></diV>    
-<button type=button value="Image Down Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<button type=button value="Image Down Fast Button" value="downButton" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
-  speedY = 1                                                                                                                 
+  downButton.speedY = 1                                                                                                                 
   myCheckHit()     // checks for all collisions
 }"><img src="http://cdn.onlinewebfonts.com/svg/img_396761.png" height=30 width=30></button>
    </div>
