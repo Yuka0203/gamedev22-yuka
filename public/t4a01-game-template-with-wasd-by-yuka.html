@@ -178,7 +178,35 @@ function myCheckHit(){
 
 }  // end of myCheckHit()
 
+ 
+   
+   
+function moveup() {
+    myImg01.speedY = -1; 
+}
 
+function movedown() {
+    myImg01.speedY = 1; 
+}
+
+function moveleft() {
+    myImg01.speedX = -1; 
+}
+
+function moveright() {
+    myImg01.speedX = 1; 
+}
+
+function clearmove() {
+    myImg01.speedX = 0; 
+    myImg01.speedY = 0; 
+}   
+   
+   
+   
+   
+   
+   
 </script>
 
 <img id="myImg01" style="position:absolute; width:100px; height:100px; top:160px; left:130px;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdCn9n2KVLS0ReAUIPAv_LYVESTtf_ZhPHpg&usqp=CAU">
@@ -228,19 +256,15 @@ function myCheckHit(){
    <br>
    
  
-       
-   
+  
    
    
    
    
 
 <div style="text-align:center;width:100px;"> 
-<button type=button value="Image Up Fast Button" value="upButton" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
-  upButton.speedY = -5;                                                                                                               
-  myCheckHit()     // checks for all collisions
-}"><img src="https://cdn-icons-png.flaticon.com/512/25/25282.png" height=30 width=30></button>
+<button type=button value="Image Up Fast Button" onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">
+   <img src="https://cdn-icons-png.flaticon.com/512/25/25282.png" height=30 width=30></button>
    
 <br> <br>  
    
@@ -249,8 +273,7 @@ function myCheckHit(){
    
 
  <button type=button value="Image Left Fast Button" value="leftButton" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
-  leftButton.speedX = -1;                                                                                                                  
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'            
   myCheckHit()     // checks for all collisions
 }"><img src="https://www.shareicon.net/data/512x512/2015/12/17/688824_arrows_512x512.png" height=30 width=30></button>  
    
@@ -258,8 +281,7 @@ function myCheckHit(){
    
    
 <button type=button value="Image Right Fast Button" value="rightButton" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  rightButton.speedX = 1;                                                                                                                  
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'             
   myCheckHit()     // checks for all collisions
 }"><img src="https://simg.nicepng.com/png/small/135-1350731_chevron-sign-to-right-vector-resume-button.png" height=30 width=30></button>
 
@@ -271,8 +293,7 @@ function myCheckHit(){
 
    <div></diV>    
 <button type=button value="Image Down Fast Button" value="downButton" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
-  downButton.speedY = 1                                                                                                                 
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'           
   myCheckHit()     // checks for all collisions
 }"><img src="http://cdn.onlinewebfonts.com/svg/img_396761.png" height=30 width=30></button>
    </div>
