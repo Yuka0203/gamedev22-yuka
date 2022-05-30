@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.86</h4>
+  <h4>Version 0.0.2.87</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -98,7 +98,6 @@ for (let row = 0; row < level1.length; row++) {
       color: colorMap[colorCode],
       width: brickWidth,
       height: brickHeight,
-      points: (5 - row) *2
     });
   }
 }
@@ -137,38 +136,6 @@ function collides(obj1, obj2) {
          obj1.y + obj1.height > obj2.y;
 }
 
-  
-  
-  
-  
-  
-  
-  
-//for adding score  
-const brickColumnCount = 1;
-const brickRowCount = 9;
-const x = canvas.width/2;  
-const y = canvas.height-30;  
-const dy = -2
-  
-
-function countScore() {
-  for (let c=0; c < brickColumnCount; c++) {
-    for (let r=0; r < brickRowCount; r++) {
-      let b = bricks[c][r];
-      if (b.status == 1) {
-        if (x > b.x && x < b.x+brickWindth && y > b.y+brickHeight) {
-          dy = -dy;
-          b.status = 0;
-          score += brick.points
-        }
-      }
-    }
-  }
-}
-
- 
-  
   
   
   
@@ -270,9 +237,9 @@ function loop() {
       else {
         ball.dx *= -1;
       }
-      
+      score += 1
       break;
-      score += brick.points
+      
     } 
     
    
