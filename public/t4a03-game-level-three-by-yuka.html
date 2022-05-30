@@ -24,7 +24,7 @@
   <li>Use arrow keys to move the paddle        
   <li>If the ball goes falldown, you lose
   <li>Have fun!
-  <li>wanna add score (be able to store), change background, add sound, change image on bricks and paddle
+  <li>wanna add score (be able to store), change background, add sound, change bricks and paddle
   <li><a href="https://gist.github.com/straker/98a2aed6a7686d26c04810f08bfaf66b">Good reference Breakout</a>
   <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Good reference 2</a></li>
@@ -142,35 +142,6 @@ function collides(obj1, obj2) {
          obj1.y + obj1.height > obj2.y;
 }
 
-  
-  
-  
-  
-  
-  
-  
-//for adding score  
-const x = canvas.width/2;  
-const y = canvas.height-30;  
-const dy = -2
-  
-  function collisionDetection() {
-    for(var c=0; c<1; c++) {
-        for(var r=0; r<9; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                    brickScore++;
-                }
-            }
-        }
-    }
-}
-
- 
-  
   
   
   
