@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.2.87</h4>
+  <h4>Version 0.0.3.87</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -29,6 +29,15 @@
   <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Good reference 2</a></li>
   </font>
+  <br><br>
+  
+  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button>
+  
+  
+  
+  
+  
   
   
 <canvas width="400" height="500" id="game"></canvas>
@@ -55,13 +64,13 @@ const level1 = [
   [],
   [],
   [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
+  ['R','R','R','R','R','R','R','R','R'],
+  ['R','R','R','R','R','R','R','R','R'],
+  ['O','O','O','O','O','O','O','O','O'],
+  ['O','O','O','O','O','O','O','O','O'],
+  ['G','G','G','G','G','G','G','G','G'],
+  ['G','G','G','G','G','G','G','G','G'],
+  ['Y','Y','Y','Y','Y','Y','Y','Y','Y'],
   ['Y','Y','Y','Y','Y','Y','Y','Y','Y']
 ];
   
@@ -142,7 +151,18 @@ function collides(obj1, obj2) {
   
   
   
-  
+  function moveleft() {
+    paddle.speedX = -1; 
+}
+
+function moveright() {
+    paddle.speedX = 1; 
+}
+
+function clearmove() {
+    paddle.speedX = 0; 
+    paddle.speedY = 0; 
+}
   
   
   
@@ -202,6 +222,7 @@ function loop() {
   if (bricks == 0) {
     alert('YOU WIN! GO TO NEXT LEVEL!')
     location = 't4a03-game-level-three-by-yuka.html'
+    clearInterval(interval);
 }
   
   
@@ -216,8 +237,7 @@ function loop() {
     ball.y = paddle.y - ball.height;
   }
 
-  // check to see if ball collides with a brick. if it does, remove the brick
-  // and change the ball velocity based on the side the brick was hit on
+ 
   for (let i = 0; i < bricks.length; i++) {
     const brick = bricks[i];
     
