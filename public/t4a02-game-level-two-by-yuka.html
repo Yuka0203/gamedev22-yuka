@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.92</h4>
+  <h4>Version 0.0.3.93</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -31,16 +31,6 @@
   </font>
      
   
-  <button type=button value="LEFT" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  paddle.dx = -10            
-}"></button>  
-   
- 
-   
-   
-<button type=button value="RIGHT" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  paddle.dx =  10
-}"</button>
   
   
 
@@ -254,12 +244,11 @@ function loop() {
         ball.dx *= -1;
       }
       
-      break;
+    //  break;
       
     } 
     
-   score += 1;
-  }
+ 
   
   }// function(loop) is done
   
