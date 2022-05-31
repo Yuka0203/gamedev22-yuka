@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.89</h4>
+  <h4>Version 0.0.3.90</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -29,26 +29,21 @@
   <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Good reference 2</a></li>
   </font>
-  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
-  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button>
+     
   
   
-  <script>
-    function moveleft() {
-    paddle.speedX = -1; 
-}
-
-function moveright() {
-    paddle.speedX = 1; 
-}
-
-function clearmove() {
-    paddle.speedX = 0; 
-    paddle.speedY = 0; 
-}
-    
-  </script>
   
+  
+   <button type=button value="LEFT" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  paddle.dx = -10            
+}"></button>  
+   
+ 
+   
+   
+<button type=button value="RIGHT" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  paddle.dx =  10
+}"</button>
   
   
   
@@ -242,7 +237,7 @@ function loop() {
     const brick = bricks[i];
     
     if (collides(ball, brick)) {
-      score += 1;
+      
       // remove brick from the bricks array
       bricks.splice(i, 1);
       
@@ -263,8 +258,9 @@ function loop() {
       
     } 
     
-   
-    
+   score += 1;
+  }
+  
   }// function(loop) is done
   
   
