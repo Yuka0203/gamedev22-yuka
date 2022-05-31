@@ -8,23 +8,23 @@
     margin: 0;
   }
 
-  body {
-    background: DarkSlateGray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAnL_OmPO0ofiAxxZ28dHJpGVuPJou30fzhQ&usqp=CAU');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.0.6</h4>
+  <h4>Version 0.0.1.6</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
   <li>Use arrow keys to move the paddle        
   <li>If the ball goes falldown, you lose
   <li>Have fun!
-  <li>wanna add score (be able to store), change background, add sound, change bricks and paddle
+  <li>wanna add score (be able to store), add sound
   <li><a href="https://gist.github.com/straker/98a2aed6a7686d26c04810f08bfaf66b">Good reference Breakout</a>
   <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Good reference 2</a></li>
@@ -62,15 +62,15 @@ const level1 = [
   [],
   [],
   [],
-  ['Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y']
+  ['R','R','R','R','R','R','R','R','R','R','R','R','R','R']
 ];
   
 // create a mapping between color short code (R, O, G, Y) and color name
 const colorMap = {
-  'R': 'red',
-  'O': 'orange',
-  'G': 'green',
-  'Y': 'yellow'
+  'B': 'MidnightBlue',
+  'G': 'DarkGreen',
+  'P': 'DarkMagenta',
+  'R': 'DarkRed'
 };
 
 // use a 2px gap between each brick
@@ -290,7 +290,7 @@ function loop() {
   });
 
   // draw paddle
-  context.fillStyle = 'cyan';
+  context.fillStyle = 'FireBrick';
   context.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
 }
 
