@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.88</h4>
+  <h4>Version 0.0.3.89</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -29,12 +29,25 @@
   <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Good reference 2</a></li>
   </font>
-  
-  
   <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
   <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button>
   
   
+  <script>
+    function moveleft() {
+    paddle.speedX = -1; 
+}
+
+function moveright() {
+    paddle.speedX = 1; 
+}
+
+function clearmove() {
+    paddle.speedX = 0; 
+    paddle.speedY = 0; 
+}
+    
+  </script>
   
   
   
@@ -64,13 +77,13 @@ const level1 = [
   [],
   [],
   [],
-  ['R','R','R','R','R','R','R','R','R'],
-  ['R','R','R','R','R','R','R','R','R'],
-  ['O','O','O','O','O','O','O','O','O'],
-  ['O','O','O','O','O','O','O','O','O'],
-  ['G','G','G','G','G','G','G','G','G'],
-  ['G','G','G','G','G','G','G','G','G'],
-  ['Y','Y','Y','Y','Y','Y','Y','Y','Y'],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
   ['Y','Y','Y','Y','Y','Y','Y','Y','Y']
 ];
   
@@ -151,19 +164,6 @@ function collides(obj1, obj2) {
   
   
   
-  function moveleft() {
-    paddle.speedX = -1; 
-}
-
-function moveright() {
-    paddle.speedX = 1; 
-}
-
-function clearmove() {
-    paddle.speedX = 0; 
-    paddle.speedY = 0; 
-}
-  
   
   
   
@@ -242,9 +242,10 @@ function loop() {
     const brick = bricks[i];
     
     if (collides(ball, brick)) {
+      score += 1;
       // remove brick from the bricks array
       bricks.splice(i, 1);
-      score += 1
+      
   
       // ball is above or below the brick, change y velocity
       // account for the balls speed since it will be inside the brick when it
