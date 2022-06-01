@@ -17,12 +17,13 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.101</h4>
+  <h4>Version 0.0.3.102</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
   <li>Use arrow keys to move the paddle        
   <li>If the ball goes falldown, you lose
+  <li>LEFT, RIGHT, and START buttons for using touchable screen.
   <li>Have fun!
   <li>wanna add score (be able to store), bar, can do to next level
   <li><a href="https://gist.github.com/straker/98a2aed6a7686d26c04810f08bfaf66b">Good reference Breakout</a>
@@ -45,8 +46,8 @@
   
                              
   <button ontouchstart="{paddle.dx = 4;}" ontouchend="{paddle.dx = 0;}">RIGHT</button>
-  <button ontouch="{ball.dx = ball.speed; 
-                    ball.dy = ball.speed;}">START</button>
+  <button ontouchstart="{ball.dx = ball.speed; 
+                         ball.dy = ball.speed;}">START</button>
                    
   
   
