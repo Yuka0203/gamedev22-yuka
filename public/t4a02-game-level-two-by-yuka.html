@@ -239,12 +239,11 @@ function loop() {
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
         ball.dy *= -1;
-        score += 1;
+        score = 1;
       }
       // ball is on either side of the brick, change x velocity
       else {
         ball.dx *= -1;
-        score += 1;
       }
       
       break;
