@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.97</h4>
+  <h4>Version 0.0.3.98</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -42,7 +42,13 @@
   
   
   
-  
+<button vlue="LEFT" onclick="{ 
+                             paddle.dx = -4;
+                             }">
+                             
+<button value="RIGHT" onclick="{
+                               paddle.dx = 4;
+                               }">
   
   
   
@@ -227,10 +233,21 @@ function loop() {
     const brick = bricks[i];
     
     if (collides(ball, brick)) {
-      
+      score += 1;
       // remove brick from the bricks array
       bricks.splice(i, 1);
-      score++
+      
+      if (ball.y + ball.height - ball.speed <= brick.y ||
+          ball.y >= brick.y + brick.height - ball.speed) {
+        ball.dy *= -1.03;
+      }
+      // ball is on either side of the brick, change x velocity
+      else {
+        ball.dx *= -1.03;
+      }
+      
+      break;
+      
       
     } 
     
@@ -307,7 +324,7 @@ document.addEventListener('keyup', function(e) {
 
 // start the game
 requestAnimationFrame(loop);
-clearInterval(interval);
+clearInterval(loop);
 </script>
 </body>
 </html>
