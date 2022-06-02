@@ -17,7 +17,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.103</h4>
+  <h4>Version 0.0.3.104</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -25,7 +25,7 @@
   <li>If the ball goes falldown, you lose
   <li>LEFT, RIGHT, and START buttons for using touchable screen.
   <li>Have fun!
-  <li>wanna add score (be able to store), bar, can do to next level
+  <li>wanna add score (be able to store), can do to next level
   <li><a href="https://gist.github.com/straker/98a2aed6a7686d26c04810f08bfaf66b">Good reference Breakout</a>
   <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Good reference 2</a></li>
@@ -211,9 +211,9 @@ function loop() {
   }
   
   if (bricks == 0) {
+    clearInterval(loop);
     alert('YOU WIN! GO TO NEXT LEVEL!')
     location = 't4a03-game-level-three-by-yuka.html'
-    clearInterval(loop);
 }
   
   
@@ -236,11 +236,10 @@ function loop() {
       
       // remove brick from the bricks array
       bricks.splice(i, 1);
-      
+      score += 1;
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
         ball.dy *= -1;
-        score = 1;
       }
       // ball is on either side of the brick, change x velocity
       else {
@@ -325,7 +324,6 @@ document.addEventListener('keyup', function(e) {
 
 // start the game
 requestAnimationFrame(loop);
-clearInterval(loop);
 </script>
 </body>
 </html>
