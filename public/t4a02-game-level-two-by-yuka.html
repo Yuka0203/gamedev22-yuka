@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.107</h4>
+  <h4>Version 0.0.3.108</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -38,7 +38,7 @@
   
 
   
-  <button content="width=100px" ontouchstart="{paddle.dx = -4;}" ontouchend="{paddle.dx = 0;}">LEFT</button>
+  <button height=50 width=100 ontouchstart="{paddle.dx = -4;}" ontouchend="{paddle.dx = 0;}">LEFT</button>
   
   
 <canvas width="400" height="500" id="game"></canvas>
@@ -47,7 +47,7 @@
   
   
                              
-  <button ontouchstart="{paddle.dx = 4;}" ontouchend="{paddle.dx = 0;}">RIGHT</button>
+  <button height=50 width=100 ontouchstart="{paddle.dx = 4;}" ontouchend="{paddle.dx = 0;}">RIGHT</button>
   <button ontouchstart="{ball.dx = ball.speed; 
                          ball.dy = ball.speed;}">START</button>
                    
@@ -212,14 +212,7 @@ function loop() {
     location.reload()  
   }
   
-  intervalId = setInterval(loop);
-  
-  if (bricks == 0) {
-    clearInterval(intervalId);
-    alert('YOU WIN! GO TO NEXT LEVEL!')
-    location = 't4a03-game-level-three-by-yuka.html'
-}
-  
+
   
 
   // check to see if ball collides with paddle. if they do change y velocity
@@ -270,6 +263,13 @@ function loop() {
   
   
   
+ const  intervalId = setInterval(loop);
+  
+  if (bricks == 0) {
+    clearInterval(intervalId);
+    alert('YOU WIN! GO TO NEXT LEVEL!')
+    location = 't4a03-game-level-three-by-yuka.html'
+}
   
 
   
