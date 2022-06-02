@@ -34,9 +34,17 @@ body {
   </font>
   
   
+  
+  
+   
+  <button ontouchstart="{paddle.dx = -4;}" ontouchend="{paddle.dx = 0;}">LEFT</button>
+  
 <canvas width="400" height="500" id="game"></canvas>
   
-  
+                               
+  <button ontouchstart="{paddle.dx = 4;}" ontouchend="{paddle.dx = 0;}">RIGHT</button>
+  <button ontouchstart="{ball.dx = ball.speed; 
+                         ball.dy = ball.speed;}">START</button>
   
   
   
