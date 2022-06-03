@@ -253,11 +253,11 @@ function loop() {
       // collides
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
-        ball.dy *= -1.03;
+        ball.dy *= -1.01;
       }
       // ball is on either side of the brick, change x velocity
       else {
-        ball.dx *= -1.03;
+        ball.dx *= -1.01;
       }
       
       break;
