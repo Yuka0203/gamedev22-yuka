@@ -56,7 +56,23 @@
   
   
   
+  class Pallet {
+    constructor({ position }) {
+      this.position = position
+      this.radius = 3
+    }
+    
+    draw () {
+      c.beingPath()
+      c.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2)
+      c.fillStyle = 'white'
+      c.fill()
+      c.closePath()
+    }
+  }
   
+  
+  const pallets = []
   const boundaries = []
   const player = new Player({
     position: {
@@ -102,9 +118,9 @@
 
 function createImage(src) {
   const image = new Image()
-  image.src = 'drive-download-20220604T230938Z-001.zip'
+  image.src = src
   return image
-}
+} 
   
 // Additional cases (does not include the power up pellet that's inserted later in the vid)
 map.forEach((row, i) => {
@@ -117,7 +133,7 @@ map.forEach((row, i) => {
               x: Boundary.width * j,
               y: Boundary.height * i
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeHorizontal.png')
+            image: createImage('gamedev22-yuka/img/pipeHorizontal.png')
           })
         )
         break
@@ -128,7 +144,7 @@ map.forEach((row, i) => {
               x: Boundary.width * j,
               y: Boundary.height * i
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeVertical.png')
+            image: createImage('gamedev22-yuka/img/pipeVertical.png')
           })
         )
         break
@@ -139,7 +155,7 @@ map.forEach((row, i) => {
               x: Boundary.width * j,
               y: Boundary.height * i
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeCorner1.png')
+            image: createImage('gamedev22-yuka/img/pipeCorner1.png')
           })
         )
         break
@@ -150,7 +166,7 @@ map.forEach((row, i) => {
               x: Boundary.width * j,
               y: Boundary.height * i
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeCorner2.png')
+            image: createImage('gamedev22-yuka/img/pipeCorner2.png')
           })
         )
         break
@@ -161,7 +177,7 @@ map.forEach((row, i) => {
               x: Boundary.width * j,
               y: Boundary.height * i
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeCorner3.png')
+            image: createImage('gamedev22-yuka/img/pipeCorner3.png')
           })
         )
         break
@@ -172,7 +188,7 @@ map.forEach((row, i) => {
               x: Boundary.width * j,
               y: Boundary.height * i
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeCorner4.png')
+            image: createImage('gamedev22-yuka/img/pipeCorner4.png')
           })
         )
         break
@@ -183,7 +199,7 @@ map.forEach((row, i) => {
               x: Boundary.width * j,
               y: Boundary.height * i
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/block.png')
+            image: createImage('gamedev22-yuka/img/block.png')
           })
         )
         break
@@ -194,7 +210,7 @@ map.forEach((row, i) => {
               x: j * Boundary.width,
               y: i * Boundary.height
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/capLeft.png')
+            image: createImage('gamedev22-yuka/img/capLeft.png')
           })
         )
         break
@@ -205,7 +221,7 @@ map.forEach((row, i) => {
               x: j * Boundary.width,
               y: i * Boundary.height
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/capRight.png')
+            image: createImage('gamedev22-yuka/img/capRight.png')
           })
         )
         break
@@ -216,7 +232,7 @@ map.forEach((row, i) => {
               x: j * Boundary.width,
               y: i * Boundary.height
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/capBottom.png')
+            image: createImage('gamedev22-yuka/img/capBottom.png')
           })
         )
         break
@@ -227,7 +243,7 @@ map.forEach((row, i) => {
               x: j * Boundary.width,
               y: i * Boundary.height
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/capTop.png')
+            image: createImage('gamedev22-yuka/img/capTop.png')
           })
         )
         break
@@ -238,7 +254,7 @@ map.forEach((row, i) => {
               x: j * Boundary.width,
               y: i * Boundary.height
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeCross.png')
+            image: createImage('gamedev22-yuka/img/pipeCross.png')
           })
         )
         break
@@ -250,7 +266,7 @@ map.forEach((row, i) => {
               y: i * Boundary.height
             },
             color: 'blue',
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeConnectorTop.png')
+            image: createImage('gamedev22-yuka/img/pipeConnectorTop.png')
           })
         )
         break
@@ -262,7 +278,7 @@ map.forEach((row, i) => {
               y: i * Boundary.height
             },
             color: 'blue',
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeConnectorRight.png')
+            image: createImage('gamedev22-yuka/img/pipeConnectorRight.png')
           })
         )
         break
@@ -274,7 +290,7 @@ map.forEach((row, i) => {
               y: i * Boundary.height
             },
             color: 'blue',
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeConnectorBottom.png')
+            image: createImage('gamedev22-yuka/img/pipeConnectorBottom.png')
           })
         )
         break
@@ -285,7 +301,7 @@ map.forEach((row, i) => {
               x: j * Boundary.width,
               y: i * Boundary.height
             },
-            image: createImage('./drive-download-20220604T230938Z-001.zip/pipeConnectorLeft.png')
+            image: createImage('gamedev22-yuka/img/pipeConnectorLeft.png')
           })
         )
         break
@@ -394,6 +410,10 @@ map.forEach((row, i) => {
         }
       }
     }
+    
+    pallets.forEach((pallet) => {
+      pallet.draw()
+    })
     
     boundaries.forEach((boundary) => {
       boundary.draw()
