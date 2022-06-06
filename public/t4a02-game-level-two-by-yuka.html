@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.120</h4>
+  <h4>Version 0.0.3.121</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -231,10 +231,6 @@ function loop() {
   }
 
  
-  if (collides(ball, bricks)) {
-    score += 1
-  }
-  
   
   
   for (let i = 0; i < bricks.length; i++) {
@@ -253,12 +249,13 @@ function loop() {
       else {
         ball.dx *= -1;
       }
-      
       break;
-      
-      
     } 
-    
+    if (collides(ball, brick)) {
+    score += 1
+    }
+  }
+  
  
   
   }// function(loop) is done
