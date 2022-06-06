@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.118</h4>
+  <h4>Version 0.0.3.119</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -41,7 +41,6 @@
   <button style="width: 100px; height: 100px;" ontouchstart="{paddle.dx = -4;}" ontouchend="{paddle.dx = 0;}" onclick="{paddle.dx = -4;}">LEFT</button>
   
   
-  <span>Score: </span><span id="scoreEl">0</span>
   
   
 <canvas width="400" height="500" id="game"></canvas>
@@ -61,7 +60,6 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
-  const scoreEl = document.getElementById('#scoreEl')
 
   
 // each row is 14 bricks long. the level consists of 6 blank rows then 8 rows
@@ -233,7 +231,9 @@ function loop() {
   }
 
  
-  
+  if (collides(ball, bricks)) {
+    score += 1
+  }
   
   
   
@@ -245,7 +245,6 @@ function loop() {
       // remove brick from the bricks array
       bricks.splice(i, 1)
       score += 1
-      scoreEl.innerHTML = score
      
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
