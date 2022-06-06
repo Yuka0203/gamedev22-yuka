@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.119</h4>
+  <h4>Version 0.0.3.120</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -244,7 +244,6 @@ function loop() {
       
       // remove brick from the bricks array
       bricks.splice(i, 1)
-      score += 1
      
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
