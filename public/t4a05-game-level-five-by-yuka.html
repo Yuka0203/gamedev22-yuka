@@ -5,7 +5,7 @@
     padding: 10px 20px;
   }
 </style>
-<h3><font color=white>Version 0.0.0.1</h3></font>
+<h3><font color=white>Version 0.0.0.2</h3></font>
 <p style="color: white; font-family: sans-serif; font-size:14px; margin-bottom: 6px;">
   <span>Score: </span><span id="scoreEl">0</span>
 </p>
@@ -155,7 +155,9 @@
         x: Ghost.speed,
         y: 0
       }
-      color: 'pink',
+      color: {
+      color: 'pink'
+    }
     })
   ]
   const player = new Player({
