@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.131 </h4>
+  <h4>Version 0.0.3.132</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -155,9 +155,13 @@ function collides(obj1, obj2) {
 
   
   
-  if (let i = 0; i < bricks.length; i++) {
+  for (let i = 0; i < bricks.length; i++) {
+    const brick = bricks[i];
+    if (collides(ball, brick)) {
     score += 1
+    }
   }
+  
   
   
   
