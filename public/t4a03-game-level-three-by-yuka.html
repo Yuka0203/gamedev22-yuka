@@ -26,11 +26,7 @@ body {
   <li>Click Space key to start
   <li>Use arrow keys to move the paddle        
   <li>If the ball goes falldown, you lose
-  <li>Have fun!
-  <li>wanna add score (be able to store), add sound
-  <li><a href="https://gist.github.com/straker/98a2aed6a7686d26c04810f08bfaf66b">Good reference Breakout</a>
-  <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Good reference 2</a></li>
+  <li>Have fun!</li>
   </font>
   
   
@@ -88,7 +84,7 @@ const colorMap = {
 const brickGap = 2;
 const brickWidth = 25;
 const brickHeight = 12;
-const brickScore = 0;
+//const score = 0;
 
 // the wall width takes up the remaining space of the canvas width. with 14 bricks
 // and 13 2px gaps between them, thats: 400 - (14 * 25 + 2 * 13) = 24px. so each 
@@ -217,6 +213,7 @@ function loop() {
   }
   
   if (bricks == 0) {
+    alert('YOU WIN! YOU CAN GO TO NEXT LEVEL!!')
     location = 't4a04-game-level-four-by-yuka.html'
 }
   
@@ -278,9 +275,9 @@ function loop() {
   
   
   //draw score
-  context.font = '30px Arial';
-  context.fillStyle = 'white';
-  context.fillText("Score: " + brickScore, 150, 40);
+  //context.font = '30px Arial';
+  //context.fillStyle = 'white';
+  //context.fillText("Score: " + brickScore, 150, 40);
   
   // draw walls
   context.fillStyle = 'lightgrey';
