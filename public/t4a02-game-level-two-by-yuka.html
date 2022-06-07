@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.125</h4>
+  <h4>Version 0.0.3.126</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -102,10 +102,6 @@ const score = 0;
 const wallSize = 12;
 const bricks = [];
   
-
-  if (collides(ball, bricks)) {
-    score += 1
-  }
   
 // create the level by looping over each row and column in the level1 array
 // and creating an object with the bricks position (x, y) and color
@@ -159,7 +155,9 @@ function collides(obj1, obj2) {
 
   
   
-
+if (collides(ball, bricks)) {
+    score += 1
+  }
 
   
   
