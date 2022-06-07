@@ -5,7 +5,7 @@
     padding: 10px 20px;
   }
 </style>
-<h3><font color=white>Version 0.0.0.13</h3></font>
+<h3><font color=white>Version 0.0.0.14</h3></font>
 <p style="color: white; font-family: sans-serif; font-size:14px; margin-bottom: 6px;">
   <span>Score: </span><span id="scoreEl">0</span>
 </p>
@@ -53,7 +53,7 @@
       c.translate(this.position.x, this.position.y)
       c.rotate(this.rotation)
       c.translate(-this.position.x, -this.position.y)
-      //c.beingPath()
+      c.beginPath()
       c.arc(this.position.x, this.position.y, this.radius, this.radians, Math.PI * 2 - this.radians)
       c.lineTo(this.position.x, this.position.y)
       c.fillStyle = 'yellow'
@@ -109,7 +109,7 @@
     }
     
     draw () {
-      //c.beingPath()
+      c.beginPath()
       c.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2)
       c.fillStyle = 'white'
       c.fill()
@@ -124,7 +124,7 @@
     }
     
     draw () {
-      //c.beingPath()
+      c.beginPath()
       c.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2)
       c.fillStyle = 'white'
       c.fill()
@@ -562,7 +562,7 @@ map.forEach((row, i) => {
         Math.hypot(pellet.position.x - player.position.x, pellet.position.y - player.position.y) < pellet.radius + player.radius) {
         pellets.splice(i, 1)
         score += 10
-        scoreEl.innerHTML = score
+        //scoreEl.innerHTML = score
       }
     }
     
