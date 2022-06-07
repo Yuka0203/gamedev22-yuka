@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.132</h4>
+  <h4>Version 0.0.3.133</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -31,6 +31,7 @@
   <li><a href="https://gist.github.com/straker/98a2aed6a7686d26c04810f08bfaf66b">Good reference Breakout</a>
   <li><a href="https://levelup.gitconnected.com/game-development-breakout-in-javascript-5e5d142d3203">Good reference</a>
   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">Good reference 2</a></li>
+  <li>Score: <span id="score">0</span></li>
   </font>
      
   
@@ -94,6 +95,7 @@ const brickGap = 2;
 const brickWidth = 40;
 const brickHeight = 12;
 const score = 0;
+const score = document.getElementById("score");
 
   
 // the wall width takes up the remaining space of the canvas width. with 14 bricks
@@ -146,21 +148,14 @@ const ball = {
   
 // check for collision between two objects using axis-aligned bounding box (AABB)
 // see https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
-function collides(obj1, obj2) {
-  return obj1.x < obj2.x + obj2.width &&
-         obj1.x + obj1.width > obj2.x &&
-         obj1.y < obj2.y + obj2.height &&
-         obj1.y + obj1.height > obj2.y;
-}
+//function collides(obj1, obj2) {
+//  return obj1.x < obj2.x + obj2.width &&
+//         obj1.x + obj1.width > obj2.x &&
+//         obj1.y < obj2.y + obj2.height &&
+//         obj1.y + obj1.height > obj2.y;
+//}
 
   
-  
-  for (let i = 0; i < bricks.length; i++) {
-    const brick = bricks[i];
-    if (collides(ball, brick)) {
-    score += 1
-    }
-  }
   
   
   
@@ -219,6 +214,7 @@ function loop() {
   if (bricks == 0) {
     ball.dx = 0;
     ball.dy = 0;
+    alert('YOU WIN! YOU CAN GO TO NEXT LEVEL!!')
     location.href = 't4a03-game-level-three-by-yuka.html';
 }
 
@@ -238,7 +234,7 @@ function loop() {
     const brick = bricks[i];
     
     if (collides(ball, brick)) {
-      
+      score++;
       // remove brick from the bricks array
       bricks.splice(i, 1)
      
@@ -251,7 +247,7 @@ function loop() {
         ball.dx *= -1;
       }
       
-        break
+        break;
       
     } 
     
