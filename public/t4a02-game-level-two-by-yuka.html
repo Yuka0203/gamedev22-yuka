@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.122</h4>
+  <h4>Version 0.0.3.123</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -223,6 +223,7 @@ function loop() {
   // check to see if ball collides with paddle. if they do change y velocity
   if (collides(ball, paddle)) {
     ball.dy *= -1;
+    score++
     
 
     // move ball above the paddle otherwise the collision will happen again
@@ -230,7 +231,6 @@ function loop() {
     ball.y = paddle.y - ball.height;
   }
 
- 
   
   
   for (let i = 0; i < bricks.length; i++) {
@@ -251,9 +251,7 @@ function loop() {
       }
       break;
     } 
-    if (collides(ball, brick)) {
-    score += 1
-    }
+    
   
   
  
