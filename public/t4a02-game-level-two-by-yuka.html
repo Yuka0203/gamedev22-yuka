@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.136</h4>
+  <h4>Version 0.0.3.137</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -89,7 +89,7 @@ const colorMap = {
 const brickGap = 2;
 const brickWidth = 40;
 const brickHeight = 12;
-const score = 0;
+//const score = 0;
 
   
 // the wall width takes up the remaining space of the canvas width. with 14 bricks
@@ -230,8 +230,8 @@ function loop() {
     if (collides(ball, brick)) {
    
       // remove brick from the bricks array
-      brick.splice(i, 1)
-      score += 1
+      bricks.splice(i, 1)
+     // score += 1
      
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
@@ -263,9 +263,9 @@ function loop() {
   
   
   //draw score
-  context.font = '30px Arial';
-  context.fillStyle = 'white';
-  context.fillText("Score: " + score, 150, 40);
+  //context.font = '30px Arial';
+  //context.fillStyle = 'white';
+  //context.fillText("Score: " + score, 150, 40);
   
   // draw walls
   context.fillStyle = 'lightgrey';
