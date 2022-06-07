@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.123</h4>
+  <h4>Version 0.0.3.124</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -95,13 +95,18 @@ const brickWidth = 40;
 const brickHeight = 12;
 const score = 0;
 
+  
 // the wall width takes up the remaining space of the canvas width. with 14 bricks
 // and 13 2px gaps between them, thats: 400 - (14 * 25 + 2 * 13) = 24px. so each 
 // wall will be 12px
 const wallSize = 12;
 const bricks = [];
   
-   
+
+  if (collide(ball, bricks)) {
+    score += 1
+  }
+  
 // create the level by looping over each row and column in the level1 array
 // and creating an object with the bricks position (x, y) and color
 for (let row = 0; row < level1.length; row++) {
@@ -223,7 +228,6 @@ function loop() {
   // check to see if ball collides with paddle. if they do change y velocity
   if (collides(ball, paddle)) {
     ball.dy *= -1;
-    score++
     
 
     // move ball above the paddle otherwise the collision will happen again
