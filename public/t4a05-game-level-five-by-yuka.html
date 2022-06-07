@@ -5,7 +5,7 @@
     padding: 10px 20px;
   }
 </style>
-<h3><font color=white>Version 0.0.0.2</h3></font>
+<h3><font color=white>Version 0.0.0.3</h3></font>
 <p style="color: white; font-family: sans-serif; font-size:14px; margin-bottom: 6px;">
   <span>Score: </span><span id="scoreEl">0</span>
 </p>
@@ -89,7 +89,7 @@
     draw () {
       c.beingPath()
       c.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2)
-      c.fillStyle = this.scared ? 'blue' : this.color
+      c.fillStyle = this.scared ?? 'blue' : this.color
       c.fill()
       c.closePath()
     }
