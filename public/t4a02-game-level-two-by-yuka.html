@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.126</h4>
+  <h4>Version 0.0.3.127</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -155,13 +155,6 @@ function collides(obj1, obj2) {
 
   
   
-if (collides(ball, bricks)) {
-    score += 1
-  }
-
-  
-  
-  
   
   
   
@@ -287,6 +280,9 @@ function loop() {
   // draw ball if it's moving
   if (ball.dx || ball.dy) {
     context.fillRect(ball.x, ball.y, ball.width, ball.height);
+  }
+  if (collides(ball, bricks)) {
+    score += 1
   }
 
   // draw bricks
