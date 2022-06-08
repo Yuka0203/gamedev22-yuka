@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.1</h4>
+  <h4>Version 0.0.3.2</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -166,9 +166,6 @@ function loop() {
   // move paddle by it's velocity
   paddle.x += paddle.dx;
 
-  if (collides(ball, bricks)) {
-    score++
-  }
   
   // prevent paddle from going through walls
   if (paddle.x < wallSize) {
@@ -214,6 +211,10 @@ if (bricks == 0) {
     alert('YOU WIN! YOU CAN GO TO NEXT LEVEL!!')
     location.href = 't4a03-game-level-three-by-yuka.html';
 }
+  
+  if (collides(ball, bricks)) {
+    score += 1
+  }
   
   
   // check to see if ball collides with paddle. if they do change y velocity
