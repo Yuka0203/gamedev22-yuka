@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.137</h4>
+  <h4>Version 0.0.3.0</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -89,7 +89,7 @@ const colorMap = {
 const brickGap = 2;
 const brickWidth = 40;
 const brickHeight = 12;
-//const score = 0;
+const score = 0;
 
   
 // the wall width takes up the remaining space of the canvas width. with 14 bricks
@@ -205,13 +205,6 @@ function loop() {
   }
   
 
-  if (bricks == 0) {
-    ball.dx = 0;
-    ball.dy = 0;
-    alert('YOU WIN! YOU CAN GO TO NEXT LEVEL!!')
-    location.href = 't4a03-game-level-three-by-yuka.html';
-}
-
   // check to see if ball collides with paddle. if they do change y velocity
   if (collides(ball, paddle)) {
     ball.dy *= -1;
@@ -231,7 +224,6 @@ function loop() {
    
       // remove brick from the bricks array
       bricks.splice(i, 1)
-     // score += 1
      
       if (ball.y + ball.height - ball.speed <= brick.y ||
           ball.y >= brick.y + brick.height - ball.speed) {
@@ -245,6 +237,13 @@ function loop() {
         break;
       
     } 
+    
+    if (bricks == 0) {
+    ball.dx = 0;
+    ball.dy = 0;
+    alert('YOU WIN! YOU CAN GO TO NEXT LEVEL!!')
+    location.href = 't4a03-game-level-three-by-yuka.html';
+}
     
   
   }// function(loop) is done
@@ -263,9 +262,9 @@ function loop() {
   
   
   //draw score
-  //context.font = '30px Arial';
-  //context.fillStyle = 'white';
-  //context.fillText("Score: " + score, 150, 40);
+  context.font = '30px Arial';
+  context.fillStyle = 'white';
+  context.fillText("Score: " + score, 150, 40);
   
   // draw walls
   context.fillStyle = 'lightgrey';
