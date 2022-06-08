@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.4</h4>
+  <h4>Version 0.0.3.5</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -160,15 +160,18 @@ function collides(obj1, obj2) {
   
 // game loop
 function loop() {
+  
+  
+  if (collides(ball, bricks)) {
+    score += 1
+  }
+  
   requestAnimationFrame(loop);
   context.clearRect(0,0,canvas.width,canvas.height);
 
   // move paddle by it's velocity
   paddle.x += paddle.dx;
 
-  if (collides(ball, bricks)) {
-    score += 1
-  }
   
   // prevent paddle from going through walls
   if (paddle.x < wallSize) {
