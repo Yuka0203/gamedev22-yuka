@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.5</h4>
+  <h4>Version 0.0.3.6</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -140,17 +140,12 @@ const ball = {
   dy: 0
 };
   
-// check for collision between two objects using axis-aligned bounding box (AABB)
-// see https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
-function collides(obj1, obj2) {
-  return obj1.x < obj2.x + obj2.width &&
-         obj1.x + obj1.width > obj2.x &&
-         obj1.y < obj2.y + obj2.height &&
-         obj1.y + obj1.height > obj2.y;
-}
-
   
-  
+  for (let i = 0; i < bricks.length; i++) {
+    const brick = bricks[i];
+  if (collides(ball, brick)) {
+    score += 1
+  }
   
   
   
@@ -160,12 +155,6 @@ function collides(obj1, obj2) {
   
 // game loop
 function loop() {
-  
-  
-  if (collides(ball, bricks)) {
-    score += 1
-  }
-  
   requestAnimationFrame(loop);
   context.clearRect(0,0,canvas.width,canvas.height);
 
