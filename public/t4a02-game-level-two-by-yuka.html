@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.2</h4>
+  <h4>Version 0.0.3.3</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -195,6 +195,12 @@ function loop() {
     ball.dy *= -1;
   }
 
+  
+  if (collides(ball, bricks)) {
+    score += 1
+  }
+  
+  
   // reset ball if it goes below the screen
   if (ball.y > canvas.height) {
     ball.x = 130;
@@ -211,10 +217,6 @@ if (bricks == 0) {
     alert('YOU WIN! YOU CAN GO TO NEXT LEVEL!!')
     location.href = 't4a03-game-level-three-by-yuka.html';
 }
-  
-  if (collides(ball, bricks)) {
-    score += 1
-  }
   
   
   // check to see if ball collides with paddle. if they do change y velocity
