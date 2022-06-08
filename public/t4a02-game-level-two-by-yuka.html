@@ -34,7 +34,7 @@
   
 
   
-  <button style="width: 100px; height: 100px;" ontouchstart="{paddle.dx = -4;}" ontouchend="{paddle.dx = 0;}" onclick="{paddle.dx = -4;}">LEFT</button>
+  <button style="width: 100px; height: 100px;" ontouchstart="{paddle.dx = -4;}" ontouchend="{paddle.dx = 0;}">LEFT</button>
   
   
   
@@ -45,7 +45,7 @@
   
   
                              
-  <button style="width: 100px; height: 100px;" ontouchstart="{paddle.dx = 4;}" ontouchend="{paddle.dx = 0;}" onclick="{paddle.dx = 4;}">RIGHT</button>
+  <button style="width: 100px; height: 100px;" ontouchstart="{paddle.dx = 4;}" ontouchend="{paddle.dx = 0;}">RIGHT</button>
   <button ontouchstart="{ball.dx = ball.speed; ball.dy = ball.speed;}" onclick="{ball.dx = ball.speed; ball.dy = ball.speed;}">START</button>
                    
   
@@ -71,9 +71,9 @@ const level1 = [
   [],
   [],
   [],
-  [],
-  [],
-  [],
+  ['R','R','R','R','R','R','R','R','R'],
+  ['O','O','O','O','O','O','O','O','O'],
+  ['G','G','G','G','G','G','G','G','G'],
   ['Y','Y','Y','Y','Y','Y','Y','Y','Y']
 ];
   
