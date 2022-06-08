@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.6</h4>
+  <h4>Version 0.0.3.7</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -141,13 +141,6 @@ const ball = {
 };
   
   
-  for (let i = 0; i < bricks.length; i++) {
-    const brick = bricks[i];
-  if (collides(ball, brick)) {
-    score += 1
-  }
-  
-  
   
   
   
@@ -190,10 +183,6 @@ function loop() {
     ball.dy *= -1;
   }
 
-  
-  
-  
-  
   // reset ball if it goes below the screen
   if (ball.y > canvas.height) {
     ball.x = 130;
@@ -216,7 +205,6 @@ if (bricks == 0) {
   if (collides(ball, paddle)) {
     ball.dy *= -1;
     
-
     // move ball above the paddle otherwise the collision will happen again
     // in the next frame
     ball.y = paddle.y - ball.height;
@@ -228,7 +216,7 @@ if (bricks == 0) {
     const brick = bricks[i];
     
     if (collides(ball, brick)) {
-   
+        score += 1;
       // remove brick from the bricks array
       bricks.splice(i, 1)
      
