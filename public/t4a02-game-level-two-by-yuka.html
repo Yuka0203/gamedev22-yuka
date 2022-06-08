@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.3</h4>
+  <h4>Version 0.0.3.4</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -166,6 +166,9 @@ function loop() {
   // move paddle by it's velocity
   paddle.x += paddle.dx;
 
+  if (collides(ball, bricks)) {
+    score += 1
+  }
   
   // prevent paddle from going through walls
   if (paddle.x < wallSize) {
@@ -196,9 +199,7 @@ function loop() {
   }
 
   
-  if (collides(ball, bricks)) {
-    score += 1
-  }
+  
   
   
   // reset ball if it goes below the screen
