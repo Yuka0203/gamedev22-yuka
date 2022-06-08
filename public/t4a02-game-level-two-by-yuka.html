@@ -19,7 +19,7 @@
   </style>
 </head>
 <body><font color=white>
-  <h4>Version 0.0.3.10</h4>
+  <h4>Version 0.0.3.11</h4>
   
 <h3>Instruction:</h3>
   <li>Click Space key to start
@@ -146,7 +146,6 @@ const ball = {
   // check for collision between two objects using axis-aligned bounding box (AABB)
 // see https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
 function collides(obj1, obj2) {
-  score += 1
   return obj1.x < obj2.x + obj2.width &&
          obj1.x + obj1.width > obj2.x &&
          obj1.y < obj2.y + obj2.height &&
@@ -165,7 +164,7 @@ function collides(obj1, obj2) {
 // game loop
 function loop() {
   requestAnimationFrame(loop);
-  context.clearRect(0,0,canvas.width,canvas.height);
+  context.clearRect(0, 0, canvas.width, canvas.height);
 
   // move paddle by it's velocity
   paddle.x += paddle.dx;
