@@ -84,7 +84,7 @@ const colorMap = {
 const brickGap = 2;
 const brickWidth = 25;
 const brickHeight = 12;
-const score = 0;
+//const score = 0;
 
 // the wall width takes up the remaining space of the canvas width. with 14 bricks
 // and 13 2px gaps between them, thats: 400 - (14 * 25 + 2 * 13) = 24px. so each 
@@ -275,9 +275,9 @@ function loop() {
   
   
   //draw score
-  context.font = '30px Arial';
-  context.fillStyle = 'white';
-  context.fillText("Score: " + brickScore, 150, 40);
+ // context.font = '30px Arial';
+ // context.fillStyle = 'white';
+ // context.fillText("Score: " + score, 150, 40);
   
   // draw walls
   context.fillStyle = 'lightgrey';
