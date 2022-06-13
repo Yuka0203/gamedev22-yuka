@@ -66,7 +66,30 @@ function myCheckHit(){
 <input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
   myCheckHit()     // checks for all collisions
-}"><br><br>
+}">
+   
+   You can use asdw keys to move an image.
+   
+   
+   
+<input onClick="{
+  let myKey = event.key
+  if (myKey == 'a') {
+    document.getElementById('myImg01').style.left = - 1
+  }
+  
+  if (myKey == 's') {
+    document.getElementById('myImg01').style.top = 1
+  }
+                
+  if (myKey == 'd') {
+    document.getElementById('myImg01').style.left = 1
+  }
+                
+  if (myKey == 'w') {
+    document.getElementById('myImg01').style.top = - 1
+  }              
+}">
    
    
    
