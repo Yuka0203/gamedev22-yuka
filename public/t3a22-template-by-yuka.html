@@ -1,4 +1,4 @@
-<h4> Version 0.0.1.19</h4>
+<h4> Version 0.0.1.9</h4>
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://t3.ftcdn.net/jpg/00/88/98/18/360_F_88981880_YjJManMJ6hJmKr5CZteFJAkEzXIh8mxW.jpg" onkeydown="{
  let myKey = event.key
@@ -74,7 +74,7 @@ function myCheckHit(){
 <br><br>
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
-  let myTemp = '0px 0px'
+  let myTemp = '100px 0px'
   myClock = setInterval(function(){
       myGlobalX = 5
       myTemp =  myGlobalX + 'px 0px'
@@ -87,10 +87,10 @@ function myCheckHit(){
   clearInterval(myClock)
   let myTemp = '100px 0px'
   myClock = setInterval(function(){
-      myGlobalX -= 5
+      myGlobalX = -5
       myTemp =  myGlobalX + 'px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, 100)
+  }, 10)
     
 }">
 
